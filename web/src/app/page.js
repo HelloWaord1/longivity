@@ -117,7 +117,9 @@ export default function HomePage() {
     }
   };
 
-  const productCount = allProducts.length || 48;
+  const productCount = stats?.products || allProducts.length || 48;
+  const paperCount = stats?.papers || '44+';
+  const articleCount = stats?.articles || 120;
 
   return (
     <div className="animate-fade-in">
@@ -161,13 +163,13 @@ export default function HomePage() {
               </div>
               <div className="w-px h-8 bg-border" />
               <div className="text-center">
-                <div className="text-lg md:text-xl font-semibold text-primary">44+</div>
+                <div className="text-lg md:text-xl font-semibold text-primary">{paperCount}</div>
                 <div className="text-[11px] text-tertiary uppercase tracking-wider">Papers</div>
               </div>
               <div className="w-px h-8 bg-border" />
               <div className="text-center">
-                <div className="text-lg md:text-xl font-semibold text-primary">A–D</div>
-                <div className="text-[11px] text-tertiary uppercase tracking-wider">Grades</div>
+                <div className="text-lg md:text-xl font-semibold text-primary">{articleCount}</div>
+                <div className="text-[11px] text-tertiary uppercase tracking-wider">Articles</div>
               </div>
               <div className="w-px h-8 bg-border" />
               <div className="text-center">

@@ -1,0 +1,18 @@
+{
+  "userId": "test-user",
+  "age": 35,
+  "sex": "male",
+  "weight": 75,
+  "height": 180,
+  "healthGoals": [
+    "longevity",
+    "energy",
+    "cognitive"
+  ],
+  "conditions": [],
+  "allergies": [
+    "shellfish"
+  ],
+  "updatedAt": "2026-02-04T18:38:24.205Z",
+  "createdAt": "2026-02-04T18:38:24.244Z"
+}

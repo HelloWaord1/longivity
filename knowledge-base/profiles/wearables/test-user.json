@@ -1,0 +1,19 @@
+[
+  {
+    "id": "wear_1770230304301_vviyqsgm9",
+    "userId": "test-user",
+    "date": "2026-02-04",
+    "sleep": {
+      "duration": 480,
+      "efficiency": 87
+    },
+    "hrv": 45,
+    "steps": 8500,
+    "restingHR": 58,
+    "activeCalories": null,
+    "workouts": [],
+    "deviceType": "apple_watch",
+    "notes": "",
+    "createdAt": "2026-02-04T18:38:24.301Z"
+  }
+]

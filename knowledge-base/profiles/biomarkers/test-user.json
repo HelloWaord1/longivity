@@ -1,0 +1,20 @@
+[
+  {
+    "id": "bio_1770230304298_8uctdu4ek",
+    "userId": "test-user",
+    "date": "2026-02-04",
+    "values": {
+      "cholesterol": 185,
+      "glucose": 92,
+      "vitamin_d": 35
+    },
+    "referenceRanges": {
+      "cholesterol": "< 200 mg/dL",
+      "glucose": "70-100 mg/dL",
+      "vitamin_d": "30-100 ng/mL"
+    },
+    "notes": "",
+    "source": "user_input",
+    "createdAt": "2026-02-04T18:38:24.298Z"
+  }
+]
