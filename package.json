@@ -1,0 +1,13 @@
+{
+  "name": "longivity",
+  "version": "0.1.0",
+  "description": "Longevity subscription service powered by multi-agent AI research system",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "keywords": ["longevity", "ai", "agents", "health", "supplements"],
+  "license": "MIT"
+}
