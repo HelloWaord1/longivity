@@ -47,6 +47,25 @@ export async function getRecommendation({ budget, age, goals }) {
   return res.json();
 }
 
+export async function fetchArticles(params = {}) {
+  const url = new URL(`${API_URL}/articles`);
+  if (params.category) url.searchParams.set('category', params.category);
+  if (params.featured) url.searchParams.set('featured', 'true');
+  if (params.limit) url.searchParams.set('limit', params.limit);
+  if (params.tag) url.searchParams.set('tag', params.tag);
+  const res = await fetch(url.toString());
+  if (!res.ok) throw new Error('Failed to fetch articles');
+  const data = await res.json();
+  return data;
+}
+
+export async function fetchArticle(id) {
+  const res = await fetch(`${API_URL}/articles/${encodeURIComponent(id)}`);
+  if (!res.ok) throw new Error('Failed to fetch article');
+  const data = await res.json();
+  return data.article;
+}
+
 export function getGradeColor(grade) {
   const g = (grade || 'D').toUpperCase();
   switch (g) {

@@ -1,0 +1,43 @@
+{
+  "id": "autophagy-and-cellular-cleanup",
+  "title": "Your Body's Recycling System May Be the Key to Living Longer",
+  "summary": "A review of 2 recent preprint and animal studies on autophagy & cellular cleanup. Related supplements include EGCG (Green Tea Extract), Intermittent Fasting, Lithium (microdose). Here's what the latest science tells us about this important area of longevity research.",
+  "body": "## Summary\n\nNew research sheds light on **Autophagy & Cellular Cleanup** and its implications for healthy aging. We reviewed 2 recent studies exploring this topic — here's what the science says.\n\n\n## Key Findings\n\n- **Autophagy-dependent proteome remodelling and ribosome decline balance starvation survival and rec...:** Hyperactivation of the mTORC1 regulator RAGA-1 preserved ribosomal proteins, accelerated recovery after short starvation, but reduced survival under prolonged starvation.\n- **The mTOR Pathway in Hearing Disorders: Mechanistic Links to Aging, Regeneration, and Neurodegener...:** We further explored the possibility that dysregulated mTOR activity may represent a missing mechanistic link between hearing loss and broader neurological disease processes.\n\n## What This Means For You\n\nAutophagy — your body's cellular recycling system — is crucial for clearing damaged proteins and organelles. These studies highlight how autophagy can be activated through fasting, rapamycin, or natural compounds like spermidine. Regular autophagy activation may slow the accumulation of cellular damage that drives aging.\n\n## Related Products\n\n- **EGCG (Green Tea Extract)** (Grade B) — 400-500mg/day\n  *Mechanisms:* Autophagy induction, Antioxidant, Anti-inflammatory, AMPK activation\n- **Intermittent Fasting** (Grade B) — 16:8 (16h fast, 8h eating window)\n  *Mechanisms:* Autophagy induction, Insulin sensitivity, mTOR inhibition, Ketogenesis\n- **Lithium (microdose)** (Grade C) — 1-5mg/day (lithium orotate)\n  *Mechanisms:* Autophagy induction, GSK-3β inhibition, Neuroprotective, Mood stabilization\n- **Metformin** (Grade B) — 500-1000mg/day\n  *Mechanisms:* AMPK activation, mTOR inhibition, Glucose regulation\n\n## Sources\n\n- Autophagy-dependent proteome remodelling and ribosome decline balance starvation survival and rec... *bioRxiv (preprint)* [DOI](https://doi.org/10.1101/2024.08.28.609383)\n- The mTOR Pathway in Hearing Disorders: Mechanistic Links to Aging, Regeneration, and Neurodegener... *Molecular neurobiology* [DOI](https://doi.org/10.1007/s12035-025-05653-3)",
+  "category": "research",
+  "tags": [
+    "preprint",
+    "longevity",
+    "pubmed",
+    "autophagy",
+    "antioxidant",
+    "green-tea",
+    "catechin",
+    "cancer",
+    "protocol",
+    "fasting"
+  ],
+  "evidenceLevel": "Animal",
+  "relatedProducts": [
+    "egcg-green-tea-extract",
+    "intermittent-fasting",
+    "lithium-microdose",
+    "metformin",
+    "rapamycin-low-dose",
+    "spermidine",
+    "trehalose"
+  ],
+  "sourcePapers": [
+    {
+      "title": "Autophagy-dependent proteome remodelling and ribosome decline balance starvation survival and rec...",
+      "doi": "10.1101/2024.08.28.609383",
+      "journal": "bioRxiv (preprint)"
+    },
+    {
+      "title": "The mTOR Pathway in Hearing Disorders: Mechanistic Links to Aging, Regeneration, and Neurodegener...",
+      "doi": "10.1007/s12035-025-05653-3",
+      "journal": "Molecular neurobiology"
+    }
+  ],
+  "createdAt": "2026-02-04T10:39:14.305Z",
+  "featured": false
+}

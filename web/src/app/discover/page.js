@@ -1,75 +1,140 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
-import { fetchDigest, fetchProducts } from '@/lib/api';
+import { fetchArticles } from '@/lib/api';
 
 const CATEGORIES = ['all', 'supplements', 'research', 'protocols', 'news'];
 
-function parseDigestToArticles(digestText, products) {
-  if (!digestText) return [];
+const EVIDENCE_COLORS = {
+  'Meta-Analysis': 'text-grade-a',
+  'RCT': 'text-grade-a',
+  'Cohort': 'text-grade-b',
+  'Review': 'text-grade-b',
+  'Animal': 'text-grade-c',
+  'In Vitro': 'text-grade-c',
+  'Preprint': 'text-secondary',
+};
 
-  const articles = [];
-  const sections = digestText.split(/## /);
+/**
+ * Minimal markdown renderer for article bodies
+ * Handles: ## headings, **bold**, *italic*, - bullets, [links](url), \n\n paragraphs
+ */
+function renderMarkdown(text) {
+  if (!text) return null;
 
-  for (const section of sections) {
-    if (!section.trim()) continue;
+  const lines = text.split('\n');
+  const elements = [];
+  let key = 0;
 
-    const lines = section.split('\n');
-    const sectionTitle = lines[0]?.trim();
-    const paperBlocks = section.split(/### /);
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
 
-    for (let i = 1; i < paperBlocks.length; i++) {
-      const block = paperBlocks[i];
-      const blockLines = block.split('\n');
-      const title = blockLines[0]?.trim();
-      if (!title) continue;
+    // Heading
+    if (line.startsWith('## ')) {
+      elements.push(
+        <h3 key={key++} className="text-sm font-semibold text-primary mt-5 mb-2 uppercase tracking-wider">
+          {line.replace('## ', '')}
+        </h3>
+      );
+      continue;
+    }
 
-      let journal = '';
-      let doi = '';
-      let abstract = '';
+    // Bullet point
+    if (line.startsWith('- ')) {
+      const content = line.slice(2);
+      elements.push(
+        <li key={key++} className="text-sm text-secondary leading-relaxed ml-4 mb-1.5 list-disc">
+          {renderInline(content)}
+        </li>
+      );
+      continue;
+    }
 
-      for (const line of blockLines) {
-        if (line.startsWith('- **Journal:**')) journal = line.replace('- **Journal:**', '').trim();
-        if (line.startsWith('- **DOI:**')) doi = line.replace('- **DOI:**', '').trim();
-        if (line.startsWith('- **Abstract:**')) abstract = line.replace('- **Abstract:**', '').trim();
-      }
+    // Indented sub-text (e.g., "  *Mechanisms:*")
+    if (line.startsWith('  ')) {
+      elements.push(
+        <p key={key++} className="text-xs text-tertiary ml-6 mb-1">
+          {renderInline(line.trim())}
+        </p>
+      );
+      continue;
+    }
 
-      let category = 'research';
-      const lowerTitle = title.toLowerCase();
-      const lowerAbstract = abstract.toLowerCase();
+    // Empty line
+    if (line.trim() === '') {
+      continue;
+    }
 
-      if (sectionTitle?.includes('OTHER')) category = 'news';
+    // Regular paragraph
+    elements.push(
+      <p key={key++} className="text-sm text-secondary leading-relaxed mb-2">
+        {renderInline(line)}
+      </p>
+    );
+  }
 
-      const relatedProduct = products.find(p => {
-        const name = p.name.toLowerCase();
-        return lowerTitle.includes(name) || lowerAbstract.includes(name) ||
-               p.tags?.some(t => lowerTitle.includes(t) || lowerAbstract.includes(t));
-      });
+  return <div>{elements}</div>;
+}
 
-      if (relatedProduct) {
-        category = relatedProduct.category === 'protocol' ? 'protocols' : 'supplements';
-      }
+function renderInline(text) {
+  // Process inline markdown: **bold**, *italic*, [text](url)
+  const parts = [];
+  let remaining = text;
+  let key = 0;
 
-      let evidenceLevel = 'Preprint';
-      if (sectionTitle?.includes('ANIMAL')) evidenceLevel = 'Animal Study';
-      else if (sectionTitle?.includes('IN-VITRO')) evidenceLevel = 'In Vitro';
-      else if (sectionTitle?.includes('OTHER')) evidenceLevel = 'Review';
+  while (remaining.length > 0) {
+    // Bold
+    const boldMatch = remaining.match(/\*\*(.+?)\*\*/);
+    // Italic
+    const italicMatch = remaining.match(/\*(.+?)\*/);
+    // Link
+    const linkMatch = remaining.match(/\[(.+?)\]\((.+?)\)/);
 
-      articles.push({
-        id: i + '-' + title.slice(0, 20).replace(/\s/g, '-'),
-        title,
-        summary: abstract.slice(0, 300) + (abstract.length > 300 ? '...' : ''),
-        fullAbstract: abstract,
-        journal,
-        doi,
-        category,
-        evidenceLevel,
-        relatedProduct,
-      });
+    // Find earliest match
+    let earliest = null;
+    let earliestIdx = remaining.length;
+
+    if (boldMatch && remaining.indexOf(boldMatch[0]) < earliestIdx) {
+      earliest = { type: 'bold', match: boldMatch, idx: remaining.indexOf(boldMatch[0]) };
+      earliestIdx = earliest.idx;
+    }
+    if (linkMatch && remaining.indexOf(linkMatch[0]) < earliestIdx) {
+      earliest = { type: 'link', match: linkMatch, idx: remaining.indexOf(linkMatch[0]) };
+      earliestIdx = earliest.idx;
+    }
+    if (italicMatch && !boldMatch && remaining.indexOf(italicMatch[0]) < earliestIdx) {
+      earliest = { type: 'italic', match: italicMatch, idx: remaining.indexOf(italicMatch[0]) };
+      earliestIdx = earliest.idx;
+    }
+
+    if (!earliest) {
+      parts.push(remaining);
+      break;
+    }
+
+    // Text before match
+    if (earliest.idx > 0) {
+      parts.push(remaining.slice(0, earliest.idx));
+    }
+
+    if (earliest.type === 'bold') {
+      parts.push(<strong key={key++} className="text-primary font-medium">{earliest.match[1]}</strong>);
+      remaining = remaining.slice(earliest.idx + earliest.match[0].length);
+    } else if (earliest.type === 'italic') {
+      parts.push(<em key={key++} className="text-secondary italic">{earliest.match[1]}</em>);
+      remaining = remaining.slice(earliest.idx + earliest.match[0].length);
+    } else if (earliest.type === 'link') {
+      parts.push(
+        <a key={key++} href={earliest.match[2]} target="_blank" rel="noopener noreferrer"
+           className="text-accent hover:underline">
+          {earliest.match[1]}
+        </a>
+      );
+      remaining = remaining.slice(earliest.idx + earliest.match[0].length);
     }
   }
 
-  return articles;
+  return parts;
 }
 
 function ArticleDetail({ article, onClose }) {
@@ -88,11 +153,22 @@ function ArticleDetail({ article, onClose }) {
       <div className="absolute inset-0 bg-black/60" onClick={onClose} />
 
       <div className="relative w-full max-w-lg max-h-[85vh] overflow-y-auto bg-bg-card border border-border rounded-t-xl md:rounded-xl animate-fade-in">
+        {/* Header */}
         <div className="sticky top-0 bg-bg-card border-b border-border px-5 py-4 flex items-start justify-between gap-3">
-          <div className="flex items-center gap-2">
-            <span className="text-xs text-tertiary uppercase tracking-wider font-medium">{article.evidenceLevel}</span>
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className={`text-xs uppercase tracking-wider font-medium ${EVIDENCE_COLORS[article.evidenceLevel] || 'text-secondary'}`}>
+              {article.evidenceLevel}
+            </span>
             <span className="text-tertiary">·</span>
-            <span className="text-xs text-tertiary uppercase tracking-wider font-medium">{article.category}</span>
+            <span className="text-xs text-tertiary uppercase tracking-wider font-medium">
+              {article.category}
+            </span>
+            {article.featured && (
+              <>
+                <span className="text-tertiary">·</span>
+                <span className="text-xs text-accent font-medium">⭐ Featured</span>
+              </>
+            )}
           </div>
           <button
             onClick={onClose}
@@ -104,39 +180,53 @@ function ArticleDetail({ article, onClose }) {
           </button>
         </div>
 
-        <div className="px-5 py-4 space-y-5">
+        {/* Content */}
+        <div className="px-5 py-4 space-y-4">
           <h2 className="text-lg font-semibold text-primary leading-snug">{article.title}</h2>
 
-          {article.journal && (
-            <p className="text-xs text-secondary">{article.journal}</p>
-          )}
+          <p className="text-sm text-secondary leading-relaxed">{article.summary}</p>
 
-          {article.doi && (
-            <a
-              href={`https://doi.org/${article.doi}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs text-accent hover:underline inline-block"
-            >
-              DOI: {article.doi}
-            </a>
-          )}
-
-          {article.fullAbstract && (
-            <div className="border-t border-border pt-4">
-              <h3 className="text-xs font-medium text-tertiary uppercase tracking-wider mb-2">Abstract</h3>
-              <p className="text-sm text-secondary leading-relaxed">{article.fullAbstract}</p>
+          {/* Tags */}
+          {article.tags && article.tags.length > 0 && (
+            <div className="flex flex-wrap gap-1.5">
+              {article.tags.slice(0, 6).map(tag => (
+                <span key={tag} className="text-xs px-2 py-0.5 rounded-full bg-bg-hover text-tertiary">
+                  #{tag}
+                </span>
+              ))}
             </div>
           )}
 
-          {article.relatedProduct && (
+          {/* Article body */}
+          <div className="border-t border-border pt-4">
+            {renderMarkdown(article.body)}
+          </div>
+
+          {/* Source papers */}
+          {article.sourcePapers && article.sourcePapers.length > 0 && (
             <div className="border-t border-border pt-4">
-              <h3 className="text-xs font-medium text-tertiary uppercase tracking-wider mb-2">Related Product</h3>
-              <div className="p-3 border border-border rounded-lg">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-primary">{article.relatedProduct.name}</span>
-                  <span className="text-xs text-secondary">{article.relatedProduct.evidenceGrade}</span>
-                </div>
+              <h3 className="text-xs font-medium text-tertiary uppercase tracking-wider mb-2">
+                Sources ({article.sourcePapers.length})
+              </h3>
+              <div className="space-y-2">
+                {article.sourcePapers.map((paper, i) => (
+                  <div key={i} className="text-xs text-secondary">
+                    <span>{paper.title}</span>
+                    {paper.journal && (
+                      <span className="text-tertiary italic"> — {paper.journal}</span>
+                    )}
+                    {paper.doi && (
+                      <a
+                        href={`https://doi.org/${paper.doi}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-accent hover:underline ml-1"
+                      >
+                        DOI
+                      </a>
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
           )}
@@ -148,19 +238,19 @@ function ArticleDetail({ article, onClose }) {
 
 export default function DiscoverPage() {
   const [articles, setArticles] = useState([]);
-  const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedArticle, setSelectedArticle] = useState(null);
+  const [availableCategories, setAvailableCategories] = useState([]);
 
   useEffect(() => {
     async function load() {
       try {
-        const [digest, prods] = await Promise.all([fetchDigest(), fetchProducts()]);
-        setProducts(prods);
-        setArticles(parseDigestToArticles(digest, prods));
+        const data = await fetchArticles();
+        setArticles(data.articles || []);
+        setAvailableCategories(data.categories || []);
       } catch (err) {
-        console.error('Failed to load discover data:', err);
+        console.error('Failed to load articles:', err);
       } finally {
         setLoading(false);
       }
@@ -173,33 +263,42 @@ export default function DiscoverPage() {
     return articles.filter(a => a.category === activeCategory);
   }, [articles, activeCategory]);
 
+  const featuredArticles = useMemo(() => filtered.filter(a => a.featured), [filtered]);
+  const regularArticles = useMemo(() => filtered.filter(a => !a.featured), [filtered]);
+
   return (
     <div className="animate-fade-in">
       <section className="max-w-3xl mx-auto px-4 md:px-6 pt-10 pb-6">
         <h1 className="text-2xl font-semibold text-primary mb-1">Discover</h1>
         <p className="text-sm text-secondary">
-          Latest longevity research from PubMed, bioRxiv, and leading journals.
+          AI-curated longevity articles from the latest research and evidence-graded supplements.
         </p>
 
+        {/* Category filters */}
         <div className="flex gap-2 mt-5 overflow-x-auto pb-1 -mx-4 px-4 md:mx-0 md:px-0">
-          {CATEGORIES.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`px-3 py-1.5 text-xs font-medium rounded-md whitespace-nowrap transition-colors duration-150 ${
-                activeCategory === cat
-                  ? 'bg-bg-card text-primary border border-border'
-                  : 'text-tertiary hover:text-secondary'
-              }`}
-            >
-              {cat.charAt(0).toUpperCase() + cat.slice(1)}
-              {cat !== 'all' && articles.length > 0 && (
-                <span className="ml-1.5 text-tertiary">
-                  {articles.filter(a => cat === 'all' || a.category === cat).length}
-                </span>
-              )}
-            </button>
-          ))}
+          {CATEGORIES.map((cat) => {
+            const count = cat === 'all'
+              ? articles.length
+              : articles.filter(a => a.category === cat).length;
+
+            // Hide categories with 0 articles (except 'all')
+            if (cat !== 'all' && count === 0) return null;
+
+            return (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className={`px-3 py-1.5 text-xs font-medium rounded-md whitespace-nowrap transition-colors duration-150 ${
+                  activeCategory === cat
+                    ? 'bg-bg-card text-primary border border-border'
+                    : 'text-tertiary hover:text-secondary'
+                }`}
+              >
+                {cat.charAt(0).toUpperCase() + cat.slice(1)}
+                <span className="ml-1.5 text-tertiary">{count}</span>
+              </button>
+            );
+          })}
         </div>
       </section>
 
@@ -208,9 +307,9 @@ export default function DiscoverPage() {
           <div className="space-y-4">
             {[1, 2, 3, 4, 5].map((i) => (
               <div key={i} className="py-4 border-b border-border">
-                <div className="h-3 bg-bg-hover rounded w-24 mb-3" />
-                <div className="h-4 bg-bg-hover rounded w-3/4 mb-2" />
-                <div className="h-3 bg-bg-hover rounded w-full" />
+                <div className="h-3 bg-bg-hover rounded w-24 mb-3 animate-pulse" />
+                <div className="h-4 bg-bg-hover rounded w-3/4 mb-2 animate-pulse" />
+                <div className="h-3 bg-bg-hover rounded w-full animate-pulse" />
               </div>
             ))}
           </div>
@@ -220,34 +319,82 @@ export default function DiscoverPage() {
           </div>
         ) : (
           <div className="divide-y divide-border">
-            {filtered.map((article) => (
+            {/* Featured articles with subtle highlight */}
+            {featuredArticles.map((article) => (
               <article
                 key={article.id}
                 onClick={() => setSelectedArticle(article)}
-                className="py-4 cursor-pointer group"
+                className="py-4 cursor-pointer group border-l-2 border-l-accent pl-4 -ml-4"
               >
                 <div className="flex items-center gap-2 mb-1.5">
-                  <span className="text-xs text-tertiary uppercase tracking-wider font-medium">
+                  <span className="text-xs text-accent font-medium">⭐ Featured</span>
+                  <span className="text-tertiary text-xs">·</span>
+                  <span className={`text-xs uppercase tracking-wider font-medium ${EVIDENCE_COLORS[article.evidenceLevel] || 'text-secondary'}`}>
                     {article.evidenceLevel}
                   </span>
                   <span className="text-tertiary text-xs">·</span>
                   <span className="text-xs text-tertiary uppercase tracking-wider font-medium">
                     {article.category}
                   </span>
-                  {article.relatedProduct && (
-                    <>
-                      <span className="text-tertiary text-xs">·</span>
-                      <span className="text-xs text-accent">{article.relatedProduct.name}</span>
-                    </>
-                  )}
                 </div>
                 <h3 className="text-sm font-medium text-primary group-hover:text-accent transition-colors duration-150 line-clamp-2 mb-1">
                   {article.title}
                 </h3>
-                {article.summary && (
-                  <p className="text-xs text-secondary line-clamp-2 leading-relaxed">
-                    {article.summary}
-                  </p>
+                <p className="text-xs text-secondary line-clamp-2 leading-relaxed">
+                  {article.summary}
+                </p>
+                {article.tags && (
+                  <div className="flex gap-1.5 mt-2">
+                    {article.tags.slice(0, 4).map(tag => (
+                      <span key={tag} className="text-xs px-1.5 py-0.5 rounded-full bg-bg-hover text-tertiary">
+                        {tag}
+                      </span>
+                    ))}
+                    {article.sourcePapers && (
+                      <span className="text-xs text-tertiary ml-auto">
+                        {article.sourcePapers.length} source{article.sourcePapers.length !== 1 ? 's' : ''}
+                      </span>
+                    )}
+                  </div>
+                )}
+              </article>
+            ))}
+
+            {/* Regular articles */}
+            {regularArticles.map((article) => (
+              <article
+                key={article.id}
+                onClick={() => setSelectedArticle(article)}
+                className="py-4 cursor-pointer group"
+              >
+                <div className="flex items-center gap-2 mb-1.5">
+                  <span className={`text-xs uppercase tracking-wider font-medium ${EVIDENCE_COLORS[article.evidenceLevel] || 'text-secondary'}`}>
+                    {article.evidenceLevel}
+                  </span>
+                  <span className="text-tertiary text-xs">·</span>
+                  <span className="text-xs text-tertiary uppercase tracking-wider font-medium">
+                    {article.category}
+                  </span>
+                </div>
+                <h3 className="text-sm font-medium text-primary group-hover:text-accent transition-colors duration-150 line-clamp-2 mb-1">
+                  {article.title}
+                </h3>
+                <p className="text-xs text-secondary line-clamp-2 leading-relaxed">
+                  {article.summary}
+                </p>
+                {article.tags && (
+                  <div className="flex gap-1.5 mt-2">
+                    {article.tags.slice(0, 4).map(tag => (
+                      <span key={tag} className="text-xs px-1.5 py-0.5 rounded-full bg-bg-hover text-tertiary">
+                        {tag}
+                      </span>
+                    ))}
+                    {article.sourcePapers && (
+                      <span className="text-xs text-tertiary ml-auto">
+                        {article.sourcePapers.length} source{article.sourcePapers.length !== 1 ? 's' : ''}
+                      </span>
+                    )}
+                  </div>
                 )}
               </article>
             ))}

@@ -1,0 +1,41 @@
+{
+  "id": "muscle-aging-and-sarcopenia",
+  "title": "Why Muscle Health Is a Longevity Priority",
+  "summary": "A review of 2 recent animal studies on muscle aging & sarcopenia. Related supplements include BPC-157, Creatine, Magnesium (L-Threonate). Here's what the latest science tells us about this important area of longevity research.",
+  "body": "## Summary\n\nNew research sheds light on **Muscle Aging & Sarcopenia** and its implications for healthy aging. We reviewed 2 recent studies exploring this topic — here's what the science says.\n\n\n## Key Findings\n\n- **CD36 regulates myogenic differentiation via chronic integrated stress response - implications for...:** Knocking down CD36 expression at day 3 in differentiated C2C12 myoblasts indicated that the expression levels of Activating transcription factor 4 (ATF4), and other ISR - related proteins decreased...\n- **Cellular survivorship bias as a mechanistic driver of muscle stem cell aging:** With age, MuSCs increased expression of a tumor suppressor, N-myc down-regulated gene 1 (NDRG1), which, by suppressing the mammalian target of rapamycin (mTOR) pathway, increased their long-term su...\n\n## What This Means For You\n\nMuscle loss (sarcopenia) is one of the most impactful aspects of aging, affecting mobility, metabolism, and independence. These studies reveal new mechanisms behind muscle stem cell decline and point to both nutritional and exercise-based interventions. Resistance training remains the gold standard, but understanding the molecular basis helps identify complementary strategies.\n\n## Related Products\n\n- **BPC-157** (Grade D) — 250-500mcg/day (oral or injection)\n  *Mechanisms:* Tissue repair, Angiogenesis, Anti-inflammatory, Gut healing\n- **Creatine** (Grade A) — 5g/day\n  *Mechanisms:* ATP buffering, Neuroprotective, Muscle preservation, Cognitive enhancement\n- **Magnesium (L-Threonate)** (Grade A) — 400-600mg elemental Mg/day\n  *Mechanisms:* Enzyme cofactor (300+ reactions), Sleep quality, Neuroprotective, Muscle relaxation\n- **Resistance Training** (Grade A) — 3-4 sessions/week, compound movements\n  *Mechanisms:* Muscle preservation, Bone density, Insulin sensitivity, Growth hormone\n\n## Sources\n\n- CD36 regulates myogenic differentiation via chronic integrated stress response - implications for... *Journal of muscle research and cell motility* [DOI](https://doi.org/10.1007/s10974-025-09719-6)\n- Cellular survivorship bias as a mechanistic driver of muscle stem cell aging *Science (New York, N.Y.)* [DOI](https://doi.org/10.1126/science.ads9175)",
+  "category": "research",
+  "tags": [
+    "pubmed",
+    "longevity",
+    "peptide",
+    "healing",
+    "gut",
+    "experimental",
+    "biohacker",
+    "energy",
+    "muscle",
+    "brain"
+  ],
+  "evidenceLevel": "Animal",
+  "relatedProducts": [
+    "bpc-157",
+    "creatine",
+    "magnesium-l-threonate",
+    "resistance-training",
+    "urolithin-a"
+  ],
+  "sourcePapers": [
+    {
+      "title": "CD36 regulates myogenic differentiation via chronic integrated stress response - implications for...",
+      "doi": "10.1007/s10974-025-09719-6",
+      "journal": "Journal of muscle research and cell motility"
+    },
+    {
+      "title": "Cellular survivorship bias as a mechanistic driver of muscle stem cell aging",
+      "doi": "10.1126/science.ads9175",
+      "journal": "Science (New York, N.Y.)"
+    }
+  ],
+  "createdAt": "2026-02-04T10:39:14.311Z",
+  "featured": false
+}

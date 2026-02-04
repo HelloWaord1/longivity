@@ -1,0 +1,39 @@
+{
+  "id": "dietary-nutrition-longevity",
+  "title": "The Food-Longevity Connection: Latest Evidence Reviewed",
+  "summary": "A review of 2 recent animal studies on nutrition & longevity. Related supplements include CoQ10 (Ubiquinol), Glycine, Spermidine. Here's what the latest science tells us about this important area of longevity research.",
+  "body": "## Summary\n\nNew research sheds light on **Nutrition & Longevity** and its implications for healthy aging. We reviewed 2 recent studies exploring this topic — here's what the science says.\n\n\n## Key Findings\n\n- **Dietary factors and nutritional guidelines for sarcopenia in older adults: a narrative review:** It increases the risk of falls, frailty, disability, hospitalization, and mortality in older adults.\n- **Harnessing Phytochemicals and Nanotechnology Synergy for Molecular, Epigenetic, and Microbiota-Dr...:** This review discusses the emerging role of bioactive phytochemicals-such as curcumin, berberine, resveratrol, flavonoids, and polysaccharides-in modulating essential molecular pathways including AM...\n\n## What This Means For You\n\nNutrition remains the most accessible lever for longevity. These studies reinforce that a whole-foods-based diet, rich in phytochemicals and essential nutrients, provides the foundation for any anti-aging protocol. No supplement can replace a poor diet — start with nutrition, then optimize with targeted supplementation.\n\n## Related Products\n\n- **CoQ10 (Ubiquinol)** (Grade A) — 200mg/day (ubiquinol form)\n  *Mechanisms:* Mitochondrial electron transport, Antioxidant, Energy production\n- **Glycine** (Grade B) — 3-5g/day\n  *Mechanisms:* Glutathione synthesis, Collagen formation, Sleep quality, Anti-inflammatory\n- **Spermidine** (Grade C) — 1-5mg/day\n  *Mechanisms:* Autophagy induction, Cardioprotective, Epigenetic regulation\n\n## Sources\n\n- Dietary factors and nutritional guidelines for sarcopenia in older adults: a narrative review *Korean journal of community nutrition* [DOI](https://doi.org/10.5720/kjcn.2025.00360)\n- Harnessing Phytochemicals and Nanotechnology Synergy for Molecular, Epigenetic, and Microbiota-Dr... *Pharmaceutics* [DOI](https://doi.org/10.3390/pharmaceutics18010113)",
+  "category": "protocols",
+  "tags": [
+    "pubmed",
+    "longevity",
+    "mitochondria",
+    "energy",
+    "heart",
+    "statin",
+    "antioxidant",
+    "amino-acid",
+    "sleep",
+    "collagen"
+  ],
+  "evidenceLevel": "Animal",
+  "relatedProducts": [
+    "coq10-ubiquinol",
+    "glycine",
+    "spermidine"
+  ],
+  "sourcePapers": [
+    {
+      "title": "Dietary factors and nutritional guidelines for sarcopenia in older adults: a narrative review",
+      "doi": "10.5720/kjcn.2025.00360",
+      "journal": "Korean journal of community nutrition"
+    },
+    {
+      "title": "Harnessing Phytochemicals and Nanotechnology Synergy for Molecular, Epigenetic, and Microbiota-Dr...",
+      "doi": "10.3390/pharmaceutics18010113",
+      "journal": "Pharmaceutics"
+    }
+  ],
+  "createdAt": "2026-02-04T10:39:14.313Z",
+  "featured": false
+}

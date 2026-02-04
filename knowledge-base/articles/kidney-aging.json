@@ -1,0 +1,30 @@
+{
+  "id": "kidney-aging",
+  "title": "How Your Kidneys Age — And What You Can Do About It",
+  "summary": "A review of 2 recent animal studies on kidney aging & health. Here's what the latest science tells us about this important area of longevity research.",
+  "body": "## Summary\n\nNew research sheds light on **Kidney Aging & Health** and its implications for healthy aging. We reviewed 2 recent studies exploring this topic — here's what the science says.\n\n\n## Key Findings\n\n- **Aging kidney is associated with metabolic rewiring and epigenetic reprogramming:** The major metabolic adaptations observed with aging include increased glycolysis, decreased fatty acid oxidation, mitochondrial dysfunction, oxidative stress, and impaired metabolic waste clearance...\n- **Current Controversies on Adequate Circulating Vitamin D Levels in CKD:** Crucially, these analogs revealed unexpected survival benefits, suggesting protective VDR actions extending beyond mineral metabolism.\n\n## What This Means For You\n\nThe kidneys are among the organs most affected by aging, with metabolic and epigenetic changes accumulating over time. Supporting kidney health through hydration, blood pressure management, and avoiding nephrotoxic substances becomes increasingly important. Emerging research points to metabolic interventions that could slow kidney aging.\n\n## Sources\n\n- Aging kidney is associated with metabolic rewiring and epigenetic reprogramming *GeroScience* [DOI](https://doi.org/10.1007/s11357-025-02071-0)\n- Current Controversies on Adequate Circulating Vitamin D Levels in CKD *International journal of molecular sciences* [DOI](https://doi.org/10.3390/ijms27010108)",
+  "category": "research",
+  "tags": [
+    "pubmed",
+    "longevity",
+    "kidney",
+    "renal",
+    "ckd"
+  ],
+  "evidenceLevel": "Animal",
+  "relatedProducts": [],
+  "sourcePapers": [
+    {
+      "title": "Aging kidney is associated with metabolic rewiring and epigenetic reprogramming",
+      "doi": "10.1007/s11357-025-02071-0",
+      "journal": "GeroScience"
+    },
+    {
+      "title": "Current Controversies on Adequate Circulating Vitamin D Levels in CKD",
+      "doi": "10.3390/ijms27010108",
+      "journal": "International journal of molecular sciences"
+    }
+  ],
+  "createdAt": "2026-02-04T10:39:14.300Z",
+  "featured": false
+}

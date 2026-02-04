@@ -1,0 +1,38 @@
+{
+  "id": "nad-and-cellular-energy",
+  "title": "Why NAD+ Levels May Be the Key to Aging Well",
+  "summary": "Nicotinamide adenine dinucleotide (NAD+) levels decline with age, which has been associated with the development of aging-associated diseases. Published in Cell reports, this animal study explores implications for nad+ & cellular energy.",
+  "body": "## Summary\n\nNicotinamide adenine dinucleotide (NAD+) levels decline with age, which has been associated with the development of aging-associated diseases.  However, it remains unknown whether low NAD+ levels in early life affect aging.  This study demonstrates that deficiency of NAD synthetase (NADS), a critical enzyme of the deamidated NAD+ biosynthesis pathway, drastically reduced NAD+ levels in skeletal muscle and impaired muscle function at a young age.\n\n\n## Key Findings\n\n- **Early-life NAD+ deficiency programs skeletal muscle aging by sustained suppression of hyaluronic ...:** This study demonstrates that deficiency of NAD synthetase (NADS), a critical enzyme of the deamidated NAD+ biosynthesis pathway, drastically reduced NAD+ levels in skeletal muscle and impaired musc...\n\n## What This Means For You\n\nNAD+ is a critical molecule for cellular energy and DNA repair, and its levels naturally decline with age. These findings reinforce the importance of supporting NAD+ pathways — whether through precursors like NMN or NR, or lifestyle factors that preserve NAD+ levels. Maintaining adequate NAD+ from an early age may be more important than previously thought.\n\n## Related Products\n\n- **Apigenin** (Grade C) — 50mg/day\n  *Mechanisms:* CD38 inhibitor (preserves NAD+), Anti-inflammatory, Anxiolytic, Anti-cancer\n- **Niacin (Vitamin B3)** (Grade A) — 500mg/day\n  *Mechanisms:* NAD+ precursor, Lipid metabolism, DNA repair\n- **NMN (Nicotinamide Mononucleotide)** (Grade B) — 500mg/day\n  *Mechanisms:* NAD+ precursor, Sirtuin activation, DNA repair\n- **NR (Nicotinamide Riboside)** (Grade B) — 300mg/day\n  *Mechanisms:* NAD+ precursor, Sirtuin activation, Mitochondrial function\n\n## Sources\n\n- Early-life NAD+ deficiency programs skeletal muscle aging by sustained suppression of hyaluronic ... *Cell reports* [DOI](https://doi.org/10.1016/j.celrep.2025.116912)",
+  "category": "supplements",
+  "tags": [
+    "pubmed",
+    "longevity",
+    "nad+",
+    "cd38",
+    "anxiolytic",
+    "chamomile",
+    "synergistic",
+    "niacin",
+    "b3",
+    "cardiovascular"
+  ],
+  "evidenceLevel": "Animal",
+  "relatedProducts": [
+    "apigenin",
+    "niacin-vitamin-b3",
+    "nmn-nicotinamide-mononucleotide",
+    "nr-nicotinamide-riboside",
+    "pterostilbene",
+    "resveratrol",
+    "sulforaphane-broccoli-extract"
+  ],
+  "sourcePapers": [
+    {
+      "title": "Early-life NAD+ deficiency programs skeletal muscle aging by sustained suppression of hyaluronic ...",
+      "doi": "10.1016/j.celrep.2025.116912",
+      "journal": "Cell reports"
+    }
+  ],
+  "createdAt": "2026-02-04T10:39:14.317Z",
+  "featured": true
+}

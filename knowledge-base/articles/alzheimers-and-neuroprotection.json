@@ -1,0 +1,59 @@
+{
+  "id": "alzheimers-and-neuroprotection",
+  "title": "From Senescence to Supplements: Fighting Alzheimer's on Multiple Fronts",
+  "summary": "A review of 4 recent preprint and animal studies on alzheimer's & neuroprotection. Related supplements include Creatine, Curcumin (Turmeric Extract), DHEA. Here's what the latest science tells us about this important area of longevity research.",
+  "body": "## Summary\n\nNew research sheds light on **Alzheimer's & Neuroprotection** and its implications for healthy aging. We reviewed 4 recent studies exploring this topic — here's what the science says.\n\n\n## Key Findings\n\n- **Disorganized Inhibitory Dynamics in Hippocampal area CA1 of 22q11.2 Deletion Mutant Mice:** 2 deletion syndrome, one of the strongest genetic risk factors for schizophrenia, demonstrate cognitive impairments, including episodic memory dysfunction.\n- **Early spatial and contextual coding deficits in hippocampal CA1 precede performance decline in an...:** At this early stage, CA1 neurons showed intact global spatial encoding but impaired task-related place cell representations.\n- **Functional imaging of time on task and the involvement of dopaminergic and cholinergic substrates...:** Instead, the ventral tegmental area and parts of the basal forebrain (BF) corresponding to the cholinergic Ch4 nuclei increased in activity with time on task and were sensitive to reward levels.\n- **Protection of multiple aspects of Alzheimer's disease pathology using dietary supplementation wit...:** As Alzheimers disease (AD) continues to rise amongst the aging population, preventative measures such as dietary or lifestyle changes represent an attractive option to mitigate the burden.\n\n## What This Means For You\n\nProtecting brain health is a top priority in longevity research. These findings highlight both the mechanisms of neurodegeneration and potential protective strategies. Compounds like taurine and senolytic approaches show promise in preclinical models. A combination of cognitive engagement, exercise, sleep optimization, and targeted supplements may offer the best protection.\n\n## Related Products\n\n- **Creatine** (Grade A) — 5g/day\n  *Mechanisms:* ATP buffering, Neuroprotective, Muscle preservation, Cognitive enhancement\n- **Curcumin (Turmeric Extract)** (Grade B) — 500-1000mg/day (enhanced absorption form)\n  *Mechanisms:* Anti-inflammatory (NF-κB), Antioxidant, Senomorphic, Neuroprotective\n- **DHEA** (Grade C) — 25-50mg/day\n  *Mechanisms:* Precursor to testosterone and estrogen, Immune function, Bone density, Cognitive\n- **Ergothioneine** (Grade C) — 5-25mg/day\n  *Mechanisms:* Unique antioxidant (OCTN1 transporter), Mitochondrial protection, Neuroprotective\n\n## Sources\n\n- Disorganized Inhibitory Dynamics in Hippocampal area CA1 of 22q11.2 Deletion Mutant Mice *bioRxiv (preprint)* [DOI](https://doi.org/10.1101/2024.04.28.591464)\n- Early spatial and contextual coding deficits in hippocampal CA1 precede performance decline in an... *bioRxiv (preprint)* [DOI](https://doi.org/10.1101/2025.02.05.636661)\n- Functional imaging of time on task and the involvement of dopaminergic and cholinergic substrates... *bioRxiv (preprint)* [DOI](https://doi.org/10.1101/2024.12.12.628171)\n- Protection of multiple aspects of Alzheimer's disease pathology using dietary supplementation wit... *Scientific reports* [DOI](https://doi.org/10.1038/s41598-025-32797-y)",
+  "category": "research",
+  "tags": [
+    "preprint",
+    "longevity",
+    "pubmed",
+    "energy",
+    "muscle",
+    "brain",
+    "atp",
+    "affordable",
+    "well-studied",
+    "anti-inflammatory"
+  ],
+  "evidenceLevel": "Animal",
+  "relatedProducts": [
+    "creatine",
+    "curcumin-turmeric-extract",
+    "dhea",
+    "ergothioneine",
+    "fisetin",
+    "lithium-microdose",
+    "magnesium-l-threonate",
+    "melatonin-low-dose",
+    "omega-3-epa-dha",
+    "pqq-pyrroloquinoline-quinone",
+    "pterostilbene",
+    "taurine",
+    "trehalose"
+  ],
+  "sourcePapers": [
+    {
+      "title": "Disorganized Inhibitory Dynamics in Hippocampal area CA1 of 22q11.2 Deletion Mutant Mice",
+      "doi": "10.1101/2024.04.28.591464",
+      "journal": "bioRxiv (preprint)"
+    },
+    {
+      "title": "Early spatial and contextual coding deficits in hippocampal CA1 precede performance decline in an...",
+      "doi": "10.1101/2025.02.05.636661",
+      "journal": "bioRxiv (preprint)"
+    },
+    {
+      "title": "Functional imaging of time on task and the involvement of dopaminergic and cholinergic substrates...",
+      "doi": "10.1101/2024.12.12.628171",
+      "journal": "bioRxiv (preprint)"
+    },
+    {
+      "title": "Protection of multiple aspects of Alzheimer's disease pathology using dietary supplementation wit...",
+      "doi": "10.1038/s41598-025-32797-y",
+      "journal": "Scientific reports"
+    }
+  ],
+  "createdAt": "2026-02-04T10:39:14.315Z",
+  "featured": true
+}

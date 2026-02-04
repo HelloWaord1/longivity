@@ -1,0 +1,93 @@
+{
+  "id": "ferroptosis-and-oxidative-stress",
+  "title": "Oxidative Stress and Ferroptosis: New Targets for Anti-Aging",
+  "summary": "A review of 10 recent preprint and animal studies on ferroptosis & oxidative stress. Related supplements include Alpha-Lipoic Acid (ALA), Astaxanthin, CoQ10 (Ubiquinol). Here's what the latest science tells us about this important area of longevity research.",
+  "body": "## Summary\n\nNew research sheds light on **Ferroptosis & Oxidative Stress** and its implications for healthy aging. We reviewed 10 recent studies exploring this topic — here's what the science says.\n\n\n## Key Findings\n\n- **A meta-analysis of neural systems underlying delay discounting: Implications for transdiagnostic ...:** We strongly recommend that future neuroimaging studies of delay discounting use these analytic approaches shown to reliably identify specific networks.\n- **Automated Segmentation of Kidney Nephron Structures by Deep Learning Models on Label-free Autoflu...:** Consistent with previous literature, we demonstrated differing transcript expression of collecting ducts in the inner and outer medulla.\n- **Data-driven denoising in spinal cord fMRI with principal component analysis:** First-level fMRI modeling demonstrated that principal component regressors did fit noise (e.\n- **Effectiveness of a network Open House model to recruit trainees to post-baccalaureate STEM programs:** Many of these sponsored programs are designed to increase research exposure for underrepresented minorities, including African American, Hispanic, Native American, and first-generation college stud...\n- **Fluorescence-based mapping of condensate dielectric permittivity uncovers hydrophobicity-driven m...:** This robust method reveals a surprisingly broad range of condensate permittivities, from oil-like to water-like.\n\n## What This Means For You\n\nFerroptosis — a form of cell death driven by iron and lipid damage — is increasingly recognized as a key aging mechanism. Managing oxidative stress through antioxidants, Nrf2 activators, and iron balance may help prevent this destructive process. Compounds like sulforaphane and curcumin activate protective Nrf2 pathways naturally.\n\n## Related Products\n\n- **Alpha-Lipoic Acid (ALA)** (Grade B) — 600mg/day\n  *Mechanisms:* Mitochondrial cofactor, Antioxidant (both fat and water soluble), Glucose metabolism\n- **Astaxanthin** (Grade B) — 12mg/day\n  *Mechanisms:* Potent antioxidant (6000x vitamin C), Anti-inflammatory, Skin protection, Cardiovascular\n- **CoQ10 (Ubiquinol)** (Grade A) — 200mg/day (ubiquinol form)\n  *Mechanisms:* Mitochondrial electron transport, Antioxidant, Energy production\n- **Curcumin (Turmeric Extract)** (Grade B) — 500-1000mg/day (enhanced absorption form)\n  *Mechanisms:* Anti-inflammatory (NF-κB), Antioxidant, Senomorphic, Neuroprotective\n\n## Sources\n\n- A meta-analysis of neural systems underlying delay discounting: Implications for transdiagnostic ... *bioRxiv (preprint)* [DOI](https://doi.org/10.1101/2022.10.12.511959)\n- Automated Segmentation of Kidney Nephron Structures by Deep Learning Models on Label-free Autoflu... *bioRxiv (preprint)* [DOI](https://doi.org/10.1101/2021.07.16.452703)\n- Data-driven denoising in spinal cord fMRI with principal component analysis *bioRxiv (preprint)* [DOI](https://doi.org/10.1101/2025.01.23.634596)\n- Effectiveness of a network Open House model to recruit trainees to post-baccalaureate STEM programs *bioRxiv (preprint)* [DOI](https://doi.org/10.1101/2024.01.08.574670)\n- Fluorescence-based mapping of condensate dielectric permittivity uncovers hydrophobicity-driven m... *bioRxiv (preprint)* [DOI](https://doi.org/10.1101/2025.03.09.642144)\n- Multimodal longitudinal diffusion-MRI analysis of the neocortex in a rat model of cortical dysplasia *bioRxiv (preprint)* [DOI](https://doi.org/10.1101/2024.07.09.602800)\n- Olfactory combinatorial coding supports risk-reward decision making in C. elegans *bioRxiv (preprint)* [DOI](https://doi.org/10.1101/2024.06.19.599745)\n- Oxidative Stress and SIRT1-Nrf2 Anti-Ferroptotic Pathways in Granulosa Cells: A Molecular Key to ... *International journal of molecular sciences* [DOI](https://doi.org/10.3390/ijms27020950)\n- Targeting Aging and Diseases Associated with Ferroptosis and Senescence Through Modulation of Iro... *Antioxidants (Basel, Switzerland)* [DOI](https://doi.org/10.3390/antiox15010015)\n- The larval Drosophila mushroom body balances lateralized sensing and interhemispheric integration *bioRxiv (preprint)* [DOI](https://doi.org/10.1101/2025.03.02.641007)",
+  "category": "research",
+  "tags": [
+    "preprint",
+    "longevity",
+    "pubmed",
+    "mitochondria",
+    "antioxidant",
+    "glucose",
+    "neuropathy",
+    "skin",
+    "cardiovascular",
+    "carotenoid"
+  ],
+  "evidenceLevel": "Animal",
+  "relatedProducts": [
+    "alpha-lipoic-acid-ala",
+    "astaxanthin",
+    "coq10-ubiquinol",
+    "curcumin-turmeric-extract",
+    "egcg-green-tea-extract",
+    "ergothioneine",
+    "fisetin",
+    "glynac-glycine-nac",
+    "melatonin-low-dose",
+    "n-acetyl-cysteine-nac",
+    "pqq-pyrroloquinoline-quinone",
+    "pterostilbene",
+    "resveratrol",
+    "selenium",
+    "sulforaphane-broccoli-extract",
+    "taurine",
+    "zinc-copper"
+  ],
+  "sourcePapers": [
+    {
+      "title": "A meta-analysis of neural systems underlying delay discounting: Implications for transdiagnostic ...",
+      "doi": "10.1101/2022.10.12.511959",
+      "journal": "bioRxiv (preprint)"
+    },
+    {
+      "title": "Automated Segmentation of Kidney Nephron Structures by Deep Learning Models on Label-free Autoflu...",
+      "doi": "10.1101/2021.07.16.452703",
+      "journal": "bioRxiv (preprint)"
+    },
+    {
+      "title": "Data-driven denoising in spinal cord fMRI with principal component analysis",
+      "doi": "10.1101/2025.01.23.634596",
+      "journal": "bioRxiv (preprint)"
+    },
+    {
+      "title": "Effectiveness of a network Open House model to recruit trainees to post-baccalaureate STEM programs",
+      "doi": "10.1101/2024.01.08.574670",
+      "journal": "bioRxiv (preprint)"
+    },
+    {
+      "title": "Fluorescence-based mapping of condensate dielectric permittivity uncovers hydrophobicity-driven m...",
+      "doi": "10.1101/2025.03.09.642144",
+      "journal": "bioRxiv (preprint)"
+    },
+    {
+      "title": "Multimodal longitudinal diffusion-MRI analysis of the neocortex in a rat model of cortical dysplasia",
+      "doi": "10.1101/2024.07.09.602800",
+      "journal": "bioRxiv (preprint)"
+    },
+    {
+      "title": "Olfactory combinatorial coding supports risk-reward decision making in C. elegans",
+      "doi": "10.1101/2024.06.19.599745",
+      "journal": "bioRxiv (preprint)"
+    },
+    {
+      "title": "Oxidative Stress and SIRT1-Nrf2 Anti-Ferroptotic Pathways in Granulosa Cells: A Molecular Key to ...",
+      "doi": "10.3390/ijms27020950",
+      "journal": "International journal of molecular sciences"
+    },
+    {
+      "title": "Targeting Aging and Diseases Associated with Ferroptosis and Senescence Through Modulation of Iro...",
+      "doi": "10.3390/antiox15010015",
+      "journal": "Antioxidants (Basel, Switzerland)"
+    },
+    {
+      "title": "The larval Drosophila mushroom body balances lateralized sensing and interhemispheric integration",
+      "doi": "10.1101/2025.03.02.641007",
+      "journal": "bioRxiv (preprint)"
+    }
+  ],
+  "createdAt": "2026-02-04T10:39:14.295Z",
+  "featured": true
+}

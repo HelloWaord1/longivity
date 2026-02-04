@@ -1,0 +1,30 @@
+{
+  "id": "polyamines-and-longevity",
+  "title": "Spermidine and Beyond: How Polyamines Support Healthy Aging",
+  "summary": "Polyamines - putrescine, spermidine, and spermine - are ubiquitous cationic molecules that are essential for cellular proliferation and homeostasis. Published in Amino acids, this animal study explores implications for polyamines & longevity.",
+  "body": "## Summary\n\nPolyamines - putrescine, spermidine, and spermine - are ubiquitous cationic molecules that are essential for cellular proliferation and homeostasis.  Their intracellular concentrations decline with age, contributing to physiological and cognitive deterioration.  Recent studies have revealed that spermidine supplementation extends lifespan and improves cognitive and cardiac function in various model organisms, suggesting that maintaining polyamine balance has anti-aging potential.\n\n\n## Key Findings\n\n- **Polyamine metabolism as a regulator of cellular and organismal aging:** Recent studies have revealed that spermidine supplementation extends lifespan and improves cognitive and cardiac function in various model organisms, suggesting that maintaining polyamine balance h...\n\n## What This Means For You\n\nPolyamines (spermidine, putrescine, spermine) are essential for cell growth and autophagy. Their levels decline with age, and supplementing with spermidine has shown promise for extending lifespan in animal models and improving cardiovascular markers in humans. Polyamine-rich foods include wheat germ, soybeans, aged cheese, and mushrooms.\n\n## Related Products\n\n- **Spermidine** (Grade C) — 1-5mg/day\n  *Mechanisms:* Autophagy induction, Cardioprotective, Epigenetic regulation\n\n## Sources\n\n- Polyamine metabolism as a regulator of cellular and organismal aging *Amino acids* [DOI](https://doi.org/10.1007/s00726-026-03497-2)",
+  "category": "supplements",
+  "tags": [
+    "pubmed",
+    "longevity",
+    "autophagy",
+    "cardioprotective",
+    "memory",
+    "polyamine",
+    "spermidine",
+    "putrescine"
+  ],
+  "evidenceLevel": "Animal",
+  "relatedProducts": [
+    "spermidine"
+  ],
+  "sourcePapers": [
+    {
+      "title": "Polyamine metabolism as a regulator of cellular and organismal aging",
+      "doi": "10.1007/s00726-026-03497-2",
+      "journal": "Amino acids"
+    }
+  ],
+  "createdAt": "2026-02-04T10:39:14.323Z",
+  "featured": false
+}

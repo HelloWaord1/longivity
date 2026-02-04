@@ -11,7 +11,8 @@
     "research": "node src/index.js research",
     "products": "node src/index.js products",
     "seed": "node src/agents/product-seed-extended.js",
-    "mcp": "node src/mcp/server.js"
+    "mcp": "node src/mcp/server.js",
+    "content": "node src/agents/content-generator.js"
   },
   "keywords": ["longevity", "ai", "agents", "health", "supplements", "mcp"],
   "license": "MIT"

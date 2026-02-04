@@ -1,0 +1,59 @@
+{
+  "id": "mitochondrial-health",
+  "title": "Mitochondrial Dysfunction and Aging: Latest Findings",
+  "summary": "A review of 5 recent preprint and in vitro studies on mitochondrial health. Related supplements include Alpha-Lipoic Acid (ALA), CoQ10 (Ubiquinol), Ergothioneine. Here's what the latest science tells us about this important area of longevity research.",
+  "body": "## Summary\n\nNew research sheds light on **Mitochondrial Health** and its implications for healthy aging. We reviewed 5 recent studies exploring this topic — here's what the science says.\n\n\n## Key Findings\n\n- **A novel genetic fluorescent reporter to visualize mitochondrial nucleoids:** In addition to demonstrating the adaptability of the mt-HI-NESS reporter for multiple fluorescent proteins, we also emphasize important factors to consider during the optimization and application o...\n- **Functionalized hydrogels of CeO2 and Urolithin A synergistically scavenge ROS and activate mitoph...:** In vitro experiments confirmed that this material significantly reduces ROS levels within BMSCs under oxidative stress, maintains mitochondrial membrane potential, and promotes chondrogenic differe...\n- **Mitochondrial dysfunction drives natural killer cell dysfunction in systemic lupus erythematosus:** Here, we show that mitochondrial dysfunction and impaired mitophagy are key contributors to NK cell abnormalities in SLE.\n- **Naringenin-functionalized polyester nanoparticles improve oral urolithin A delivery and protect a...:** Here, we developed naringenin-functionalized polyester nanoparticles (P2Ns-NAR) to enhance the oral delivery and therapeutic efficacy of urolithin A (UA), a mitochondrial-targeting metabolite with ...\n- **The Role of ATP Synthase Subunit e (ATP5I) in Mediating the Metabolic and Antiproliferative Effec...:** We demonstrate that ATP5I interacts with a biguanide analogue in vitro and disabling its expression by CRISPR-Cas9 in pancreatic cancer cells leads to the same phenotype as biguanide treated cells ...\n\n## What This Means For You\n\nYour mitochondria are the powerhouses of your cells, and their decline is one of the hallmarks of aging. Supporting mitochondrial function through targeted supplements like CoQ10, Urolithin A, or PQQ, combined with exercise (especially Zone 2 cardio), may help maintain energy and cellular health as you age.\n\n## Related Products\n\n- **Alpha-Lipoic Acid (ALA)** (Grade B) — 600mg/day\n  *Mechanisms:* Mitochondrial cofactor, Antioxidant (both fat and water soluble), Glucose metabolism\n- **CoQ10 (Ubiquinol)** (Grade A) — 200mg/day (ubiquinol form)\n  *Mechanisms:* Mitochondrial electron transport, Antioxidant, Energy production\n- **Ergothioneine** (Grade C) — 5-25mg/day\n  *Mechanisms:* Unique antioxidant (OCTN1 transporter), Mitochondrial protection, Neuroprotective\n- **GlyNAC (Glycine + NAC)** (Grade B) — Glycine 1.33mmol/kg + NAC 0.81mmol/kg daily\n  *Mechanisms:* Glutathione restoration, Mitochondrial function, Oxidative stress reduction, Insulin sensitivity\n\n## Sources\n\n- A novel genetic fluorescent reporter to visualize mitochondrial nucleoids *bioRxiv (preprint)* [DOI](https://doi.org/10.1101/2023.10.23.563667)\n- Functionalized hydrogels of CeO2 and Urolithin A synergistically scavenge ROS and activate mitoph... *Materials today. Bio* [DOI](https://doi.org/10.1016/j.mtbio.2026.102785)\n- Mitochondrial dysfunction drives natural killer cell dysfunction in systemic lupus erythematosus *JCI insight* [DOI](https://doi.org/10.1172/jci.insight.195170)\n- Naringenin-functionalized polyester nanoparticles improve oral urolithin A delivery and protect a... *The Journal of pharmacology and experimental therapeutics* [DOI](https://doi.org/10.1016/j.jpet.2025.103794)\n- The Role of ATP Synthase Subunit e (ATP5I) in Mediating the Metabolic and Antiproliferative Effec... *bioRxiv (preprint)* [DOI](https://doi.org/10.1101/2024.09.20.614047)",
+  "category": "supplements",
+  "tags": [
+    "preprint",
+    "longevity",
+    "pubmed",
+    "mitochondria",
+    "antioxidant",
+    "glucose",
+    "neuropathy",
+    "energy",
+    "heart",
+    "statin"
+  ],
+  "evidenceLevel": "In Vitro",
+  "relatedProducts": [
+    "alpha-lipoic-acid-ala",
+    "coq10-ubiquinol",
+    "ergothioneine",
+    "glynac-glycine-nac",
+    "nr-nicotinamide-riboside",
+    "pqq-pyrroloquinoline-quinone",
+    "urolithin-a",
+    "zone-2-cardio"
+  ],
+  "sourcePapers": [
+    {
+      "title": "A novel genetic fluorescent reporter to visualize mitochondrial nucleoids",
+      "doi": "10.1101/2023.10.23.563667",
+      "journal": "bioRxiv (preprint)"
+    },
+    {
+      "title": "Functionalized hydrogels of CeO2 and Urolithin A synergistically scavenge ROS and activate mitoph...",
+      "doi": "10.1016/j.mtbio.2026.102785",
+      "journal": "Materials today. Bio"
+    },
+    {
+      "title": "Mitochondrial dysfunction drives natural killer cell dysfunction in systemic lupus erythematosus",
+      "doi": "10.1172/jci.insight.195170",
+      "journal": "JCI insight"
+    },
+    {
+      "title": "Naringenin-functionalized polyester nanoparticles improve oral urolithin A delivery and protect a...",
+      "doi": "10.1016/j.jpet.2025.103794",
+      "journal": "The Journal of pharmacology and experimental therapeutics"
+    },
+    {
+      "title": "The Role of ATP Synthase Subunit e (ATP5I) in Mediating the Metabolic and Antiproliferative Effec...",
+      "doi": "10.1101/2024.09.20.614047",
+      "journal": "bioRxiv (preprint)"
+    }
+  ],
+  "createdAt": "2026-02-04T10:39:14.297Z",
+  "featured": true
+}

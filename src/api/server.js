@@ -6,8 +6,9 @@
 
 import { createServer } from 'http';
 import { KnowledgeBase } from '../kb/store.js';
-import { readFile, stat } from 'fs/promises';
+import { readFile, readdir, stat } from 'fs/promises';
 import { join } from 'path';
+import { existsSync } from 'fs';
 
 const kb = new KnowledgeBase();
 const PORT = process.env.PORT || 3000;
@@ -55,6 +56,8 @@ const routes = {
         'GET /products/:name',
         'GET /research',
         'GET /digest',
+        'GET /articles',
+        'GET /articles/:id',
         'POST /consult',
         'POST /recommend',
       ],
@@ -124,6 +127,67 @@ const routes = {
       return json(res, { error: 'No digest available yet' }, 404);
     }
     json(res, { digest, format: 'markdown' });
+  },
+
+  // List articles (supports ?category=, ?featured=true, ?limit=, ?tag=)
+  'GET /articles': async (req, res) => {
+    const url = new URL(req.url, `http://localhost:${PORT}`);
+    const filterCategory = url.searchParams.get('category');
+    const filterFeatured = url.searchParams.get('featured');
+    const filterTag = url.searchParams.get('tag');
+    const limit = parseInt(url.searchParams.get('limit')) || 50;
+
+    const articlesDir = join(process.cwd(), 'knowledge-base', 'articles');
+    if (!existsSync(articlesDir)) {
+      return json(res, { articles: [], count: 0 });
+    }
+
+    const files = await readdir(articlesDir);
+    const articles = [];
+    for (const file of files) {
+      if (!file.endsWith('.json')) continue;
+      try {
+        const data = JSON.parse(await readFile(join(articlesDir, file), 'utf-8'));
+        
+        // Apply filters
+        if (filterCategory && data.category !== filterCategory) continue;
+        if (filterFeatured === 'true' && !data.featured) continue;
+        if (filterTag && !(data.tags || []).includes(filterTag.toLowerCase())) continue;
+        
+        articles.push(data);
+      } catch (e) {
+        // skip bad files
+      }
+    }
+
+    // Sort: featured first, then by date
+    articles.sort((a, b) => {
+      if (a.featured && !b.featured) return -1;
+      if (!a.featured && b.featured) return 1;
+      return new Date(b.createdAt) - new Date(a.createdAt);
+    });
+
+    const limited = articles.slice(0, limit);
+    const categories = [...new Set(articles.map(a => a.category))];
+
+    json(res, { articles: limited, count: limited.length, total: articles.length, categories });
+  },
+
+  // Get single article by id
+  'GET /articles/:id': async (req, res, params) => {
+    const articlesDir = join(process.cwd(), 'knowledge-base', 'articles');
+    const filePath = join(articlesDir, `${params.id}.json`);
+    
+    if (!existsSync(filePath)) {
+      return json(res, { error: 'Article not found' }, 404);
+    }
+
+    try {
+      const article = JSON.parse(await readFile(filePath, 'utf-8'));
+      json(res, { article });
+    } catch (e) {
+      json(res, { error: 'Failed to read article' }, 500);
+    }
   },
 
   // Consult endpoint — answer longevity questions
@@ -279,6 +343,11 @@ async function handleRequest(req, res) {
     }
 
     // Param routes
+    if (method === 'GET' && path.startsWith('/articles/')) {
+      const id = decodeURIComponent(path.replace('/articles/', ''));
+      return await routes['GET /articles/:id'](req, res, { id });
+    }
+
     if (method === 'GET' && path.startsWith('/products/')) {
       const name = decodeURIComponent(path.replace('/products/', ''));
       return await routes['GET /products/:name'](req, res, { name });

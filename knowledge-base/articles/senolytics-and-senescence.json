@@ -1,0 +1,64 @@
+{
+  "id": "senolytics-and-senescence",
+  "title": "New Senolytics Show Promise for Extending Healthspan",
+  "summary": "A review of 7 recent animal and preprint and in vitro studies on senolytics & cellular senescence. Related supplements include Fisetin, Piperlongumine, Quercetin + Dasatinib. Here's what the latest science tells us about this important area of longevity research.",
+  "body": "## Summary\n\nNew research sheds light on **Senolytics & Cellular Senescence** and its implications for healthy aging. We reviewed 7 recent studies exploring this topic — here's what the science says.\n\n\n## Key Findings\n\n- **AKG-TET axis is central to senescence plasticity:** Downregulating TET expression and activity, either genetically (siRNA) or pharmacologically (via C35), or limiting AKG bioavailability through a targeting peptide, trigger widespread epigenetic rep...\n- **Celastrol Targets Hsc70-Bim Interaction as a Novel Senolytic to Extend Lifespan and Mitigate Orga...:** Senolysis holds promise for geroprotection but is limited by efficacy and safety; here we show that Celastrol, a pentacyclic triterpenoid, surpasses benchmark agents ABT-263 and fisetin in senolyti...\n- **Evaluating Senescence-Targeted Approaches in Alzheimer's Disease: What We Know and What Lies Ahead:** Although amyloid- (A) and tau pathology have been the classic focus of treatment, accumulating evidence indicates that ageing-associated cellular senescence plays a central role in AD pathogenesis.\n- **Fragmentation through cell-cell adhesion maintains senescent cell viability but promotes debris d...:** Found across all senescent types examined, SCAFs lack nuclear material but contain organelles, including damaged mitochondria.\n- **Natural senotherapeutics in respiratory health: Addressing cellular senescence, inflammaging, and...:** We examined the latest findings on key natural compounds (rapamycin, berberine, resveratrol, pterostilbene, quercetin, EGCG, fisetin, apigenin and curcumin) that demonstrate senomorphic and/or seno...\n\n## What This Means For You\n\nSenescent cells — \"zombie cells\" that stop dividing but refuse to die — contribute to inflammation and tissue damage. Research into senolytics (compounds that clear these cells) continues to show promise. While most senolytic compounds are still experimental, the field is rapidly advancing toward clinical applications.\n\n## Related Products\n\n- **Fisetin** (Grade C) — 500mg intermittent (2 days/month)\n  *Mechanisms:* Senolytic, Anti-inflammatory, Antioxidant, Neuroprotective\n- **Piperlongumine** (Grade D) — No established dose\n  *Mechanisms:* Senolytic, Pro-oxidant in senescent cells, Anti-cancer\n- **Quercetin + Dasatinib** (Grade C) — D:100mg + Q:1000mg, 3 days/month\n  *Mechanisms:* Senolytic — clears senescent cells, Anti-inflammatory\n\n## Sources\n\n- AKG-TET axis is central to senescence plasticity *iScience* [DOI](https://doi.org/10.1016/j.isci.2025.114298)\n- Celastrol Targets Hsc70-Bim Interaction as a Novel Senolytic to Extend Lifespan and Mitigate Orga... *Phytotherapy research : PTR* [DOI](https://doi.org/10.1002/ptr.70220)\n- Evaluating Senescence-Targeted Approaches in Alzheimer's Disease: What We Know and What Lies Ahead *Ageing research reviews* [DOI](https://doi.org/10.1016/j.arr.2026.103029)\n- Fragmentation through cell-cell adhesion maintains senescent cell viability but promotes debris d... *bioRxiv (preprint)* [DOI](https://doi.org/10.1101/2023.01.11.523642)\n- Natural senotherapeutics in respiratory health: Addressing cellular senescence, inflammaging, and... *European journal of pharmacology* [DOI](https://doi.org/10.1016/j.ejphar.2026.178620)\n- p16-mediated G0/G1 cell cycle arrest leads to SASP and fibrosis in Fuchs endothelial corneal dyst... *Cell death &amp; disease* [DOI](https://doi.org/10.1038/s41419-026-08425-6)\n- Targeting senescent cells in aged adipose tissue induced by ovarian cancer with the NF-B inhibito... *Science China. Life sciences* [DOI](https://doi.org/10.1007/s11427-024-3060-0)",
+  "category": "research",
+  "tags": [
+    "pubmed",
+    "longevity",
+    "preprint",
+    "senolytic",
+    "flavonoid",
+    "neuroprotective",
+    "strawberry",
+    "experimental",
+    "pepper",
+    "senescent-cells"
+  ],
+  "evidenceLevel": "Animal",
+  "relatedProducts": [
+    "fisetin",
+    "piperlongumine",
+    "quercetin-dasatinib"
+  ],
+  "sourcePapers": [
+    {
+      "title": "AKG-TET axis is central to senescence plasticity",
+      "doi": "10.1016/j.isci.2025.114298",
+      "journal": "iScience"
+    },
+    {
+      "title": "Celastrol Targets Hsc70-Bim Interaction as a Novel Senolytic to Extend Lifespan and Mitigate Orga...",
+      "doi": "10.1002/ptr.70220",
+      "journal": "Phytotherapy research : PTR"
+    },
+    {
+      "title": "Evaluating Senescence-Targeted Approaches in Alzheimer's Disease: What We Know and What Lies Ahead",
+      "doi": "10.1016/j.arr.2026.103029",
+      "journal": "Ageing research reviews"
+    },
+    {
+      "title": "Fragmentation through cell-cell adhesion maintains senescent cell viability but promotes debris d...",
+      "doi": "10.1101/2023.01.11.523642",
+      "journal": "bioRxiv (preprint)"
+    },
+    {
+      "title": "Natural senotherapeutics in respiratory health: Addressing cellular senescence, inflammaging, and...",
+      "doi": "10.1016/j.ejphar.2026.178620",
+      "journal": "European journal of pharmacology"
+    },
+    {
+      "title": "p16-mediated G0/G1 cell cycle arrest leads to SASP and fibrosis in Fuchs endothelial corneal dyst...",
+      "doi": "10.1038/s41419-026-08425-6",
+      "journal": "Cell death &amp; disease"
+    },
+    {
+      "title": "Targeting senescent cells in aged adipose tissue induced by ovarian cancer with the NF-B inhibito...",
+      "doi": "10.1007/s11427-024-3060-0",
+      "journal": "Science China. Life sciences"
+    }
+  ],
+  "createdAt": "2026-02-04T10:39:14.303Z",
+  "featured": true
+}

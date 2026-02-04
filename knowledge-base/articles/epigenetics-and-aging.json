@@ -1,0 +1,41 @@
+{
+  "id": "epigenetics-and-aging",
+  "title": "Beyond Genetics: How Epigenetic Changes Drive Aging",
+  "summary": "A review of 2 recent preprint studies on epigenetics & aging clocks. Related supplements include Alpha-Ketoglutarate (AKG), Niacin (Vitamin B3), NMN (Nicotinamide Mononucleotide). Here's what the latest science tells us about this important area of longevity research.",
+  "body": "## Summary\n\nNew research sheds light on **Epigenetics & Aging Clocks** and its implications for healthy aging. We reviewed 2 recent studies exploring this topic — here's what the science says.\n\n\n## Key Findings\n\n- **Lysine Crotonylation Acts as an Epigenetic Switch for Glutamate Neurotransmission and Spatial Memory:** Through genetic and pharmacological manipulations, we show that reducing hippocampal Kcr levels impairs memory, while increasing Kcr enhances long-term memory.\n- **Species-specific satellite DNA composition dictates PRC1-mediated pericentric heterochromatin:** Here we show functional consequences of satellite DNA variation for pericentric heterochromatin formation, recruitment of the Chromosome Passenger Complex (CPC), and interactions with the mitotic s...\n\n## What This Means For You\n\nYour genes aren't your destiny — epigenetic modifications (chemical tags on DNA) control which genes are active and change with age. Understanding these epigenetic clocks and modifications opens doors to interventions that could literally reverse biological aging. This is one of the most exciting frontiers in longevity science.\n\n## Related Products\n\n- **Alpha-Ketoglutarate (AKG)** (Grade C) — 1000mg/day (Ca-AKG form)\n  *Mechanisms:* TCA cycle metabolite, Epigenetic regulation (TET enzymes), Collagen synthesis, Anti-inflammatory\n- **Niacin (Vitamin B3)** (Grade A) — 500mg/day\n  *Mechanisms:* NAD+ precursor, Lipid metabolism, DNA repair\n- **NMN (Nicotinamide Mononucleotide)** (Grade B) — 500mg/day\n  *Mechanisms:* NAD+ precursor, Sirtuin activation, DNA repair\n- **Spermidine** (Grade C) — 1-5mg/day\n  *Mechanisms:* Autophagy induction, Cardioprotective, Epigenetic regulation\n\n## Sources\n\n- Lysine Crotonylation Acts as an Epigenetic Switch for Glutamate Neurotransmission and Spatial Memory *bioRxiv (preprint)* [DOI](https://doi.org/10.1101/2025.02.19.639114)\n- Species-specific satellite DNA composition dictates PRC1-mediated pericentric heterochromatin *bioRxiv (preprint)* [DOI](https://doi.org/10.1101/2024.10.11.617947)",
+  "category": "research",
+  "tags": [
+    "preprint",
+    "longevity",
+    "metabolite",
+    "epigenetic",
+    "tca-cycle",
+    "emerging",
+    "nad+",
+    "niacin",
+    "b3",
+    "cardiovascular"
+  ],
+  "evidenceLevel": "Preprint",
+  "relatedProducts": [
+    "alpha-ketoglutarate-akg",
+    "niacin-vitamin-b3",
+    "nmn-nicotinamide-mononucleotide",
+    "spermidine",
+    "zinc-copper"
+  ],
+  "sourcePapers": [
+    {
+      "title": "Lysine Crotonylation Acts as an Epigenetic Switch for Glutamate Neurotransmission and Spatial Memory",
+      "doi": "10.1101/2025.02.19.639114",
+      "journal": "bioRxiv (preprint)"
+    },
+    {
+      "title": "Species-specific satellite DNA composition dictates PRC1-mediated pericentric heterochromatin",
+      "doi": "10.1101/2024.10.11.617947",
+      "journal": "bioRxiv (preprint)"
+    }
+  ],
+  "createdAt": "2026-02-04T10:39:14.322Z",
+  "featured": false
+}
