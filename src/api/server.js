@@ -6,9 +6,10 @@
 
 import { createServer } from 'http';
 import { KnowledgeBase } from '../kb/store.js';
-import { readFile, readdir, stat } from 'fs/promises';
+import { readFile, readdir, stat, writeFile, mkdir } from 'fs/promises';
 import { join } from 'path';
 import { existsSync } from 'fs';
+import { randomUUID } from 'crypto';
 
 const kb = new KnowledgeBase();
 const PORT = process.env.PORT || 3000;
@@ -59,7 +60,10 @@ const routes = {
         'GET /articles  (supports ?type=generated|web|all, ?source=, ?category=, ?limit=)',
         'GET /articles/:id',
         'POST /consult',
+        'POST /consult-stack',
         'POST /recommend',
+        'POST /orders',
+        'GET /orders',
       ],
     });
   },
@@ -346,6 +350,177 @@ Rules:
       count: relevant.length,
       note: 'This is not medical advice. Consult a healthcare professional.',
     });
+  },
+
+  // Consult-stack endpoint — AI-guided stack consultation chat
+  'POST /consult-stack': async (req, res) => {
+    const body = await parseBody(req);
+    const { messages, healthProfile } = body;
+
+    if (!messages || !Array.isArray(messages)) {
+      return json(res, { error: 'messages array is required' }, 400);
+    }
+
+    // Load products for context
+    const productNames = await kb.listProducts();
+    const allProducts = [];
+    for (const name of productNames) {
+      const p = await kb.getProduct(name);
+      if (p) allProducts.push(p);
+    }
+
+    const productContext = allProducts
+      .slice(0, 15)
+      .map(
+        (p) =>
+          `- ${p.name} (Grade ${p.evidenceGrade}, ${p.riskProfile} risk, ${p.category}): ${p.description}\n  Dosage: ${p.dosage?.standard || 'N/A'}\n  Mechanisms: ${(p.mechanisms || []).join(', ')}`
+      )
+      .join('\n');
+
+    const apiKey = process.env.ANTHROPIC_API_KEY;
+    if (apiKey) {
+      try {
+        const systemPrompt = `You are Longivity AI, a longevity supplement consultant. You help users build personalized supplement stacks through a brief conversation.
+
+Rules:
+- Be conversational but concise. No emojis.
+- Ask ONE question at a time
+- Collect: goals, age/sex, budget, current supplements, health conditions/allergies
+- After collecting enough info (at minimum: goals + age + budget), generate the final stack
+- The whole conversation should be 4-6 messages max
+- When generating a stack, format each item on its own line with name, evidence grade, dosage, approximate monthly cost, and brief reasoning
+- Use markdown formatting
+- End stack recommendations with a disclaimer
+
+Available products in our knowledge base:
+${productContext}
+
+When you have enough information to make a recommendation, end your message with a JSON block wrapped in <STACK_JSON> tags containing the recommended products:
+<STACK_JSON>
+[{"name": "Product Name", "slug": "product-slug", "dosage": "500mg daily", "monthlyCost": 30, "evidenceGrade": "A", "reasoning": "Brief reason"}]
+</STACK_JSON>
+
+Current health profile collected so far: ${JSON.stringify(healthProfile || {})}`;
+
+        const claudeMessages = messages.map((m) => ({
+          role: m.role,
+          content: m.content,
+        }));
+
+        const claudeRes = await fetch('https://api.anthropic.com/v1/messages', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'x-api-key': apiKey,
+            'anthropic-version': '2023-06-01',
+          },
+          body: JSON.stringify({
+            model: 'claude-sonnet-4-20250514',
+            max_tokens: 2048,
+            system: systemPrompt,
+            messages: claudeMessages,
+          }),
+        });
+
+        if (claudeRes.ok) {
+          const claudeData = await claudeRes.json();
+          const rawText = claudeData.content?.[0]?.text || '';
+
+          // Check if the response contains a stack recommendation
+          const stackMatch = rawText.match(/<STACK_JSON>\s*([\s\S]*?)\s*<\/STACK_JSON>/);
+          let stack = null;
+          let message = rawText;
+
+          if (stackMatch) {
+            try {
+              stack = JSON.parse(stackMatch[1]);
+              message = rawText.replace(/<STACK_JSON>[\s\S]*?<\/STACK_JSON>/, '').trim();
+            } catch {
+              // ignore parse error, just show the message
+            }
+          }
+
+          return json(res, {
+            message,
+            stackReady: !!stack,
+            stack: stack || undefined,
+            healthProfile: healthProfile || {},
+          });
+        }
+
+        console.error('[Consult-Stack] Claude API error:', claudeRes.status);
+      } catch (err) {
+        console.error('[Consult-Stack] Claude error:', err.message);
+      }
+    }
+
+    // Fallback: simple question-based flow without LLM
+    return json(res, {
+      error: 'AI consultation unavailable',
+      message: 'The AI consultation service is temporarily unavailable. Please try again later.',
+      stackReady: false,
+    }, 503);
+  },
+
+  // Create order
+  'POST /orders': async (req, res) => {
+    const body = await parseBody(req);
+    const { customer, items, total } = body;
+
+    if (!customer || !customer.name || !customer.email) {
+      return json(res, { error: 'customer.name and customer.email are required' }, 400);
+    }
+    if (!items || !Array.isArray(items) || items.length === 0) {
+      return json(res, { error: 'items array is required and must not be empty' }, 400);
+    }
+
+    const orderId = randomUUID();
+    const order = {
+      id: orderId,
+      customer,
+      items,
+      total: total || 0,
+      status: 'pending',
+      createdAt: new Date().toISOString(),
+    };
+
+    const ordersDir = join(process.cwd(), 'knowledge-base', 'orders');
+    if (!existsSync(ordersDir)) {
+      await mkdir(ordersDir, { recursive: true });
+    }
+
+    await writeFile(
+      join(ordersDir, `${orderId}.json`),
+      JSON.stringify(order, null, 2),
+      'utf-8'
+    );
+
+    console.log(`[Orders] New order ${orderId} from ${customer.name} (${customer.email}), ${items.length} items`);
+
+    json(res, { success: true, orderId, order });
+  },
+
+  // List orders (admin, no auth for MVP)
+  'GET /orders': async (req, res) => {
+    const ordersDir = join(process.cwd(), 'knowledge-base', 'orders');
+    if (!existsSync(ordersDir)) {
+      return json(res, { orders: [], count: 0 });
+    }
+
+    const files = await readdir(ordersDir);
+    const orders = [];
+    for (const file of files) {
+      if (!file.endsWith('.json')) continue;
+      try {
+        const data = JSON.parse(await readFile(join(ordersDir, file), 'utf-8'));
+        orders.push(data);
+      } catch {
+        // skip bad files
+      }
+    }
+
+    orders.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    json(res, { orders, count: orders.length });
   },
 
   // Recommend a stack based on profile

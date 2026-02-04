@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { useCart } from '@/lib/CartContext';
 
 function GradeDot({ grade }) {
   const colors = { A: 'bg-grade-a', B: 'bg-grade-b', C: 'bg-grade-c', D: 'bg-grade-d' };
@@ -14,6 +15,8 @@ function GradeDot({ grade }) {
 }
 
 export default function ProductModal({ product, onClose }) {
+  const { addToCart, isInCart } = useCart();
+
   useEffect(() => {
     const handleEsc = (e) => e.key === 'Escape' && onClose();
     document.addEventListener('keydown', handleEsc);
@@ -25,6 +28,28 @@ export default function ProductModal({ product, onClose }) {
   }, [onClose]);
 
   if (!product) return null;
+
+  const slug =
+    product.slug ||
+    product.name
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '');
+
+  const inCart = isInCart(slug);
+
+  const handleAdd = () => {
+    addToCart({
+      name: product.name,
+      slug,
+      dosage:
+        typeof product.dosage === 'string'
+          ? product.dosage
+          : product.dosage?.standard || null,
+      monthlyCost: product.monthlyCost || null,
+      evidenceGrade: product.evidenceGrade,
+    });
+  };
 
   return (
     <div className="fixed inset-0 z-[100] flex items-end md:items-center justify-center">
@@ -60,6 +85,19 @@ export default function ProductModal({ product, onClose }) {
           {product.description && (
             <p className="text-sm text-secondary leading-relaxed">{product.description}</p>
           )}
+
+          {/* Add to cart */}
+          <button
+            onClick={handleAdd}
+            disabled={inCart}
+            className={`w-full py-3 text-sm font-medium rounded-lg transition-colors duration-150 min-h-[44px] ${
+              inCart
+                ? 'bg-bg-hover text-tertiary cursor-default'
+                : 'bg-accent text-bg hover:bg-accent-hover'
+            }`}
+          >
+            {inCart ? 'Added to cart' : 'Add to cart'}
+          </button>
 
           {/* Dosage */}
           {product.dosage && (

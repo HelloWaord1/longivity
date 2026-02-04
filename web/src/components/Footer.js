@@ -16,7 +16,7 @@ export default function Footer() {
             <Link href="/" className="text-xs text-secondary hover:text-primary transition-colors duration-150">Search</Link>
             <Link href="/discover" className="text-xs text-secondary hover:text-primary transition-colors duration-150">Discover</Link>
             <Link href="/products" className="text-xs text-secondary hover:text-primary transition-colors duration-150">Products</Link>
-            <Link href="/stack" className="text-xs text-secondary hover:text-primary transition-colors duration-150">Stack</Link>
+            <Link href="/stack" className="text-xs text-secondary hover:text-primary transition-colors duration-150">Build Stack</Link>
           </div>
         </div>
 

@@ -84,3 +84,23 @@ export function getCategoryEmoji(category) {
 export function getCategoryGradient(category) {
   return '';
 }
+
+export async function consultStack({ messages, healthProfile }) {
+  const res = await fetch(`${API_URL}/consult-stack`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ messages, healthProfile }),
+  });
+  if (!res.ok) throw new Error('Failed to consult stack');
+  return res.json();
+}
+
+export async function placeOrder({ customer, items, total }) {
+  const res = await fetch(`${API_URL}/orders`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ customer, items, total }),
+  });
+  if (!res.ok) throw new Error('Failed to place order');
+  return res.json();
+}
