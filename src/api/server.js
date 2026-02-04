@@ -6,7 +6,8 @@
 
 import { createServer } from 'http';
 import { KnowledgeBase } from '../kb/store.js';
-import { readFile } from 'fs/promises';
+import { readFile, stat } from 'fs/promises';
+import { join } from 'path';
 
 const kb = new KnowledgeBase();
 const PORT = process.env.PORT || 3000;
@@ -37,8 +38,14 @@ function json(res, data, status = 200) {
  * Route handlers
  */
 const routes = {
-  // Health check
+  // Serve frontend
   'GET /': async (req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+    res.end(getIndexHtml());
+  },
+
+  // API info
+  'GET /api': async (req, res) => {
     json(res, {
       name: 'Longivity API',
       version: '0.1.0',
@@ -279,3 +286,211 @@ start().catch(err => {
   console.error('Failed to start:', err);
   process.exit(1);
 });
+
+function getIndexHtml() {
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Longivity — AI-Powered Longevity Platform</title>
+<style>
+:root{--bg:#0a0a0f;--bg2:#12121a;--bg3:#1a1a2e;--t:#e4e4e7;--tm:#71717a;--ac:#22d3ee;--ach:#06b6d4;--g:#4ade80;--y:#fbbf24;--r:#f87171;--b:#27272a;--rad:12px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--t);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--ac);text-decoration:none}
+.ctr{max-width:1100px;margin:0 auto;padding:0 20px}
+nav{position:fixed;top:0;width:100%;z-index:100;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,15,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--b)}
+nav .logo{font-size:20px;font-weight:700}
+nav ul{display:flex;gap:28px;list-style:none}
+nav a{color:var(--tm);font-size:14px}
+nav a:hover{color:var(--t)}
+.hero{min-height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:80px 20px}
+.badge{display:inline-flex;padding:5px 14px;border:1px solid var(--b);border-radius:100px;font-size:13px;color:var(--ac);margin-bottom:28px;background:var(--bg2)}
+.hero h1{font-size:clamp(36px,7vw,68px);font-weight:700;line-height:1.1;margin-bottom:20px;background:linear-gradient(135deg,var(--t),var(--ac));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{font-size:18px;color:var(--tm);max-width:600px;margin-bottom:36px}
+.btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:var(--rad);font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s}
+.bp{background:var(--ac);color:var(--bg)}
+.bp:hover{background:var(--ach);transform:translateY(-1px)}
+.bs{background:var(--bg2);color:var(--t);border:1px solid var(--b)}
+.bs:hover{background:var(--bg3)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px;margin:44px 0}
+.stat-v{font-size:32px;font-weight:700;color:var(--ac)}
+.stat-l{font-size:13px;color:var(--tm);margin-top:2px}
+.sec{padding:80px 20px}
+.sec h2{font-size:32px;font-weight:700;margin-bottom:12px}
+.sec .sub{font-size:16px;color:var(--tm);margin-bottom:40px;max-width:560px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.card{background:var(--bg2);border:1px solid var(--b);border-radius:var(--rad);padding:28px;transition:border-color .2s}
+.card:hover{border-color:var(--ac)}
+.card .ic{font-size:28px;margin-bottom:12px}
+.card h3{font-size:18px;margin-bottom:6px}
+.card p{color:var(--tm);font-size:14px}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.pcard{background:var(--bg2);border:1px solid var(--b);border-radius:var(--rad);padding:20px;transition:all .2s;cursor:pointer}
+.pcard:hover{border-color:var(--ac);transform:translateY(-2px)}
+.pname{font-size:16px;font-weight:600;margin-bottom:6px}
+.pmeta{display:flex;gap:10px;margin-bottom:10px}
+.tag{display:inline-flex;padding:2px 9px;border-radius:100px;font-size:11px;font-weight:600}
+.ga{background:rgba(74,222,128,.15);color:var(--g)}
+.gb{background:rgba(34,211,238,.15);color:var(--ac)}
+.gc{background:rgba(251,191,36,.15);color:var(--y)}
+.gd{background:rgba(248,113,113,.15);color:var(--r)}
+.tcat{background:rgba(113,113,122,.15);color:var(--tm)}
+.pdesc{font-size:13px;color:var(--tm)}
+.chat-c{max-width:760px;margin:0 auto}
+.msgs{min-height:250px;max-height:450px;overflow-y:auto;padding:20px 0}
+.msg{margin-bottom:14px;padding:14px;border-radius:var(--rad)}
+.msg.u{background:var(--bg3);margin-left:36px}
+.msg.a{background:var(--bg2);border:1px solid var(--b);margin-right:36px}
+.msg .rl{font-size:11px;color:var(--ac);margin-bottom:3px;font-weight:600;text-transform:uppercase}
+.cinp{display:flex;gap:10px}
+.cinp input{flex:1;padding:12px 18px;border-radius:var(--rad);border:1px solid var(--b);background:var(--bg2);color:var(--t);font-size:15px;outline:none}
+.cinp input:focus{border-color:var(--ac)}
+.rform{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+.rform label{font-size:13px;color:var(--tm);display:block;margin-bottom:3px}
+.rform input{padding:10px 14px;border-radius:var(--rad);border:1px solid var(--b);background:var(--bg2);color:var(--t);font-size:14px;outline:none;width:130px}
+.scard{background:var(--bg2);border:1px solid var(--b);border-radius:var(--rad);padding:20px;margin-bottom:10px}
+.stier{font-size:13px;color:var(--ac);font-weight:600;margin-bottom:14px}
+footer{padding:40px 20px;text-align:center;color:var(--tm);border-top:1px solid var(--b);font-size:13px}
+@media(max-width:768px){nav ul{display:none}.hero h1{font-size:32px}.grid{grid-template-columns:1fr}.msg.u{margin-left:0}.msg.a{margin-right:0}}
+</style>
+</head>
+<body>
+<nav><div class="logo">🧬 Longivity</div><ul><li><a href="#products">Products</a></li><li><a href="#chat">Ask AI</a></li><li><a href="#stack">My Stack</a></li><li><a href="#digest">Research</a></li></ul></nav>
+
+<section class="hero">
+<div class="badge">🔬 AI-Powered Longevity Platform</div>
+<h1>Live Longer,<br>Live Better</h1>
+<p>Multi-agent AI system that monitors all longevity research, supplements, and protocols — then builds your personalized stack based on your health data and budget.</p>
+<div class="btns"><a href="#stack" class="btn bp">Get Your Stack →</a><a href="#chat" class="btn bs">Ask About Longevity</a></div>
+<div class="stats ctr">
+<div style="text-align:center"><div class="stat-v">$20.2B</div><div class="stat-l">Global Market by 2033</div></div>
+<div style="text-align:center"><div class="stat-v" id="paper-count">44+</div><div class="stat-l">Research Papers</div></div>
+<div style="text-align:center"><div class="stat-v" id="prod-count">10</div><div class="stat-l">Evidence-Graded Products</div></div>
+<div style="text-align:center"><div class="stat-v">24/7</div><div class="stat-l">AI Monitoring</div></div>
+</div>
+</section>
+
+<section class="sec ctr">
+<h2>How It Works</h2>
+<p class="sub">Not another supplement brand — an AI aggregator that picks the best from the entire market.</p>
+<div class="grid">
+<div class="card"><div class="ic">🔍</div><h3>Multi-Agent Research</h3><p>AI agents continuously monitor PubMed, bioRxiv, supplement markets, and biohacker communities.</p></div>
+<div class="card"><div class="ic">🧬</div><h3>Evidence Grading</h3><p>Every product rated A-D based on scientific evidence: RCTs, meta-analyses, cohort studies.</p></div>
+<div class="card"><div class="ic">🤖</div><h3>AI Personalization</h3><p>Your AI agent builds a unique stack based on health data, genetics, and budget — $10 to $100K+/month.</p></div>
+<div class="card"><div class="ic">📦</div><h3>Monthly Delivery</h3><p>Personalized box monthly. Stack adapts as new research emerges and your health data changes.</p></div>
+<div class="card"><div class="ic">👨‍⚕️</div><h3>Expert Verified</h3><p>Every protocol reviewed by verified gerontologists and clinical researchers.</p></div>
+<div class="card"><div class="ic">🌐</div><h3>Works with Any AI</h3><p>Connect via MCP (Claude), REST API (ChatGPT/Gemini), or use our web interface.</p></div>
+</div>
+</section>
+
+<section id="products" class="sec ctr">
+<h2>Knowledge Base</h2>
+<p class="sub">Evidence-graded longevity products monitored by our AI agents.</p>
+<div class="pgrid" id="products-grid"></div>
+</section>
+
+<section id="chat" class="sec ctr">
+<h2>Ask Longivity AI</h2>
+<p class="sub">Your longevity questions, answered with evidence-graded research.</p>
+<div class="chat-c">
+<div class="msgs" id="messages">
+<div class="msg a"><div class="rl">🧬 Longivity</div>Ask me anything about longevity! Try: "How to boost NAD+?" or "What are senolytics?"</div>
+</div>
+<div class="cinp"><input id="q" placeholder="Ask about longevity..." onkeydown="if(event.key==='Enter')ask()"><button class="btn bp" onclick="ask()">Send</button></div>
+</div>
+</section>
+
+<section id="stack" class="sec ctr">
+<h2>Build Your Stack</h2>
+<p class="sub">Get a personalized longevity stack based on your budget.</p>
+<div class="rform">
+<div><label>Monthly Budget (USD)</label><input id="budget" type="number" value="50" min="10" max="100000"></div>
+<div><label>Age</label><input id="age" type="number" value="30" min="18" max="100" style="width:90px"></div>
+<div style="display:flex;align-items:flex-end"><button class="btn bp" onclick="getStack()">Get My Stack →</button></div>
+</div>
+<div id="stack-result"></div>
+</section>
+
+<section id="digest" class="sec ctr">
+<h2>Research Digest</h2>
+<p class="sub">Latest longevity research from PubMed and bioRxiv.</p>
+<div id="digest-content" style="background:var(--bg2);border:1px solid var(--b);border-radius:var(--rad);padding:28px;font-family:monospace;font-size:13px;max-height:500px;overflow:auto;color:var(--tm);white-space:pre-wrap">Loading...</div>
+</section>
+
+<footer><p>🧬 Longivity — AI-powered longevity platform</p><p style="margin-top:6px">Built with OpenClaw · © 2026 · Not medical advice.</p></footer>
+
+<script>
+const API=location.origin;
+const gc={'A':'ga','B':'gb','C':'gc','D':'gd'};
+
+async function loadProducts(){
+  try{const r=await fetch(API+'/products');const d=await r.json();
+  const el=document.getElementById('products-grid');
+  document.getElementById('prod-count').textContent=d.count;
+  el.innerHTML=d.products.map(p=>'<div class="pcard"><div class="pname">'+p.name+'</div><div class="pmeta"><span class="tag '+(gc[p.evidenceGrade]||'gd')+'">Grade '+p.evidenceGrade+'</span><span class="tag tcat">'+p.category+'</span></div><div class="pdesc">'+p.description+'</div></div>').join('')}
+  catch(e){console.error(e)}
+}
+
+async function loadDigest(){
+  try{const r=await fetch(API+'/digest');const d=await r.json();
+  document.getElementById('digest-content').textContent=d.digest||'No digest yet.'}
+  catch(e){document.getElementById('digest-content').textContent='Failed to load digest.'}
+}
+
+async function loadResearch(){
+  try{const r=await fetch(API+'/research');const d=await r.json();
+  document.getElementById('paper-count').textContent=d.count+'+'}
+  catch(e){}
+}
+
+async function ask(){
+  const input=document.getElementById('q');
+  const query=input.value.trim();if(!query)return;
+  input.value='';
+  const msgs=document.getElementById('messages');
+  msgs.innerHTML+='<div class="msg u"><div class="rl">🧑 You</div>'+esc(query)+'</div>';
+  msgs.innerHTML+='<div class="msg a" id="loading"><div class="rl">🧬 Longivity</div>Searching...</div>';
+  msgs.scrollTop=msgs.scrollHeight;
+  try{
+    const r=await fetch(API+'/consult',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({query})});
+    const d=await r.json();
+    document.getElementById('loading').remove();
+    let reply='';
+    if(d.relevantProducts&&d.relevantProducts.length>0){
+      reply='Found '+d.count+' product(s):<br><br>';
+      d.relevantProducts.forEach(p=>{
+        reply+='<b>'+esc(p.name)+'</b> (Grade '+p.evidenceGrade+', '+p.riskProfile+' risk)<br>';
+        reply+='Mechanisms: '+esc((p.mechanisms||[]).join(', '))+'<br>';
+        reply+='Dosage: '+esc(p.dosage?.standard||'N/A')+'<br>';
+        if(p.keyFindings&&p.keyFindings[0])reply+='Key: '+esc(p.keyFindings[0])+'<br>';
+        reply+='<br>'});
+      reply+='⚠️ '+esc(d.note);
+    }else{reply='No specific products found for "'+esc(query)+'". Try: NMN, NAD+, rapamycin, senolytics, omega-3, taurine, spermidine, metformin, resveratrol, urolithin A.'}
+    msgs.innerHTML+='<div class="msg a"><div class="rl">🧬 Longivity</div>'+reply+'</div>';
+  }catch(e){document.getElementById('loading')?.remove();msgs.innerHTML+='<div class="msg a"><div class="rl">🧬 Longivity</div>Error. Try again.</div>'}
+  msgs.scrollTop=msgs.scrollHeight;
+}
+
+async function getStack(){
+  const budget=document.getElementById('budget').value;
+  const age=document.getElementById('age').value;
+  const el=document.getElementById('stack-result');
+  el.innerHTML='<p style="color:var(--tm)">Building your stack...</p>';
+  try{
+    const r=await fetch(API+'/recommend',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({budget:+budget,age:+age})});
+    const d=await r.json();const s=d.stack;
+    let html='<div class="stier">'+s.tier+' Tier — '+s.itemCount+' products for $'+s.monthlyBudget+'/month</div>';
+    s.items.forEach(i=>{html+='<div class="scard"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px"><strong>'+esc(i.name)+'</strong><span class="tag '+(gc[i.evidenceGrade]||'gd')+'">Grade '+i.evidenceGrade+'</span></div><div style="color:var(--ac);font-size:13px;margin-bottom:3px">💊 '+esc(i.dosage)+'</div><div style="color:var(--tm);font-size:13px">'+esc(i.reasoning)+'</div></div>'});
+    html+='<p style="color:var(--tm);font-size:12px;margin-top:14px">⚠️ Not medical advice. Consult a healthcare professional.</p>';
+    el.innerHTML=html;
+  }catch(e){el.innerHTML='<p style="color:var(--r)">Error loading stack.</p>'}
+}
+
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+loadProducts();loadDigest();loadResearch();
+</script>
+</body></html>`;
+}
