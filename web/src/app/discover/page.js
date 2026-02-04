@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { fetchArticles } from '@/lib/api';
 
 const CATEGORIES = ['all', 'supplements', 'research', 'protocols', 'news'];
+const TYPE_FILTERS = ['all', 'generated', 'web'];
 
 const EVIDENCE_COLORS = {
   'Meta-Analysis': 'text-grade-a',
@@ -156,13 +157,27 @@ function ArticleDetail({ article, onClose }) {
         {/* Header */}
         <div className="sticky top-0 bg-bg-card border-b border-border px-5 py-4 flex items-start justify-between gap-3">
           <div className="flex items-center gap-2 flex-wrap">
-            <span className={`text-xs uppercase tracking-wider font-medium ${EVIDENCE_COLORS[article.evidenceLevel] || 'text-secondary'}`}>
-              {article.evidenceLevel}
-            </span>
+            {article.type === 'web' ? (
+              <span className="text-xs uppercase tracking-wider font-medium text-blue-400">
+                ↗ External
+              </span>
+            ) : (
+              <span className={`text-xs uppercase tracking-wider font-medium ${EVIDENCE_COLORS[article.evidenceLevel] || 'text-secondary'}`}>
+                {article.evidenceLevel}
+              </span>
+            )}
             <span className="text-tertiary">·</span>
             <span className="text-xs text-tertiary uppercase tracking-wider font-medium">
               {article.category}
             </span>
+            {article.source && article.type === 'web' && (
+              <>
+                <span className="text-tertiary">·</span>
+                <span className="text-xs text-secondary font-medium">
+                  {article.source}
+                </span>
+              </>
+            )}
             {article.featured && (
               <>
                 <span className="text-tertiary">·</span>
@@ -186,10 +201,32 @@ function ArticleDetail({ article, onClose }) {
 
           <p className="text-sm text-secondary leading-relaxed">{article.summary}</p>
 
-          {/* Tags */}
-          {article.tags && article.tags.length > 0 && (
+          {/* Web article: Read Original button + metadata */}
+          {article.type === 'web' && article.url && (
+            <div className="flex items-center gap-3">
+              <a
+                href={article.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/20 hover:bg-blue-500/20 transition-colors"
+              >
+                ↗ Read Original Article
+              </a>
+              {article.author && (
+                <span className="text-xs text-tertiary">by {article.author}</span>
+              )}
+              {article.relevanceScore != null && (
+                <span className="text-xs text-tertiary ml-auto">
+                  Relevance: {Math.round(article.relevanceScore * 100)}%
+                </span>
+              )}
+            </div>
+          )}
+
+          {/* Tags — use tags for generated, matchedKeywords for web */}
+          {(article.tags || article.matchedKeywords || []).length > 0 && (
             <div className="flex flex-wrap gap-1.5">
-              {article.tags.slice(0, 6).map(tag => (
+              {(article.tags || article.matchedKeywords || []).slice(0, 6).map(tag => (
                 <span key={tag} className="text-xs px-2 py-0.5 rounded-full bg-bg-hover text-tertiary">
                   #{tag}
                 </span>
@@ -197,10 +234,12 @@ function ArticleDetail({ article, onClose }) {
             </div>
           )}
 
-          {/* Article body */}
-          <div className="border-t border-border pt-4">
-            {renderMarkdown(article.body)}
-          </div>
+          {/* Article body (generated articles only) */}
+          {article.body && (
+            <div className="border-t border-border pt-4">
+              {renderMarkdown(article.body)}
+            </div>
+          )}
 
           {/* Source papers */}
           {article.sourcePapers && article.sourcePapers.length > 0 && (
@@ -240,6 +279,7 @@ export default function DiscoverPage() {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState('all');
+  const [activeType, setActiveType] = useState('all');
   const [selectedArticle, setSelectedArticle] = useState(null);
   const [availableCategories, setAvailableCategories] = useState([]);
 
@@ -259,9 +299,12 @@ export default function DiscoverPage() {
   }, []);
 
   const filtered = useMemo(() => {
-    if (activeCategory === 'all') return articles;
-    return articles.filter(a => a.category === activeCategory);
-  }, [articles, activeCategory]);
+    return articles.filter(a => {
+      if (activeCategory !== 'all' && a.category !== activeCategory) return false;
+      if (activeType !== 'all' && (a.type || 'generated') !== activeType) return false;
+      return true;
+    });
+  }, [articles, activeCategory, activeType]);
 
   const featuredArticles = useMemo(() => filtered.filter(a => a.featured), [filtered]);
   const regularArticles = useMemo(() => filtered.filter(a => !a.featured), [filtered]);
@@ -274,31 +317,62 @@ export default function DiscoverPage() {
           AI-curated longevity articles from the latest research and evidence-graded supplements.
         </p>
 
-        {/* Category filters */}
-        <div className="flex gap-2 mt-5 overflow-x-auto pb-1 -mx-4 px-4 md:mx-0 md:px-0">
-          {CATEGORIES.map((cat) => {
-            const count = cat === 'all'
-              ? articles.length
-              : articles.filter(a => a.category === cat).length;
+        {/* Type + Category filters */}
+        <div className="flex flex-col gap-2 mt-5">
+          {/* Type filter */}
+          <div className="flex gap-2 overflow-x-auto pb-1 -mx-4 px-4 md:mx-0 md:px-0">
+            {TYPE_FILTERS.map((type) => {
+              const count = type === 'all'
+                ? articles.length
+                : articles.filter(a => (a.type || 'generated') === type).length;
 
-            // Hide categories with 0 articles (except 'all')
-            if (cat !== 'all' && count === 0) return null;
+              if (type !== 'all' && count === 0) return null;
 
-            return (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`px-3 py-1.5 text-xs font-medium rounded-md whitespace-nowrap transition-colors duration-150 ${
-                  activeCategory === cat
-                    ? 'bg-bg-card text-primary border border-border'
-                    : 'text-tertiary hover:text-secondary'
-                }`}
-              >
-                {cat.charAt(0).toUpperCase() + cat.slice(1)}
-                <span className="ml-1.5 text-tertiary">{count}</span>
-              </button>
-            );
-          })}
+              const labels = { all: '📰 All', generated: '🧬 AI-Generated', web: '🌐 Web Sources' };
+
+              return (
+                <button
+                  key={type}
+                  onClick={() => setActiveType(type)}
+                  className={`px-3 py-1.5 text-xs font-medium rounded-md whitespace-nowrap transition-colors duration-150 ${
+                    activeType === type
+                      ? 'bg-bg-card text-primary border border-border'
+                      : 'text-tertiary hover:text-secondary'
+                  }`}
+                >
+                  {labels[type] || type}
+                  <span className="ml-1.5 text-tertiary">{count}</span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Category filter */}
+          <div className="flex gap-2 overflow-x-auto pb-1 -mx-4 px-4 md:mx-0 md:px-0">
+            {CATEGORIES.map((cat) => {
+              const count = cat === 'all'
+                ? articles.length
+                : articles.filter(a => a.category === cat).length;
+
+              // Hide categories with 0 articles (except 'all')
+              if (cat !== 'all' && count === 0) return null;
+
+              return (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className={`px-3 py-1.5 text-xs font-medium rounded-md whitespace-nowrap transition-colors duration-150 ${
+                    activeCategory === cat
+                      ? 'bg-bg-card text-primary border border-border'
+                      : 'text-tertiary hover:text-secondary'
+                  }`}
+                >
+                  {cat.charAt(0).toUpperCase() + cat.slice(1)}
+                  <span className="ml-1.5 text-tertiary">{count}</span>
+                </button>
+              );
+            })}
+          </div>
         </div>
       </section>
 
@@ -368,13 +442,27 @@ export default function DiscoverPage() {
                 className="py-4 cursor-pointer group"
               >
                 <div className="flex items-center gap-2 mb-1.5">
-                  <span className={`text-xs uppercase tracking-wider font-medium ${EVIDENCE_COLORS[article.evidenceLevel] || 'text-secondary'}`}>
-                    {article.evidenceLevel}
-                  </span>
+                  {article.type === 'web' ? (
+                    <span className="text-xs uppercase tracking-wider font-medium text-blue-400">
+                      ↗ {article.source || 'External'}
+                    </span>
+                  ) : (
+                    <span className={`text-xs uppercase tracking-wider font-medium ${EVIDENCE_COLORS[article.evidenceLevel] || 'text-secondary'}`}>
+                      {article.evidenceLevel}
+                    </span>
+                  )}
                   <span className="text-tertiary text-xs">·</span>
                   <span className="text-xs text-tertiary uppercase tracking-wider font-medium">
                     {article.category}
                   </span>
+                  {article.publishedAt && (
+                    <>
+                      <span className="text-tertiary text-xs">·</span>
+                      <span className="text-xs text-tertiary">
+                        {new Date(article.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                      </span>
+                    </>
+                  )}
                 </div>
                 <h3 className="text-sm font-medium text-primary group-hover:text-accent transition-colors duration-150 line-clamp-2 mb-1">
                   {article.title}
@@ -382,9 +470,9 @@ export default function DiscoverPage() {
                 <p className="text-xs text-secondary line-clamp-2 leading-relaxed">
                   {article.summary}
                 </p>
-                {article.tags && (
+                {(article.tags || article.matchedKeywords) && (
                   <div className="flex gap-1.5 mt-2">
-                    {article.tags.slice(0, 4).map(tag => (
+                    {(article.tags || article.matchedKeywords || []).slice(0, 4).map(tag => (
                       <span key={tag} className="text-xs px-1.5 py-0.5 rounded-full bg-bg-hover text-tertiary">
                         {tag}
                       </span>
@@ -392,6 +480,11 @@ export default function DiscoverPage() {
                     {article.sourcePapers && (
                       <span className="text-xs text-tertiary ml-auto">
                         {article.sourcePapers.length} source{article.sourcePapers.length !== 1 ? 's' : ''}
+                      </span>
+                    )}
+                    {article.type === 'web' && article.relevanceScore != null && (
+                      <span className="text-xs text-tertiary ml-auto">
+                        {Math.round(article.relevanceScore * 100)}% match
                       </span>
                     )}
                   </div>

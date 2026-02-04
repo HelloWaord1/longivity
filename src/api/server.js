@@ -56,7 +56,7 @@ const routes = {
         'GET /products/:name',
         'GET /research',
         'GET /digest',
-        'GET /articles',
+        'GET /articles  (supports ?type=generated|web|all, ?source=, ?category=, ?limit=)',
         'GET /articles/:id',
         'POST /consult',
         'POST /recommend',
@@ -129,65 +129,110 @@ const routes = {
     json(res, { digest, format: 'markdown' });
   },
 
-  // List articles (supports ?category=, ?featured=true, ?limit=, ?tag=)
+  // List articles (supports ?category=, ?featured=true, ?limit=, ?tag=, ?type=generated|web|all, ?source=)
   'GET /articles': async (req, res) => {
     const url = new URL(req.url, `http://localhost:${PORT}`);
     const filterCategory = url.searchParams.get('category');
     const filterFeatured = url.searchParams.get('featured');
     const filterTag = url.searchParams.get('tag');
+    const filterType = url.searchParams.get('type') || 'all'; // generated, web, all
+    const filterSource = url.searchParams.get('source');
     const limit = parseInt(url.searchParams.get('limit')) || 50;
 
-    const articlesDir = join(process.cwd(), 'knowledge-base', 'articles');
-    if (!existsSync(articlesDir)) {
-      return json(res, { articles: [], count: 0 });
-    }
-
-    const files = await readdir(articlesDir);
     const articles = [];
-    for (const file of files) {
-      if (!file.endsWith('.json')) continue;
-      try {
-        const data = JSON.parse(await readFile(join(articlesDir, file), 'utf-8'));
-        
-        // Apply filters
-        if (filterCategory && data.category !== filterCategory) continue;
-        if (filterFeatured === 'true' && !data.featured) continue;
-        if (filterTag && !(data.tags || []).includes(filterTag.toLowerCase())) continue;
-        
-        articles.push(data);
-      } catch (e) {
-        // skip bad files
+
+    // Load generated articles
+    if (filterType === 'all' || filterType === 'generated') {
+      const articlesDir = join(process.cwd(), 'knowledge-base', 'articles');
+      if (existsSync(articlesDir)) {
+        const files = await readdir(articlesDir);
+        for (const file of files) {
+          if (!file.endsWith('.json')) continue;
+          try {
+            const data = JSON.parse(await readFile(join(articlesDir, file), 'utf-8'));
+            data.type = data.type || 'generated';
+            articles.push(data);
+          } catch (e) {
+            // skip bad files
+          }
+        }
       }
     }
 
-    // Sort: featured first, then by date
-    articles.sort((a, b) => {
-      if (a.featured && !b.featured) return -1;
-      if (!a.featured && b.featured) return 1;
-      return new Date(b.createdAt) - new Date(a.createdAt);
+    // Load web articles
+    if (filterType === 'all' || filterType === 'web') {
+      const webDir = join(process.cwd(), 'knowledge-base', 'web-articles');
+      if (existsSync(webDir)) {
+        const files = await readdir(webDir);
+        for (const file of files) {
+          if (!file.endsWith('.json')) continue;
+          try {
+            const data = JSON.parse(await readFile(join(webDir, file), 'utf-8'));
+            data.type = 'web';
+            articles.push(data);
+          } catch (e) {
+            // skip bad files
+          }
+        }
+      }
+    }
+
+    // Apply filters
+    const filtered = articles.filter(data => {
+      if (filterCategory && data.category !== filterCategory) return false;
+      if (filterFeatured === 'true' && !data.featured) return false;
+      if (filterTag && !(data.tags || data.matchedKeywords || []).includes(filterTag.toLowerCase())) return false;
+      if (filterSource && data.source !== filterSource) return false;
+      return true;
     });
 
-    const limited = articles.slice(0, limit);
-    const categories = [...new Set(articles.map(a => a.category))];
+    // Sort: featured first, then by date (use createdAt or publishedAt or fetchedAt)
+    filtered.sort((a, b) => {
+      if (a.featured && !b.featured) return -1;
+      if (!a.featured && b.featured) return 1;
+      const dateA = new Date(a.publishedAt || a.createdAt || 0);
+      const dateB = new Date(b.publishedAt || b.createdAt || 0);
+      return dateB - dateA;
+    });
 
-    json(res, { articles: limited, count: limited.length, total: articles.length, categories });
+    const limited = filtered.slice(0, limit);
+    const categories = [...new Set(articles.map(a => a.category))];
+    const sources = [...new Set(articles.filter(a => a.type === 'web').map(a => a.source).filter(Boolean))];
+
+    json(res, { articles: limited, count: limited.length, total: filtered.length, categories, sources });
   },
 
-  // Get single article by id
+  // Get single article by id (checks both generated and web articles)
   'GET /articles/:id': async (req, res, params) => {
+    // Try generated articles first
     const articlesDir = join(process.cwd(), 'knowledge-base', 'articles');
     const filePath = join(articlesDir, `${params.id}.json`);
     
-    if (!existsSync(filePath)) {
-      return json(res, { error: 'Article not found' }, 404);
+    if (existsSync(filePath)) {
+      try {
+        const article = JSON.parse(await readFile(filePath, 'utf-8'));
+        article.type = article.type || 'generated';
+        return json(res, { article });
+      } catch (e) {
+        return json(res, { error: 'Failed to read article' }, 500);
+      }
     }
 
-    try {
-      const article = JSON.parse(await readFile(filePath, 'utf-8'));
-      json(res, { article });
-    } catch (e) {
-      json(res, { error: 'Failed to read article' }, 500);
+    // Try web articles
+    const webDir = join(process.cwd(), 'knowledge-base', 'web-articles');
+    const webPath = join(webDir, `${params.id}.json`);
+    
+    if (existsSync(webPath)) {
+      try {
+        const article = JSON.parse(await readFile(webPath, 'utf-8'));
+        article.type = 'web';
+        return json(res, { article });
+      } catch (e) {
+        return json(res, { error: 'Failed to read article' }, 500);
+      }
     }
+
+    json(res, { error: 'Article not found' }, 404);
   },
 
   // Consult endpoint — answer longevity questions

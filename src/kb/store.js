@@ -19,6 +19,7 @@ export class KnowledgeBase {
       community: join(root, 'community'),
       experts: join(root, 'experts'),
       daily: join(root, 'daily-digests'),
+      webArticles: join(root, 'web-articles'),
     };
   }
 
@@ -97,6 +98,29 @@ export class KnowledgeBase {
     const filepath = join(this.dirs.protocols, filename);
     await writeFile(filepath, protocol.content);
     return filepath;
+  }
+
+  // --- Web Articles ---
+
+  async saveWebArticle(article) {
+    const filename = `${this.slugify(article.id || article.title)}.json`;
+    const filepath = join(this.dirs.webArticles, filename);
+    article.savedAt = new Date().toISOString();
+    await writeFile(filepath, JSON.stringify(article, null, 2));
+    return article;
+  }
+
+  async getWebArticle(id) {
+    const filename = `${this.slugify(id)}.json`;
+    const filepath = join(this.dirs.webArticles, filename);
+    if (!existsSync(filepath)) return null;
+    return JSON.parse(await readFile(filepath, 'utf-8'));
+  }
+
+  async listWebArticles() {
+    if (!existsSync(this.dirs.webArticles)) return [];
+    const files = await readdir(this.dirs.webArticles);
+    return files.filter(f => f.endsWith('.json')).map(f => f.replace('.json', ''));
   }
 
   // --- Helpers ---
