@@ -1,0 +1,43 @@
+{
+  "name": "Berberine",
+  "category": "supplement",
+  "mechanisms": [
+    "AMPK activation",
+    "Glucose regulation",
+    "Gut microbiome",
+    "Lipid metabolism"
+  ],
+  "evidenceGrade": "A",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "500mg 2-3x/day with meals",
+    "range": "500-1500mg/day",
+    "notes": "Often called \"natural metformin\". Take with meals. May interact with many medications."
+  },
+  "keyFindings": [
+    "Comparable to metformin for glucose regulation in diabetics",
+    "Reduced LDL cholesterol and triglycerides",
+    "Positive effects on gut microbiome composition"
+  ],
+  "contraindications": [
+    "May interact with CYP enzymes — check drug interactions",
+    "Not with metformin simultaneously"
+  ],
+  "tags": [
+    "ampk",
+    "glucose",
+    "metabolic",
+    "gut",
+    "natural-metformin"
+  ],
+  "id": "prod-berberine",
+  "description": "Comparable to metformin for glucose regulation in diabetics",
+  "interactions": [],
+  "sideEffects": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.534Z",
+  "createdAt": "2026-02-04T09:31:04.534Z"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "CoQ10 (Ubiquinol)",
+  "category": "supplement",
+  "mechanisms": [
+    "Mitochondrial electron transport",
+    "Antioxidant",
+    "Energy production"
+  ],
+  "evidenceGrade": "A",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "200mg/day (ubiquinol form)",
+    "range": "100-600mg/day",
+    "notes": "Ubiquinol > ubiquinone for absorption. Essential if on statins."
+  },
+  "keyFindings": [
+    "Levels decline with age — supplementation restores",
+    "QSYMIA trial: improved heart failure outcomes",
+    "Essential for anyone on statin medications"
+  ],
+  "tags": [
+    "mitochondria",
+    "energy",
+    "heart",
+    "statin",
+    "antioxidant"
+  ],
+  "id": "prod-coq10-ubiquinol",
+  "description": "Levels decline with age — supplementation restores",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.500Z",
+  "createdAt": "2026-02-04T09:31:04.500Z"
+}

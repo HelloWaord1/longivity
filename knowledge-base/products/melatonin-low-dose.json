@@ -1,0 +1,41 @@
+{
+  "name": "Melatonin (low-dose)",
+  "category": "supplement",
+  "mechanisms": [
+    "Circadian rhythm",
+    "Antioxidant",
+    "Immune modulation",
+    "Neuroprotective"
+  ],
+  "evidenceGrade": "A",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "0.3-1mg/night",
+    "range": "0.1-5mg",
+    "notes": "Less is more — physiological dose 0.3mg. Higher doses may desensitize receptors. Take 30-60min before bed."
+  },
+  "keyFindings": [
+    "Potent antioxidant — crosses blood-brain barrier",
+    "Production declines significantly with age",
+    "Immune-modulatory: enhances vaccine response in elderly"
+  ],
+  "tags": [
+    "sleep",
+    "antioxidant",
+    "immune",
+    "hormone",
+    "affordable",
+    "circadian"
+  ],
+  "id": "prod-melatonin-low-dose",
+  "description": "Potent antioxidant — crosses blood-brain barrier",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.524Z",
+  "createdAt": "2026-02-04T09:31:04.524Z"
+}

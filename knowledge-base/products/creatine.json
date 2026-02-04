@@ -1,0 +1,41 @@
+{
+  "name": "Creatine",
+  "category": "supplement",
+  "mechanisms": [
+    "ATP buffering",
+    "Neuroprotective",
+    "Muscle preservation",
+    "Cognitive enhancement"
+  ],
+  "evidenceGrade": "A",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "5g/day",
+    "range": "3-10g/day",
+    "notes": "Most studied supplement in sports nutrition. Also cognitive benefits. No loading needed."
+  },
+  "keyFindings": [
+    "Preserves muscle mass during aging (sarcopenia)",
+    "Improved cognitive function under stress and in elderly",
+    "Neuroprotective properties — being studied for neurodegenerative diseases"
+  ],
+  "tags": [
+    "energy",
+    "muscle",
+    "brain",
+    "atp",
+    "affordable",
+    "well-studied"
+  ],
+  "id": "prod-creatine",
+  "description": "Preserves muscle mass during aging (sarcopenia)",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.504Z",
+  "createdAt": "2026-02-04T09:31:04.504Z"
+}

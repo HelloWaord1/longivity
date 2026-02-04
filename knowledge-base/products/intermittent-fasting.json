@@ -1,0 +1,40 @@
+{
+  "name": "Intermittent Fasting",
+  "category": "protocol",
+  "mechanisms": [
+    "Autophagy induction",
+    "Insulin sensitivity",
+    "mTOR inhibition",
+    "Ketogenesis"
+  ],
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "16:8 (16h fast, 8h eating window)",
+    "range": "Various: 14:10 to OMAD",
+    "notes": "Start with 14:10, progress to 16:8. Time-restricted eating. Not for everyone."
+  },
+  "keyFindings": [
+    "Activates autophagy after 16-24h fasting",
+    "Improved insulin sensitivity and metabolic markers",
+    "NEJM review: benefits for aging, cancer, cardiovascular disease"
+  ],
+  "tags": [
+    "protocol",
+    "autophagy",
+    "fasting",
+    "free",
+    "metabolic"
+  ],
+  "id": "prod-intermittent-fasting",
+  "description": "Activates autophagy after 16-24h fasting",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.528Z",
+  "createdAt": "2026-02-04T09:31:04.528Z"
+}

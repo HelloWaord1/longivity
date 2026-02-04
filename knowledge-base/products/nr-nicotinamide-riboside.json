@@ -1,0 +1,39 @@
+{
+  "name": "NR (Nicotinamide Riboside)",
+  "category": "supplement",
+  "mechanisms": [
+    "NAD+ precursor",
+    "Sirtuin activation",
+    "Mitochondrial function"
+  ],
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "300mg/day",
+    "range": "250-1000mg/day",
+    "notes": "ChromaDex (Niagen) is the most studied form"
+  },
+  "keyFindings": [
+    "Increases NAD+ levels by 40-90% in humans",
+    "Improved hepatic lipid metabolism",
+    "Well-tolerated in clinical trials"
+  ],
+  "tags": [
+    "nad+",
+    "nr",
+    "niagen",
+    "energy",
+    "mitochondria"
+  ],
+  "id": "prod-nr-nicotinamide-riboside",
+  "description": "Increases NAD+ levels by 40-90% in humans",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.480Z",
+  "createdAt": "2026-02-04T09:31:04.480Z"
+}

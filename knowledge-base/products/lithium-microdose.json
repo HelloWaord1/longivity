@@ -1,0 +1,40 @@
+{
+  "name": "Lithium (microdose)",
+  "category": "supplement",
+  "mechanisms": [
+    "Autophagy induction",
+    "GSK-3β inhibition",
+    "Neuroprotective",
+    "Mood stabilization"
+  ],
+  "evidenceGrade": "C",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "1-5mg/day (lithium orotate)",
+    "range": "0.5-20mg/day",
+    "notes": "Microdose — NOT therapeutic psychiatric dose. Lithium orotate form."
+  },
+  "keyFindings": [
+    "Regions with higher lithium in water have lower dementia rates",
+    "Extends lifespan in C. elegans and Drosophila",
+    "Neuroprotective at microdoses in human studies"
+  ],
+  "tags": [
+    "autophagy",
+    "neuroprotective",
+    "mood",
+    "microdose",
+    "brain"
+  ],
+  "id": "prod-lithium-microdose",
+  "description": "Regions with higher lithium in water have lower dementia rates",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.492Z",
+  "createdAt": "2026-02-04T09:31:04.492Z"
+}

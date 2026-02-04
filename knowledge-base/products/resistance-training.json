@@ -1,0 +1,41 @@
+{
+  "name": "Resistance Training",
+  "category": "protocol",
+  "mechanisms": [
+    "Muscle preservation",
+    "Bone density",
+    "Insulin sensitivity",
+    "Growth hormone"
+  ],
+  "evidenceGrade": "A",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "3-4 sessions/week, compound movements",
+    "range": "2-6 sessions/week",
+    "notes": "Progressive overload. Prioritize squats, deadlifts, presses. Sarcopenia prevention."
+  },
+  "keyFindings": [
+    "Muscle mass is strongest predictor of mortality in elderly",
+    "Prevents sarcopenia — #1 cause of functional decline",
+    "Improved insulin sensitivity, bone density, cognitive function"
+  ],
+  "tags": [
+    "protocol",
+    "exercise",
+    "muscle",
+    "bone",
+    "free",
+    "essential"
+  ],
+  "id": "prod-resistance-training",
+  "description": "Muscle mass is strongest predictor of mortality in elderly",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.530Z",
+  "createdAt": "2026-02-04T09:31:04.530Z"
+}

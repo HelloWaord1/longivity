@@ -1,0 +1,40 @@
+{
+  "name": "DHEA",
+  "category": "supplement",
+  "mechanisms": [
+    "Precursor to testosterone and estrogen",
+    "Immune function",
+    "Bone density",
+    "Cognitive"
+  ],
+  "evidenceGrade": "C",
+  "riskProfile": "medium",
+  "dosage": {
+    "standard": "25-50mg/day",
+    "range": "10-100mg/day",
+    "notes": "Levels peak at 25 and decline ~2% per year. Monitor with blood tests. Banned in some sports."
+  },
+  "keyFindings": [
+    "DHEA levels correlate with longevity markers",
+    "Improved bone density in elderly women",
+    "Mixed results in clinical trials — individualized approach needed"
+  ],
+  "tags": [
+    "hormone",
+    "precursor",
+    "immune",
+    "bone",
+    "age-related-decline"
+  ],
+  "id": "prod-dhea",
+  "description": "DHEA levels correlate with longevity markers",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.525Z",
+  "createdAt": "2026-02-04T09:31:04.525Z"
+}

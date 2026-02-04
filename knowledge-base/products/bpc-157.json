@@ -1,0 +1,40 @@
+{
+  "name": "BPC-157",
+  "category": "peptide",
+  "mechanisms": [
+    "Tissue repair",
+    "Angiogenesis",
+    "Anti-inflammatory",
+    "Gut healing"
+  ],
+  "evidenceGrade": "D",
+  "riskProfile": "medium",
+  "dosage": {
+    "standard": "250-500mcg/day (oral or injection)",
+    "range": "200-1000mcg/day",
+    "notes": "Body Protection Compound. Derived from gastric juice. Oral and injectable forms. No FDA approval."
+  },
+  "keyFindings": [
+    "Accelerated healing of tendons, ligaments, muscles in animal studies",
+    "Gut-protective properties (derived from gastric secretion)",
+    "Popular in biohacker community but limited human data"
+  ],
+  "tags": [
+    "peptide",
+    "healing",
+    "gut",
+    "experimental",
+    "biohacker"
+  ],
+  "id": "prod-bpc-157",
+  "description": "Accelerated healing of tendons, ligaments, muscles in animal studies",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.522Z",
+  "createdAt": "2026-02-04T09:31:04.522Z"
+}

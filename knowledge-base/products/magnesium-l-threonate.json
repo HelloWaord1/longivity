@@ -1,0 +1,41 @@
+{
+  "name": "Magnesium (L-Threonate)",
+  "category": "supplement",
+  "mechanisms": [
+    "Enzyme cofactor (300+ reactions)",
+    "Sleep quality",
+    "Neuroprotective",
+    "Muscle relaxation"
+  ],
+  "evidenceGrade": "A",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "400-600mg elemental Mg/day",
+    "range": "200-800mg/day",
+    "notes": "L-Threonate for brain (crosses BBB). Glycinate for sleep. Citrate for general. 50%+ people are deficient."
+  },
+  "keyFindings": [
+    "Involved in 300+ enzymatic reactions",
+    "L-Threonate form crosses blood-brain barrier — improved memory in trial",
+    "Deficiency linked to accelerated aging, inflammation, CVD"
+  ],
+  "tags": [
+    "mineral",
+    "essential",
+    "sleep",
+    "brain",
+    "affordable",
+    "deficiency-common"
+  ],
+  "id": "prod-magnesium-l-threonate",
+  "description": "Involved in 300+ enzymatic reactions",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.518Z",
+  "createdAt": "2026-02-04T09:31:04.518Z"
+}

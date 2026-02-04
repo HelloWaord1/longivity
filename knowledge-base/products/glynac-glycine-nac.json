@@ -1,0 +1,40 @@
+{
+  "name": "GlyNAC (Glycine + NAC)",
+  "category": "protocol",
+  "mechanisms": [
+    "Glutathione restoration",
+    "Mitochondrial function",
+    "Oxidative stress reduction",
+    "Insulin sensitivity"
+  ],
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "Glycine 1.33mmol/kg + NAC 0.81mmol/kg daily",
+    "range": "Typically ~7g glycine + ~5g NAC/day",
+    "notes": "Baylor College study protocol. Simple, affordable, effective."
+  },
+  "keyFindings": [
+    "Restored glutathione levels in elderly to young levels",
+    "Improved mitochondrial function, insulin resistance, inflammation",
+    "Reversed multiple hallmarks of aging in randomized trial (Baylor 2023)"
+  ],
+  "tags": [
+    "glutathione",
+    "anti-aging",
+    "protocol",
+    "affordable",
+    "evidence-strong"
+  ],
+  "id": "prod-glynac-glycine-nac",
+  "description": "Restored glutathione levels in elderly to young levels",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.532Z",
+  "createdAt": "2026-02-04T09:31:04.532Z"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Fisetin",
+  "category": "supplement",
+  "mechanisms": [
+    "Senolytic",
+    "Anti-inflammatory",
+    "Antioxidant",
+    "Neuroprotective"
+  ],
+  "evidenceGrade": "C",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "500mg intermittent (2 days/month)",
+    "range": "100-500mg",
+    "notes": "Found in strawberries. Intermittent high-dose may be more effective as senolytic."
+  },
+  "keyFindings": [
+    "Most potent natural senolytic in screening studies",
+    "Extended healthspan in mice by ~10%",
+    "AFFIRM-LITE trial underway for COVID long-haulers"
+  ],
+  "tags": [
+    "senolytic",
+    "flavonoid",
+    "neuroprotective",
+    "strawberry"
+  ],
+  "id": "prod-fisetin",
+  "description": "Most potent natural senolytic in screening studies",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.486Z",
+  "createdAt": "2026-02-04T09:31:04.486Z"
+}

@@ -1,0 +1,40 @@
+{
+  "name": "EGCG (Green Tea Extract)",
+  "category": "supplement",
+  "mechanisms": [
+    "Autophagy induction",
+    "Antioxidant",
+    "Anti-inflammatory",
+    "AMPK activation"
+  ],
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "400-500mg/day",
+    "range": "200-800mg/day",
+    "notes": "Take on empty stomach for better absorption. Avoid with iron-rich meals."
+  },
+  "keyFindings": [
+    "Potent autophagy inducer via multiple pathways",
+    "Reduced all-cause mortality in large cohort studies",
+    "Cancer-preventive properties in multiple cancers"
+  ],
+  "tags": [
+    "autophagy",
+    "antioxidant",
+    "green-tea",
+    "catechin",
+    "cancer"
+  ],
+  "id": "prod-egcg-green-tea-extract",
+  "description": "Potent autophagy inducer via multiple pathways",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.499Z",
+  "createdAt": "2026-02-04T09:31:04.499Z"
+}

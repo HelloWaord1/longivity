@@ -1,0 +1,37 @@
+{
+  "name": "Piperlongumine",
+  "category": "supplement",
+  "mechanisms": [
+    "Senolytic",
+    "Pro-oxidant in senescent cells",
+    "Anti-cancer"
+  ],
+  "evidenceGrade": "D",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "No established dose",
+    "range": "Research phase",
+    "notes": "Derived from long pepper (Piper longum)"
+  },
+  "keyFindings": [
+    "Selectively kills senescent cells in vitro",
+    "Targets oxidative stress response in senescent cells",
+    "Early research — no human trials yet"
+  ],
+  "tags": [
+    "senolytic",
+    "experimental",
+    "pepper"
+  ],
+  "id": "prod-piperlongumine",
+  "description": "Selectively kills senescent cells in vitro",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.489Z",
+  "createdAt": "2026-02-04T09:31:04.489Z"
+}

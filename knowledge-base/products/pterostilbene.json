@@ -1,0 +1,40 @@
+{
+  "name": "Pterostilbene",
+  "category": "supplement",
+  "mechanisms": [
+    "SIRT1 activator",
+    "Antioxidant",
+    "Neuroprotective",
+    "Better absorbed than resveratrol"
+  ],
+  "evidenceGrade": "C",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "100-150mg/day",
+    "range": "50-250mg/day",
+    "notes": "Methylated form of resveratrol. 4x better bioavailability. Found in blueberries."
+  },
+  "keyFindings": [
+    "4x better bioavailability than resveratrol",
+    "Activates SIRT1 and AMPK pathways",
+    "Improved cognitive function in elderly (NAPS trial)"
+  ],
+  "tags": [
+    "sirtuin",
+    "resveratrol",
+    "brain",
+    "blueberry",
+    "bioavailable"
+  ],
+  "id": "prod-pterostilbene",
+  "description": "4x better bioavailability than resveratrol",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.517Z",
+  "createdAt": "2026-02-04T09:31:04.517Z"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "PQQ (Pyrroloquinoline Quinone)",
+  "category": "supplement",
+  "mechanisms": [
+    "Mitochondrial biogenesis",
+    "Neuroprotective",
+    "Antioxidant",
+    "NGF stimulation"
+  ],
+  "evidenceGrade": "C",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "20mg/day",
+    "range": "10-40mg/day",
+    "notes": "Synergistic with CoQ10. Found in natto and green tea."
+  },
+  "keyFindings": [
+    "Stimulates mitochondrial biogenesis via PGC-1α",
+    "Improved cognitive function in elderly (Japanese trial)",
+    "Stimulates nerve growth factor (NGF)"
+  ],
+  "tags": [
+    "mitochondria",
+    "biogenesis",
+    "brain",
+    "ngf"
+  ],
+  "id": "prod-pqq-pyrroloquinoline-quinone",
+  "description": "Stimulates mitochondrial biogenesis via PGC-1α",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.501Z",
+  "createdAt": "2026-02-04T09:31:04.501Z"
+}

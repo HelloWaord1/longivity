@@ -1,0 +1,39 @@
+{
+  "name": "Niacin (Vitamin B3)",
+  "category": "supplement",
+  "mechanisms": [
+    "NAD+ precursor",
+    "Lipid metabolism",
+    "DNA repair"
+  ],
+  "evidenceGrade": "A",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "500mg/day",
+    "range": "250-2000mg/day",
+    "notes": "Flushing common — use flush-free or extended-release. Cheapest NAD+ precursor."
+  },
+  "keyFindings": [
+    "Decades of clinical evidence for cardiovascular health",
+    "Raises NAD+ effectively",
+    "AIM-HIGH and HPS2-THRIVE trials for CV outcomes"
+  ],
+  "tags": [
+    "nad+",
+    "niacin",
+    "b3",
+    "cardiovascular",
+    "affordable"
+  ],
+  "id": "prod-niacin-vitamin-b3",
+  "description": "Decades of clinical evidence for cardiovascular health",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.485Z",
+  "createdAt": "2026-02-04T09:31:04.485Z"
+}

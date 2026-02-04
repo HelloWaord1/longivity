@@ -1,0 +1,40 @@
+{
+  "name": "Sauna (Heat Exposure)",
+  "category": "protocol",
+  "mechanisms": [
+    "Heat shock proteins",
+    "Cardiovascular conditioning",
+    "Growth hormone release",
+    "Detoxification"
+  ],
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "15-20min at 80-100°C, 4-7x/week",
+    "range": "10-30min",
+    "notes": "Finnish sauna studies. Infrared sauna at lower temps also beneficial. Hydrate well."
+  },
+  "keyFindings": [
+    "4-7x/week sauna: 40% lower all-cause mortality (Laukkanen et al.)",
+    "Increases heat shock proteins — cellular protection",
+    "2-3x growth hormone increase after single session"
+  ],
+  "tags": [
+    "protocol",
+    "hormesis",
+    "heat-shock",
+    "cardiovascular",
+    "hsp"
+  ],
+  "id": "prod-sauna-heat-exposure",
+  "description": "4-7x/week sauna: 40% lower all-cause mortality (Laukkanen et al.)",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.526Z",
+  "createdAt": "2026-02-04T09:31:04.526Z"
+}

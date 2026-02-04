@@ -1,0 +1,39 @@
+{
+  "name": "Selenium",
+  "category": "supplement",
+  "mechanisms": [
+    "Glutathione peroxidase cofactor",
+    "Thyroid function",
+    "Anti-cancer",
+    "Antioxidant"
+  ],
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "200mcg/day",
+    "range": "100-400mcg/day",
+    "notes": "Selenomethionine or selenium yeast forms preferred. Narrow therapeutic window — don't exceed 400mcg."
+  },
+  "keyFindings": [
+    "Essential for glutathione peroxidase — key antioxidant enzyme",
+    "SELECT trial: complex results for cancer prevention",
+    "Critical for thyroid hormone conversion (T4 to T3)"
+  ],
+  "tags": [
+    "mineral",
+    "antioxidant",
+    "thyroid",
+    "essential"
+  ],
+  "id": "prod-selenium",
+  "description": "Essential for glutathione peroxidase — key antioxidant enzyme",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.522Z",
+  "createdAt": "2026-02-04T09:31:04.522Z"
+}

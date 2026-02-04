@@ -1,0 +1,39 @@
+{
+  "name": "Alpha-Ketoglutarate (AKG)",
+  "category": "supplement",
+  "mechanisms": [
+    "TCA cycle metabolite",
+    "Epigenetic regulation (TET enzymes)",
+    "Collagen synthesis",
+    "Anti-inflammatory"
+  ],
+  "evidenceGrade": "C",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "1000mg/day (Ca-AKG form)",
+    "range": "500-2000mg/day",
+    "notes": "Calcium alpha-ketoglutarate (Ca-AKG) is most studied form. Rejuvant brand."
+  },
+  "keyFindings": [
+    "Extended lifespan in mice by ~12% (Buck Institute)",
+    "Reduced biological age by 8 years in TRIIM-X adjacent study",
+    "Levels decline with age — supplementation restores"
+  ],
+  "tags": [
+    "metabolite",
+    "epigenetic",
+    "tca-cycle",
+    "emerging"
+  ],
+  "id": "prod-alpha-ketoglutarate-akg",
+  "description": "Extended lifespan in mice by ~12% (Buck Institute)",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.531Z",
+  "createdAt": "2026-02-04T09:31:04.531Z"
+}

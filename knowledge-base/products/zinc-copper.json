@@ -1,0 +1,40 @@
+{
+  "name": "Zinc + Copper",
+  "category": "supplement",
+  "mechanisms": [
+    "Immune function",
+    "Enzyme cofactor",
+    "DNA repair",
+    "Antioxidant (SOD)"
+  ],
+  "evidenceGrade": "A",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "Zinc 15-30mg + Copper 1-2mg/day",
+    "range": "Zinc 10-50mg",
+    "notes": "ALWAYS pair zinc with copper — zinc depletes copper. 10:1 ratio zinc:copper."
+  },
+  "keyFindings": [
+    "Essential for immune function — declines with age",
+    "Zinc required for DNA repair enzymes",
+    "Copper essential for SOD (superoxide dismutase) — key antioxidant enzyme"
+  ],
+  "tags": [
+    "mineral",
+    "immune",
+    "essential",
+    "dna-repair",
+    "affordable"
+  ],
+  "id": "prod-zinc-copper",
+  "description": "Essential for immune function — declines with age",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.520Z",
+  "createdAt": "2026-02-04T09:31:04.520Z"
+}

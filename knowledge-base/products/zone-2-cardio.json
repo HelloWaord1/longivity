@@ -1,0 +1,41 @@
+{
+  "name": "Zone 2 Cardio",
+  "category": "protocol",
+  "mechanisms": [
+    "Mitochondrial biogenesis",
+    "Fat oxidation",
+    "Cardiovascular fitness",
+    "Metabolic health"
+  ],
+  "evidenceGrade": "A",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "150-200min/week",
+    "range": "120-300min/week",
+    "notes": "Heart rate 60-70% max. Can hold conversation. Walking, cycling, swimming. Peter Attia protocol."
+  },
+  "keyFindings": [
+    "Strongest predictor of longevity: VO2max/cardiorespiratory fitness",
+    "Builds mitochondrial density and efficiency",
+    "Reduces all-cause mortality more than any supplement"
+  ],
+  "tags": [
+    "protocol",
+    "exercise",
+    "mitochondria",
+    "cardiovascular",
+    "free",
+    "essential"
+  ],
+  "id": "prod-zone-2-cardio",
+  "description": "Strongest predictor of longevity: VO2max/cardiorespiratory fitness",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.529Z",
+  "createdAt": "2026-02-04T09:31:04.529Z"
+}

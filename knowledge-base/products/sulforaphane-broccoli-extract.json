@@ -1,0 +1,40 @@
+{
+  "name": "Sulforaphane (Broccoli Extract)",
+  "category": "supplement",
+  "mechanisms": [
+    "Nrf2 activation",
+    "Phase II detox enzymes",
+    "Anti-cancer",
+    "Anti-inflammatory"
+  ],
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "30-60mg sulforaphane/day",
+    "range": "10-100mg/day",
+    "notes": "Glucoraphanin + myrosinase = sulforaphane. Or eat broccoli sprouts (50-100x more than mature broccoli)."
+  },
+  "keyFindings": [
+    "Most potent natural Nrf2 activator — upregulates hundreds of protective genes",
+    "Reduced cancer risk markers in human trials",
+    "Improved autistic behavior scores in clinical trial"
+  ],
+  "tags": [
+    "nrf2",
+    "detox",
+    "cancer",
+    "broccoli",
+    "isothiocyanate"
+  ],
+  "id": "prod-sulforaphane-broccoli-extract",
+  "description": "Most potent natural Nrf2 activator — upregulates hundreds of protective genes",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.509Z",
+  "createdAt": "2026-02-04T09:31:04.509Z"
+}

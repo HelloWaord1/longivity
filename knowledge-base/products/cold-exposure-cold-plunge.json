@@ -1,0 +1,40 @@
+{
+  "name": "Cold Exposure (Cold Plunge)",
+  "category": "protocol",
+  "mechanisms": [
+    "Brown fat activation",
+    "Norepinephrine release",
+    "Anti-inflammatory",
+    "Hormesis"
+  ],
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "2-5min at 10-15°C, 3-5x/week",
+    "range": "1-15min",
+    "notes": "Start gradual. End showers cold. Deliberate cold exposure — not hypothermia."
+  },
+  "keyFindings": [
+    "2-3x increase in norepinephrine (mood, focus, alertness)",
+    "Activates brown adipose tissue — metabolic benefits",
+    "Anti-inflammatory: reduced IL-6 and CRP in regular practitioners"
+  ],
+  "tags": [
+    "protocol",
+    "hormesis",
+    "brown-fat",
+    "inflammation",
+    "free"
+  ],
+  "id": "prod-cold-exposure-cold-plunge",
+  "description": "2-3x increase in norepinephrine (mood, focus, alertness)",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.526Z",
+  "createdAt": "2026-02-04T09:31:04.526Z"
+}

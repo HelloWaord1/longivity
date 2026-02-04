@@ -1,0 +1,40 @@
+{
+  "name": "Fiber (Prebiotic Blend)",
+  "category": "supplement",
+  "mechanisms": [
+    "Short-chain fatty acid production",
+    "Gut microbiome diversity",
+    "Blood sugar regulation"
+  ],
+  "evidenceGrade": "A",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "25-35g/day total fiber",
+    "range": "20-50g/day",
+    "notes": "Mix of psyllium, inulin, acacia fiber. Most people get <15g. Increase slowly."
+  },
+  "keyFindings": [
+    "Higher fiber intake consistently linked to lower all-cause mortality",
+    "Feeds beneficial gut bacteria, produces butyrate",
+    "Regulates blood sugar, reduces cardiovascular risk"
+  ],
+  "tags": [
+    "gut",
+    "microbiome",
+    "fiber",
+    "cardiovascular",
+    "essential",
+    "affordable"
+  ],
+  "id": "prod-fiber-prebiotic-blend",
+  "description": "Higher fiber intake consistently linked to lower all-cause mortality",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.515Z",
+  "createdAt": "2026-02-04T09:31:04.515Z"
+}

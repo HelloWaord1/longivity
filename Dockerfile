@@ -7,8 +7,9 @@ RUN npm install --production 2>/dev/null; exit 0
 
 COPY . .
 
-# Seed knowledge base on build
+# Seed knowledge base on build (core + extended = 48+ products)
 RUN node src/index.js products 2>/dev/null; exit 0
+RUN node src/agents/product-seed-extended.js 2>/dev/null; exit 0
 
 EXPOSE 3000
 

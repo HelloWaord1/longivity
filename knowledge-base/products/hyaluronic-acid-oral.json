@@ -1,0 +1,39 @@
+{
+  "name": "Hyaluronic Acid (Oral)",
+  "category": "supplement",
+  "mechanisms": [
+    "Joint lubrication",
+    "Skin hydration",
+    "Wound healing",
+    "Anti-inflammatory"
+  ],
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "120-240mg/day",
+    "range": "80-300mg/day",
+    "notes": "Low molecular weight form for better absorption. Found naturally in synovial fluid."
+  },
+  "keyFindings": [
+    "Improved skin hydration and reduced wrinkles in RCTs",
+    "Reduced knee pain comparable to injections in some studies",
+    "Declines significantly with age — supplementation helps"
+  ],
+  "tags": [
+    "skin",
+    "joints",
+    "hydration",
+    "anti-aging"
+  ],
+  "id": "prod-hyaluronic-acid-oral",
+  "description": "Improved skin hydration and reduced wrinkles in RCTs",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.534Z",
+  "createdAt": "2026-02-04T09:31:04.534Z"
+}

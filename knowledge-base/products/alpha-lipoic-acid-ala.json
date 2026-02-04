@@ -1,0 +1,38 @@
+{
+  "name": "Alpha-Lipoic Acid (ALA)",
+  "category": "supplement",
+  "mechanisms": [
+    "Mitochondrial cofactor",
+    "Antioxidant (both fat and water soluble)",
+    "Glucose metabolism"
+  ],
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "600mg/day",
+    "range": "300-1200mg/day",
+    "notes": "R-form (R-ALA) is the bioactive isomer. Take on empty stomach."
+  },
+  "keyFindings": [
+    "Universal antioxidant — works in both aqueous and lipid environments",
+    "ALADIN trial: improved diabetic neuropathy",
+    "Recycles other antioxidants (vitamins C, E, glutathione)"
+  ],
+  "tags": [
+    "mitochondria",
+    "antioxidant",
+    "glucose",
+    "neuropathy"
+  ],
+  "id": "prod-alpha-lipoic-acid-ala",
+  "description": "Universal antioxidant — works in both aqueous and lipid environments",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.503Z",
+  "createdAt": "2026-02-04T09:31:04.503Z"
+}

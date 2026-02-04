@@ -1,0 +1,39 @@
+{
+  "name": "Epithalon (Epitalon)",
+  "category": "peptide",
+  "mechanisms": [
+    "Telomerase activation",
+    "Pineal gland function",
+    "Melatonin regulation"
+  ],
+  "evidenceGrade": "D",
+  "riskProfile": "medium",
+  "dosage": {
+    "standard": "5-10mg/day for 10-20 day cycles",
+    "range": "Protocol-dependent",
+    "notes": "Synthetic peptide based on epithalamin. Russian research (Khavinson). Limited Western data."
+  },
+  "keyFindings": [
+    "Activated telomerase in human cell cultures",
+    "Extended lifespan in rodents by 12-26%",
+    "Restored melatonin production in elderly (Khavinson studies)"
+  ],
+  "tags": [
+    "peptide",
+    "telomere",
+    "telomerase",
+    "experimental",
+    "russian"
+  ],
+  "id": "prod-epithalon-epitalon",
+  "description": "Activated telomerase in human cell cultures",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.523Z",
+  "createdAt": "2026-02-04T09:31:04.523Z"
+}

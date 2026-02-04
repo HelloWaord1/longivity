@@ -1,0 +1,40 @@
+{
+  "name": "Curcumin (Turmeric Extract)",
+  "category": "supplement",
+  "mechanisms": [
+    "Anti-inflammatory (NF-κB)",
+    "Antioxidant",
+    "Senomorphic",
+    "Neuroprotective"
+  ],
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "500-1000mg/day (enhanced absorption form)",
+    "range": "200-2000mg/day",
+    "notes": "Bioavailability is poor — use Longvida, Meriva, or with piperine. Fat-soluble."
+  },
+  "keyFindings": [
+    "Potent NF-κB inhibitor — master inflammation regulator",
+    "Improved memory and attention in BDNF-related study",
+    "Senomorphic: reduces SASP without killing senescent cells"
+  ],
+  "tags": [
+    "anti-inflammatory",
+    "nf-kb",
+    "brain",
+    "curcumin",
+    "turmeric"
+  ],
+  "id": "prod-curcumin-turmeric-extract",
+  "description": "Potent NF-κB inhibitor — master inflammation regulator",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.506Z",
+  "createdAt": "2026-02-04T09:31:04.506Z"
+}

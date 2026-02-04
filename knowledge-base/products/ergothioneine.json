@@ -1,0 +1,39 @@
+{
+  "name": "Ergothioneine",
+  "category": "supplement",
+  "mechanisms": [
+    "Unique antioxidant (OCTN1 transporter)",
+    "Mitochondrial protection",
+    "Neuroprotective"
+  ],
+  "evidenceGrade": "C",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "5-25mg/day",
+    "range": "5-30mg/day",
+    "notes": "Found in mushrooms. Has its own dedicated transporter (OCTN1) — suggests biological importance."
+  },
+  "keyFindings": [
+    "Has its own dedicated cellular transporter — unique among antioxidants",
+    "Lower levels associated with cognitive decline and dementia risk",
+    "Accumulates in tissues under high oxidative stress"
+  ],
+  "tags": [
+    "antioxidant",
+    "mushroom",
+    "brain",
+    "novel",
+    "transporter"
+  ],
+  "id": "prod-ergothioneine",
+  "description": "Has its own dedicated cellular transporter — unique among antioxidants",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.536Z",
+  "createdAt": "2026-02-04T09:31:04.536Z"
+}

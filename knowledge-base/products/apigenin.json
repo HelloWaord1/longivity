@@ -1,0 +1,40 @@
+{
+  "name": "Apigenin",
+  "category": "supplement",
+  "mechanisms": [
+    "CD38 inhibitor (preserves NAD+)",
+    "Anti-inflammatory",
+    "Anxiolytic",
+    "Anti-cancer"
+  ],
+  "evidenceGrade": "C",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "50mg/day",
+    "range": "25-100mg/day",
+    "notes": "Found in chamomile, parsley, celery. Inhibits CD38 — main NAD+ consumer."
+  },
+  "keyFindings": [
+    "Inhibits CD38 enzyme that degrades NAD+ with age",
+    "Anxiolytic properties — found in chamomile",
+    "Synergistic with NAD+ precursors (NMN/NR)"
+  ],
+  "tags": [
+    "nad+",
+    "cd38",
+    "anxiolytic",
+    "chamomile",
+    "synergistic"
+  ],
+  "id": "prod-apigenin",
+  "description": "Inhibits CD38 enzyme that degrades NAD+ with age",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.517Z",
+  "createdAt": "2026-02-04T09:31:04.517Z"
+}

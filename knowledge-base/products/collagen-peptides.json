@@ -1,0 +1,40 @@
+{
+  "name": "Collagen Peptides",
+  "category": "supplement",
+  "mechanisms": [
+    "Connective tissue support",
+    "Skin elasticity",
+    "Joint health",
+    "Gut lining"
+  ],
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "10-15g/day",
+    "range": "5-20g/day",
+    "notes": "Type I/III for skin and tendons. Type II for joints. Hydrolyzed peptides for bioavailability."
+  },
+  "keyFindings": [
+    "Improved skin elasticity and hydration in multiple RCTs",
+    "Reduced joint pain in athletes",
+    "Collagen production declines ~1% per year after 25"
+  ],
+  "tags": [
+    "collagen",
+    "skin",
+    "joints",
+    "affordable",
+    "well-studied"
+  ],
+  "id": "prod-collagen-peptides",
+  "description": "Improved skin elasticity and hydration in multiple RCTs",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.533Z",
+  "createdAt": "2026-02-04T09:31:04.533Z"
+}

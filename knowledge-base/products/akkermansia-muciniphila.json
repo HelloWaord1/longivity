@@ -1,0 +1,40 @@
+{
+  "name": "Akkermansia muciniphila",
+  "category": "supplement",
+  "mechanisms": [
+    "Gut barrier integrity",
+    "Metabolic health",
+    "Anti-inflammatory",
+    "Mucin layer support"
+  ],
+  "evidenceGrade": "C",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "100mg (pasteurized) daily",
+    "range": "Product-specific",
+    "notes": "Pasteurized form shown to be MORE effective than live. Pendulum is main commercial source."
+  },
+  "keyFindings": [
+    "Inversely correlated with obesity and metabolic syndrome",
+    "Improved insulin sensitivity in human trial",
+    "Pasteurized Akkermansia improved metabolic markers (Depommier 2019)"
+  ],
+  "tags": [
+    "gut",
+    "microbiome",
+    "metabolic",
+    "probiotic",
+    "novel"
+  ],
+  "id": "prod-akkermansia-muciniphila",
+  "description": "Inversely correlated with obesity and metabolic syndrome",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.514Z",
+  "createdAt": "2026-02-04T09:31:04.514Z"
+}

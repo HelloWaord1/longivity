@@ -1,0 +1,40 @@
+{
+  "name": "Glycine",
+  "category": "supplement",
+  "mechanisms": [
+    "Glutathione synthesis",
+    "Collagen formation",
+    "Sleep quality",
+    "Anti-inflammatory"
+  ],
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "3-5g/day",
+    "range": "3-15g/day",
+    "notes": "Levels decline with age. GlyNAC combo (with NAC) shows anti-aging benefits. Sweet taste."
+  },
+  "keyFindings": [
+    "GlyNAC supplementation reversed aging hallmarks in elderly (Baylor study)",
+    "Improved sleep quality at 3g before bed",
+    "Essential for collagen synthesis — declines with age"
+  ],
+  "tags": [
+    "amino-acid",
+    "sleep",
+    "collagen",
+    "glutathione",
+    "affordable"
+  ],
+  "id": "prod-glycine",
+  "description": "GlyNAC supplementation reversed aging hallmarks in elderly (Baylor study)",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.513Z",
+  "createdAt": "2026-02-04T09:31:04.513Z"
+}

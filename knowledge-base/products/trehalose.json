@@ -1,0 +1,38 @@
+{
+  "name": "Trehalose",
+  "category": "supplement",
+  "mechanisms": [
+    "Autophagy inducer",
+    "Protein stabilizer",
+    "Neuroprotective"
+  ],
+  "evidenceGrade": "C",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "5-10g/day",
+    "range": "2-15g/day",
+    "notes": "Natural sugar found in mushrooms and shellfish. Low glycemic index."
+  },
+  "keyFindings": [
+    "Induces autophagy via mTOR-independent pathway",
+    "Reduced atherosclerosis in mouse models",
+    "Promising for neurodegenerative disease prevention"
+  ],
+  "tags": [
+    "autophagy",
+    "sugar",
+    "neuroprotective",
+    "affordable"
+  ],
+  "id": "prod-trehalose",
+  "description": "Induces autophagy via mTOR-independent pathway",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.496Z",
+  "createdAt": "2026-02-04T09:31:04.496Z"
+}

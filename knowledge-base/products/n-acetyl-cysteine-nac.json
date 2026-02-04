@@ -1,0 +1,40 @@
+{
+  "name": "N-Acetyl Cysteine (NAC)",
+  "category": "supplement",
+  "mechanisms": [
+    "Glutathione precursor",
+    "Antioxidant",
+    "Mucolytic",
+    "Liver protection"
+  ],
+  "evidenceGrade": "A",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "600-1200mg/day",
+    "range": "600-2400mg/day",
+    "notes": "Hospital staple for acetaminophen overdose. Raises glutathione — master antioxidant."
+  },
+  "keyFindings": [
+    "Effectively raises glutathione levels",
+    "GlyNAC (glycine + NAC) reversed aging hallmarks in elderly humans",
+    "Decades of clinical safety data"
+  ],
+  "tags": [
+    "glutathione",
+    "antioxidant",
+    "liver",
+    "affordable",
+    "well-studied"
+  ],
+  "id": "prod-n-acetyl-cysteine-nac",
+  "description": "Effectively raises glutathione levels",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.511Z",
+  "createdAt": "2026-02-04T09:31:04.511Z"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Astaxanthin",
+  "category": "supplement",
+  "mechanisms": [
+    "Potent antioxidant (6000x vitamin C)",
+    "Anti-inflammatory",
+    "Skin protection",
+    "Cardiovascular"
+  ],
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "12mg/day",
+    "range": "4-24mg/day",
+    "notes": "Derived from microalgae Haematococcus pluvialis. Fat-soluble — take with meals."
+  },
+  "keyFindings": [
+    "Most powerful carotenoid antioxidant",
+    "Reduced DNA damage markers in human trial",
+    "Improved skin elasticity and reduced wrinkles"
+  ],
+  "tags": [
+    "antioxidant",
+    "skin",
+    "cardiovascular",
+    "carotenoid"
+  ],
+  "id": "prod-astaxanthin",
+  "description": "Most powerful carotenoid antioxidant",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T09:31:04.507Z",
+  "createdAt": "2026-02-04T09:31:04.507Z"
+}
