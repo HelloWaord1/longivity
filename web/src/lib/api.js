@@ -105,6 +105,12 @@ export async function placeOrder({ customer, items, total }) {
   return res.json();
 }
 
+export async function fetchStats() {
+  const res = await fetch(`${API_URL}/stats`);
+  if (!res.ok) throw new Error('Failed to fetch stats');
+  return res.json();
+}
+
 export async function subscribeProtocol({ email, protocol }) {
   const res = await fetch(`${API_URL}/protocol/subscribe`, {
     method: 'POST',

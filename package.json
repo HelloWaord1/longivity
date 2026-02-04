@@ -14,8 +14,19 @@
     "mcp": "node src/mcp/server.js",
     "content": "node src/agents/content-generator.js",
     "web-monitor": "node src/agents/web-monitor.js",
-    "seed-v3": "node src/agents/product-seed-v3.js"
+    "seed-v3": "node src/agents/product-seed-v3.js",
+    "build-index": "node src/search/index.js"
   },
-  "keywords": ["longevity", "ai", "agents", "health", "supplements", "mcp"],
-  "license": "MIT"
+  "keywords": [
+    "longevity",
+    "ai",
+    "agents",
+    "health",
+    "supplements",
+    "mcp"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@xenova/transformers": "^2.17.2"
+  }
 }

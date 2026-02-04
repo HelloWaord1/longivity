@@ -6,13 +6,19 @@
 
 import { createServer } from 'http';
 import { KnowledgeBase } from '../kb/store.js';
+import { profileAgent } from '../agents/profile-agent.js';
 import { readFile, readdir, stat, writeFile, mkdir } from 'fs/promises';
 import { join } from 'path';
 import { existsSync } from 'fs';
 import { randomUUID } from 'crypto';
+import { loadIndex, needsRebuild, buildIndex } from '../search/index.js';
+import { searchSimilar } from '../search/embeddings.js';
 
 const kb = new KnowledgeBase();
 const PORT = process.env.PORT || 3000;
+
+// Cached search index
+let searchIndex = null;
 
 /**
  * Simple JSON router
@@ -37,6 +43,38 @@ function json(res, data, status = 200) {
 }
 
 /**
+ * Get or initialize search index
+ */
+async function getSearchIndex() {
+  if (!searchIndex) {
+    console.log('[Search] Loading search index...');
+    try {
+      searchIndex = await loadIndex();
+      
+      // Check if index needs rebuilding
+      if (await needsRebuild()) {
+        console.log('[Search] Index is stale, rebuilding in background...');
+        buildIndex().then(() => {
+          searchIndex = null; // Force reload next time
+          console.log('[Search] Background rebuild complete');
+        }).catch(err => {
+          console.error('[Search] Background rebuild failed:', err);
+        });
+      }
+    } catch (error) {
+      console.error('[Search] Failed to load index:', error);
+      // Return empty index structure as fallback
+      return {
+        products: [],
+        articles: [],
+        metadata: { productCount: 0, articleCount: 0, totalCount: 0 }
+      };
+    }
+  }
+  return searchIndex;
+}
+
+/**
  * Route handlers
  */
 const routes = {
@@ -44,6 +82,21 @@ const routes = {
   'GET /': async (req, res) => {
     res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
     res.end(getIndexHtml());
+  },
+
+  // Live stats
+  'GET /stats': async (req, res) => {
+    const products = kb.getProducts();
+    const papers = kb.getResearch();
+    const articles = kb.getArticles ? kb.getArticles() : [];
+    const webArticles = kb.getWebArticles ? kb.getWebArticles() : [];
+    json(res, {
+      products: products.length,
+      papers: papers.length,
+      articles: articles.length + webArticles.length,
+      grades: 'A–D',
+      monitoring: '24/7',
+    });
   },
 
   // API info
@@ -59,14 +112,105 @@ const routes = {
         'GET /digest',
         'GET /articles  (supports ?type=generated|web|all, ?source=, ?category=, ?limit=)',
         'GET /articles/:id',
+        'GET /search  (supports ?q=query, ?type=all|products|articles, ?limit=10)',
         'POST /consult',
         'POST /consult-stack',
         'POST /recommend',
         'POST /protocol/subscribe',
         'POST /orders',
         'GET /orders',
+        'POST /profile — create/update user profile',
+        'GET /profile/:userId — get user profile',
+        'POST /profile/:userId/biomarkers — add blood test results',
+        'GET /profile/:userId/biomarkers — get biomarker history',
+        'POST /profile/:userId/wearables — add wearable data',
+        'GET /profile/:userId/wearables — get wearable data',
       ],
     });
+  },
+
+  // Create or update user profile
+  'POST /profile': async (req, res) => {
+    try {
+      const body = await parseBody(req);
+      const { userId, ...profileData } = body;
+
+      if (!userId) {
+        return json(res, { error: 'userId is required' }, 400);
+      }
+
+      const profile = await profileAgent.createOrUpdateProfile(userId, profileData);
+      json(res, { success: true, profile });
+    } catch (err) {
+      console.error('[Profile] Create/update error:', err.message);
+      json(res, { error: err.message }, 400);
+    }
+  },
+
+  // Get user profile
+  'GET /profile/:userId': async (req, res, params) => {
+    try {
+      const profile = await profileAgent.getProfile(params.userId);
+      if (!profile) {
+        return json(res, { error: 'Profile not found' }, 404);
+      }
+      json(res, { profile });
+    } catch (err) {
+      console.error('[Profile] Get error:', err.message);
+      json(res, { error: 'Failed to retrieve profile' }, 500);
+    }
+  },
+
+  // Add biomarker data
+  'POST /profile/:userId/biomarkers': async (req, res, params) => {
+    try {
+      const body = await parseBody(req);
+      const biomarkerEntry = await profileAgent.addBiomarkers(params.userId, body);
+      json(res, { success: true, biomarker: biomarkerEntry });
+    } catch (err) {
+      console.error('[Profile] Add biomarkers error:', err.message);
+      json(res, { error: err.message }, 400);
+    }
+  },
+
+  // Get biomarker history
+  'GET /profile/:userId/biomarkers': async (req, res, params) => {
+    try {
+      const url = new URL(req.url, `http://localhost:${PORT}`);
+      const limit = parseInt(url.searchParams.get('limit')) || 50;
+      
+      const biomarkers = await profileAgent.getBiomarkers(params.userId, limit);
+      json(res, { biomarkers, count: biomarkers.length });
+    } catch (err) {
+      console.error('[Profile] Get biomarkers error:', err.message);
+      json(res, { error: 'Failed to retrieve biomarkers' }, 500);
+    }
+  },
+
+  // Add wearable data
+  'POST /profile/:userId/wearables': async (req, res, params) => {
+    try {
+      const body = await parseBody(req);
+      const wearableEntry = await profileAgent.addWearableData(params.userId, body);
+      json(res, { success: true, wearable: wearableEntry });
+    } catch (err) {
+      console.error('[Profile] Add wearables error:', err.message);
+      json(res, { error: err.message }, 400);
+    }
+  },
+
+  // Get wearable data
+  'GET /profile/:userId/wearables': async (req, res, params) => {
+    try {
+      const url = new URL(req.url, `http://localhost:${PORT}`);
+      const days = parseInt(url.searchParams.get('days')) || 30;
+      
+      const wearables = await profileAgent.getWearableData(params.userId, days);
+      json(res, { wearables, count: wearables.length });
+    } catch (err) {
+      console.error('[Profile] Get wearables error:', err.message);
+      json(res, { error: 'Failed to retrieve wearable data' }, 500);
+    }
   },
 
   // List all products (with optional filters via query params)
@@ -240,34 +384,110 @@ const routes = {
     json(res, { error: 'Article not found' }, 404);
   },
 
+  // Semantic search endpoint
+  'GET /search': async (req, res) => {
+    const url = new URL(req.url, `http://localhost:${PORT}`);
+    const query = url.searchParams.get('q');
+    const type = url.searchParams.get('type') || 'all'; // all, products, articles
+    const limit = parseInt(url.searchParams.get('limit')) || 10;
+
+    if (!query || query.trim() === '') {
+      return json(res, { error: 'query parameter (q) is required' }, 400);
+    }
+
+    try {
+      const index = await getSearchIndex();
+      const results = [];
+
+      // Search products if requested
+      if (type === 'all' || type === 'products') {
+        const productResults = await searchSimilar(query, index.products, limit);
+        results.push(...productResults.map(r => ({
+          ...r.item,
+          type: 'product',
+          score: r.score
+        })));
+      }
+
+      // Search articles if requested
+      if (type === 'all' || type === 'articles') {
+        const articleResults = await searchSimilar(query, index.articles, limit);
+        results.push(...articleResults.map(r => ({
+          ...r.item,
+          type: 'article',
+          score: r.score
+        })));
+      }
+
+      // Sort by relevance score and limit results
+      results.sort((a, b) => b.score - a.score);
+      const limited = results.slice(0, limit);
+
+      json(res, {
+        query,
+        results: limited,
+        count: limited.length,
+        type,
+        indexStats: {
+          products: index.metadata.productCount,
+          articles: index.metadata.articleCount,
+          total: index.metadata.totalCount
+        }
+      });
+    } catch (error) {
+      console.error('[Search] Search failed:', error);
+      json(res, { error: 'Search failed', details: error.message }, 500);
+    }
+  },
+
   // Consult endpoint — answer longevity questions
   'POST /consult': async (req, res) => {
     const body = await parseBody(req);
-    const { query, healthProfile } = body;
+    const { query, userId, healthProfile } = body;
 
     if (!query) {
       return json(res, { error: 'query is required' }, 400);
     }
 
-    // Search knowledge base for relevant products
-    const products = await kb.listProducts();
-    const allProducts = [];
-    for (const name of products) {
-      const p = await kb.getProduct(name);
-      if (p) allProducts.push(p);
+    // Get user profile for personalization if userId provided
+    let userHealthSummary = null;
+    if (userId) {
+      try {
+        userHealthSummary = await profileAgent.getHealthSummary(userId);
+      } catch (err) {
+        console.error('[Consult] Failed to load user profile:', err.message);
+      }
     }
 
-    // Keyword matching to find relevant products
-    const queryLower = query.toLowerCase();
-    const relevant = allProducts.filter(p => {
-      const searchText = [
-        p.name, p.description, ...(p.mechanisms || []),
-        ...(p.tags || []), ...(p.keyFindings || []),
-      ].join(' ').toLowerCase();
-      return queryLower.split(' ').some(word =>
-        word.length > 3 && searchText.includes(word)
-      );
-    }).slice(0, 8); // limit context size
+    // Search knowledge base for relevant products using semantic search
+    let relevant = [];
+    try {
+      const index = await getSearchIndex();
+      const searchResults = await searchSimilar(query, index.products, 8, 0.2); // Get top 8 with min score 0.2
+      relevant = searchResults.map(result => result.item);
+      console.log(`[Consult] Found ${relevant.length} relevant products via semantic search`);
+    } catch (error) {
+      console.error('[Consult] Semantic search failed, falling back to keyword matching:', error);
+      
+      // Fallback to old keyword matching if semantic search fails
+      const products = await kb.listProducts();
+      const allProducts = [];
+      for (const name of products) {
+        const p = await kb.getProduct(name);
+        if (p) allProducts.push(p);
+      }
+      
+      const queryLower = query.toLowerCase();
+      relevant = allProducts.filter(p => {
+        const searchText = [
+          p.name, p.description, ...(p.mechanisms || []),
+          ...(p.tags || []), ...(p.keyFindings || []),
+        ].join(' ').toLowerCase();
+        return queryLower.split(' ').some(word =>
+          word.length > 3 && searchText.includes(word)
+        );
+      }).slice(0, 8); // limit context size
+    }
 
     // If Anthropic key available, use Claude for intelligent answers
     const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -277,6 +497,26 @@ const routes = {
           `- ${p.name} (Grade ${p.evidenceGrade}, ${p.riskProfile} risk): ${p.description}\n  Mechanisms: ${(p.mechanisms || []).join(', ')}\n  Dosage: ${p.dosage?.standard || 'N/A'}\n  Key findings: ${(p.keyFindings || []).slice(0, 2).join('; ')}`
         ).join('\n\n');
 
+        // Build health context for personalization
+        let healthContext = '';
+        if (userHealthSummary) {
+          const profile = userHealthSummary.profile;
+          const summary = userHealthSummary.summary;
+          
+          healthContext = `\n\nUser Health Profile:
+- Demographics: ${profile.age ? `${profile.age} years old` : 'age unknown'}, ${profile.sex || 'sex unknown'}
+- Health Goals: ${(profile.healthGoals || []).join(', ') || 'none specified'}
+- Conditions: ${(profile.conditions || []).join(', ') || 'none reported'}
+- Allergies: ${(profile.allergies || []).join(', ') || 'none reported'}
+- Insights: ${summary.join('; ') || 'none available'}
+
+Personalize recommendations based on this profile.`;
+        } else if (healthProfile) {
+          healthContext = `\n\nUser Health Profile: ${JSON.stringify(healthProfile)}
+
+Personalize recommendations based on this profile.`;
+        }
+
         const systemPrompt = `You are Longivity AI, a longevity science assistant. Answer questions about supplements, protocols, and longevity research based on the evidence-graded knowledge base provided.
 
 Rules:
@@ -284,13 +524,14 @@ Rules:
 - Always mention evidence grades (A=strong RCTs, B=good evidence, C=emerging, D=preliminary)
 - Include dosage information when relevant
 - Note contraindications and risks
+- Personalize recommendations if user health profile is provided
 - End with a brief disclaimer
 - Use markdown formatting (## headings, **bold**, - bullet points)
 - Keep answers under 500 words`;
 
         const userMessage = productContext 
-          ? `Knowledge base context:\n${productContext}\n\nUser question: ${query}`
-          : `No specific products found in the knowledge base for this query. Answer based on general longevity science knowledge.\n\nUser question: ${query}`;
+          ? `Knowledge base context:\n${productContext}${healthContext}\n\nUser question: ${query}`
+          : `No specific products found in the knowledge base for this query. Answer based on general longevity science knowledge.${healthContext}\n\nUser question: ${query}`;
 
         const claudeRes = await fetch('https://api.anthropic.com/v1/messages', {
           method: 'POST',
@@ -688,6 +929,32 @@ async function handleRequest(req, res) {
       return await routes['GET /products/:name'](req, res, { name });
     }
 
+    // Profile routes
+    if (method === 'GET' && path.match(/^\/profile\/([^\/]+)$/)) {
+      const userId = decodeURIComponent(path.split('/')[2]);
+      return await routes['GET /profile/:userId'](req, res, { userId });
+    }
+
+    if (method === 'POST' && path.match(/^\/profile\/([^\/]+)\/biomarkers$/)) {
+      const userId = decodeURIComponent(path.split('/')[2]);
+      return await routes['POST /profile/:userId/biomarkers'](req, res, { userId });
+    }
+
+    if (method === 'GET' && path.match(/^\/profile\/([^\/]+)\/biomarkers$/)) {
+      const userId = decodeURIComponent(path.split('/')[2]);
+      return await routes['GET /profile/:userId/biomarkers'](req, res, { userId });
+    }
+
+    if (method === 'POST' && path.match(/^\/profile\/([^\/]+)\/wearables$/)) {
+      const userId = decodeURIComponent(path.split('/')[2]);
+      return await routes['POST /profile/:userId/wearables'](req, res, { userId });
+    }
+
+    if (method === 'GET' && path.match(/^\/profile\/([^\/]+)\/wearables$/)) {
+      const userId = decodeURIComponent(path.split('/')[2]);
+      return await routes['GET /profile/:userId/wearables'](req, res, { userId });
+    }
+
     json(res, { error: 'Not found', path }, 404);
   } catch (err) {
     console.error('Request error:', err);
@@ -700,6 +967,7 @@ async function handleRequest(req, res) {
  */
 async function start() {
   await kb.init();
+  await profileAgent.init();
 
   const server = createServer(handleRequest);
   server.listen(PORT, '0.0.0.0', () => {

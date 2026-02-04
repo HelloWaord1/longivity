@@ -8,6 +8,7 @@
  */
 
 import { KnowledgeBase } from '../kb/store.js';
+import { profileAgent } from '../agents/profile-agent.js';
 
 const kb = new KnowledgeBase();
 
@@ -101,6 +102,188 @@ const TOOLS = [
     inputSchema: {
       type: 'object',
       properties: {},
+    },
+  },
+  {
+    name: 'longivity_profile_create',
+    description: 'Create or update a user health profile with demographic data, health goals, conditions, and allergies.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        userId: {
+          type: 'string',
+          description: 'User identifier (e.g., "user123", email, username)',
+        },
+        age: {
+          type: 'number',
+          description: 'Age in years',
+        },
+        sex: {
+          type: 'string',
+          description: 'Sex/gender',
+          enum: ['male', 'female', 'other'],
+        },
+        weight: {
+          type: 'number',
+          description: 'Weight in kg',
+        },
+        height: {
+          type: 'number',
+          description: 'Height in cm',
+        },
+        healthGoals: {
+          type: 'array',
+          items: { type: 'string' },
+          description: 'Health goals (e.g., ["energy", "cognitive", "longevity", "cardiovascular"])',
+        },
+        conditions: {
+          type: 'array',
+          items: { type: 'string' },
+          description: 'Health conditions or medical history',
+        },
+        allergies: {
+          type: 'array',
+          items: { type: 'string' },
+          description: 'Known allergies',
+        },
+      },
+      required: ['userId'],
+    },
+  },
+  {
+    name: 'longivity_profile_get',
+    description: 'Get user health profile information.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        userId: {
+          type: 'string',
+          description: 'User identifier',
+        },
+      },
+      required: ['userId'],
+    },
+  },
+  {
+    name: 'longivity_biomarkers_add',
+    description: 'Add blood test results and biomarker data for a user.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        userId: {
+          type: 'string',
+          description: 'User identifier',
+        },
+        date: {
+          type: 'string',
+          description: 'Date of test (YYYY-MM-DD format)',
+        },
+        values: {
+          type: 'object',
+          description: 'Biomarker values as key-value pairs (e.g., {"cholesterol": 180, "glucose": 95, "vitamin_d": 45})',
+        },
+        referenceRanges: {
+          type: 'object',
+          description: 'Reference ranges for each biomarker (e.g., {"cholesterol": "< 200 mg/dL"})',
+        },
+        notes: {
+          type: 'string',
+          description: 'Additional notes about the test',
+        },
+      },
+      required: ['userId', 'values'],
+    },
+  },
+  {
+    name: 'longivity_biomarkers_get',
+    description: 'Get biomarker history for a user.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        userId: {
+          type: 'string',
+          description: 'User identifier',
+        },
+        limit: {
+          type: 'number',
+          description: 'Maximum number of entries to return (default: 10)',
+        },
+      },
+      required: ['userId'],
+    },
+  },
+  {
+    name: 'longivity_wearables_add',
+    description: 'Add wearable device data (sleep, HRV, steps, heart rate) for a user.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        userId: {
+          type: 'string',
+          description: 'User identifier',
+        },
+        date: {
+          type: 'string',
+          description: 'Date of data (YYYY-MM-DD format)',
+        },
+        sleep: {
+          type: 'object',
+          description: 'Sleep data (e.g., {"duration": 480, "efficiency": 85, "deep": 90, "rem": 120})',
+        },
+        hrv: {
+          type: 'number',
+          description: 'Heart rate variability in ms',
+        },
+        steps: {
+          type: 'number',
+          description: 'Daily step count',
+        },
+        restingHR: {
+          type: 'number',
+          description: 'Resting heart rate in bpm',
+        },
+        deviceType: {
+          type: 'string',
+          description: 'Device type (e.g., "apple_watch", "fitbit", "oura")',
+        },
+        notes: {
+          type: 'string',
+          description: 'Additional notes',
+        },
+      },
+      required: ['userId'],
+    },
+  },
+  {
+    name: 'longivity_wearables_get',
+    description: 'Get wearable device data history for a user.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        userId: {
+          type: 'string',
+          description: 'User identifier',
+        },
+        days: {
+          type: 'number',
+          description: 'Number of days to retrieve (default: 7)',
+        },
+      },
+      required: ['userId'],
+    },
+  },
+  {
+    name: 'longivity_health_summary',
+    description: 'Get comprehensive health summary for a user, including profile, recent biomarkers, and wearables data.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        userId: {
+          type: 'string',
+          description: 'User identifier',
+        },
+      },
+      required: ['userId'],
     },
   },
 ];
@@ -228,6 +411,62 @@ async function handleTool(name, args) {
       return { content: [{ type: 'text', text: JSON.stringify({ papers, count: papers.length }, null, 2) }] };
     }
 
+    case 'longivity_profile_create': {
+      try {
+        const { userId, ...profileData } = args;
+        const profile = await profileAgent.createOrUpdateProfile(userId, profileData);
+        return { content: [{ type: 'text', text: JSON.stringify({ success: true, profile }, null, 2) }] };
+      } catch (err) {
+        return { content: [{ type: 'text', text: `Profile creation failed: ${err.message}` }], isError: true };
+      }
+    }
+
+    case 'longivity_profile_get': {
+      const profile = await profileAgent.getProfile(args.userId);
+      if (!profile) {
+        return { content: [{ type: 'text', text: `Profile not found for user: ${args.userId}` }], isError: true };
+      }
+      return { content: [{ type: 'text', text: JSON.stringify({ profile }, null, 2) }] };
+    }
+
+    case 'longivity_biomarkers_add': {
+      try {
+        const { userId, ...biomarkerData } = args;
+        const biomarker = await profileAgent.addBiomarkers(userId, biomarkerData);
+        return { content: [{ type: 'text', text: JSON.stringify({ success: true, biomarker }, null, 2) }] };
+      } catch (err) {
+        return { content: [{ type: 'text', text: `Biomarker addition failed: ${err.message}` }], isError: true };
+      }
+    }
+
+    case 'longivity_biomarkers_get': {
+      const biomarkers = await profileAgent.getBiomarkers(args.userId, args.limit || 10);
+      return { content: [{ type: 'text', text: JSON.stringify({ biomarkers, count: biomarkers.length }, null, 2) }] };
+    }
+
+    case 'longivity_wearables_add': {
+      try {
+        const { userId, ...wearableData } = args;
+        const wearable = await profileAgent.addWearableData(userId, wearableData);
+        return { content: [{ type: 'text', text: JSON.stringify({ success: true, wearable }, null, 2) }] };
+      } catch (err) {
+        return { content: [{ type: 'text', text: `Wearable data addition failed: ${err.message}` }], isError: true };
+      }
+    }
+
+    case 'longivity_wearables_get': {
+      const wearables = await profileAgent.getWearableData(args.userId, args.days || 7);
+      return { content: [{ type: 'text', text: JSON.stringify({ wearables, count: wearables.length }, null, 2) }] };
+    }
+
+    case 'longivity_health_summary': {
+      const healthSummary = await profileAgent.getHealthSummary(args.userId);
+      if (!healthSummary) {
+        return { content: [{ type: 'text', text: `Health summary not available for user: ${args.userId}` }], isError: true };
+      }
+      return { content: [{ type: 'text', text: JSON.stringify(healthSummary, null, 2) }] };
+    }
+
     default:
       return { content: [{ type: 'text', text: `Unknown tool: ${name}` }], isError: true };
   }
@@ -236,6 +475,7 @@ async function handleTool(name, args) {
 // MCP stdio transport
 async function main() {
   await kb.init();
+  await profileAgent.init();
 
   const readline = await import('readline');
   const rl = readline.createInterface({ input: process.stdin });

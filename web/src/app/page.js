@@ -7,7 +7,7 @@ import ProductCard from '@/components/ProductCard';
 import ProductModal from '@/components/ProductModal';
 import TypewriterText from '@/components/TypewriterText';
 import LoadingPulse from '@/components/LoadingPulse';
-import { consultAI, fetchProducts } from '@/lib/api';
+import { consultAI, fetchProducts, fetchStats } from '@/lib/api';
 
 const SUGGESTIONS = [
   'How to boost NAD+ levels?',
@@ -82,10 +82,12 @@ export default function HomePage() {
   const [currentQuery, setCurrentQuery] = useState('');
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [allProducts, setAllProducts] = useState([]);
+  const [stats, setStats] = useState(null);
   const resultRef = useRef(null);
 
   useEffect(() => {
     fetchProducts().then(setAllProducts).catch(() => {});
+    fetchStats().then(setStats).catch(() => {});
   }, []);
 
   const handleSearch = async (query) => {
