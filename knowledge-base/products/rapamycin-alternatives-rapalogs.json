@@ -1,0 +1,60 @@
+{
+  "name": "Rapamycin Alternatives (Rapalogs)",
+  "category": "pharmaceutical",
+  "evidenceGrade": "C",
+  "riskProfile": "medium",
+  "description": "Next-generation mTOR inhibitors and rapalogs designed for better tolerability than rapamycin. Includes everolimus (RTB101) and newer compounds specifically targeting mTORC1 over mTORC2 to reduce side effects while maintaining longevity benefits.",
+  "mechanisms": [
+    "Selective mTORC1 inhibition",
+    "Autophagy induction",
+    "Immune function enhancement (low doses)",
+    "Senescent cell regulation"
+  ],
+  "dosage": {
+    "standard": "Variable by compound — physician-guided",
+    "range": "Everolimus 0.5mg/week typical",
+    "notes": "Prescription only. Replicel (RTB101/everolimus) showed immune enhancement in elderly at low dose. Goal: mTORC1 inhibition without mTORC2 suppression."
+  },
+  "keyFindings": [
+    "Low-dose everolimus enhanced immune response to flu vaccine in elderly by 20% (Mannick et al., Science Translational Medicine)",
+    "More selective mTORC1 targeting may avoid rapamycin side effects",
+    "RTB101 (everolimus derivative) in clinical trials for immune aging"
+  ],
+  "interactions": [
+    "CYP3A4 substrates",
+    "Strong CYP3A4 inhibitors/inducers",
+    "Vaccines (may affect response)"
+  ],
+  "sideEffects": [
+    "Mouth sores",
+    "Delayed wound healing",
+    "Metabolic changes",
+    "Infections (high doses)"
+  ],
+  "contraindications": [
+    "Active infections",
+    "Severe hepatic impairment",
+    "Immunosuppressed patients"
+  ],
+  "tags": [
+    "pharmaceutical",
+    "mtor",
+    "rapalog",
+    "immune",
+    "autophagy",
+    "prescription"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 30,
+    "mid": 80,
+    "high": 200,
+    "currency": "USD"
+  },
+  "id": "prod-rapamycin-alternatives-rapalogs",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.858Z",
+  "createdAt": "2026-02-04T14:50:14.858Z"
+}

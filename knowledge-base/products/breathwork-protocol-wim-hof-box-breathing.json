@@ -1,0 +1,56 @@
+{
+  "name": "Breathwork Protocol (Wim Hof / Box Breathing)",
+  "category": "protocol",
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "description": "Structured breathing practices for stress resilience, immune modulation, and autonomic nervous system control. Wim Hof Method combines cyclic hyperventilation with breath holds, while box breathing activates the parasympathetic system. Both have clinical evidence.",
+  "mechanisms": [
+    "Autonomic nervous system control",
+    "Epinephrine and norepinephrine modulation",
+    "Immune system modulation (Wim Hof)",
+    "CO2 tolerance training"
+  ],
+  "dosage": {
+    "standard": "Wim Hof: 3 rounds of 30 breaths + hold, daily. Box: 4-4-4-4, 5-10min",
+    "range": "5-20 min/day",
+    "notes": "Wim Hof Method: NEVER in water (drowning risk). Box breathing: 4sec inhale-hold-exhale-hold. Physiological sigh (double inhale, long exhale) for acute stress. Free and always available."
+  },
+  "keyFindings": [
+    "Wim Hof practitioners voluntarily modulated immune response to endotoxin (PNAS 2014)",
+    "Box breathing reduced PTSD symptoms in veterans",
+    "Cyclic hyperventilation increased epinephrine 2-3x (comparable to first-time bungee jump)"
+  ],
+  "interactions": [],
+  "sideEffects": [
+    "Lightheadedness",
+    "Tingling (hyperventilation)",
+    "Emotional release"
+  ],
+  "contraindications": [
+    "Epilepsy",
+    "Severe cardiovascular disease",
+    "Pregnancy (intense protocols)",
+    "Never near water"
+  ],
+  "tags": [
+    "protocol",
+    "breathwork",
+    "stress",
+    "immune",
+    "autonomic",
+    "free"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 0,
+    "mid": 0,
+    "high": 0,
+    "currency": "USD"
+  },
+  "id": "prod-breathwork-protocol-wim-hof-box-breathing",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.860Z",
+  "createdAt": "2026-02-04T14:50:14.860Z"
+}

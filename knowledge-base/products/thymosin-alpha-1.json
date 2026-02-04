@@ -1,0 +1,56 @@
+{
+  "name": "Thymosin Alpha-1",
+  "category": "peptide",
+  "evidenceGrade": "B",
+  "riskProfile": "medium",
+  "description": "A thymic peptide that modulates the immune system by stimulating T-cell maturation and function. FDA-approved as orphan drug (Zadaxin) for hepatitis B. Used clinically in over 30 countries for immunomodulation and shows promise for immune aging.",
+  "mechanisms": [
+    "T-cell maturation and differentiation",
+    "Dendritic cell activation",
+    "NK cell enhancement",
+    "Toll-like receptor signaling modulation"
+  ],
+  "dosage": {
+    "standard": "1.6mg subcutaneous, 2x/week",
+    "range": "0.8-3.2mg, 2-3x/week",
+    "notes": "Subcutaneous injection. FDA orphan drug approval. Used clinically in 30+ countries."
+  },
+  "keyFindings": [
+    "Improved survival in sepsis and hepatitis B in multiple clinical trials",
+    "Enhanced vaccine response in immunocompromised elderly patients",
+    "Restored T-cell function in aging immune systems (immunosenescence)"
+  ],
+  "interactions": [
+    "Immunosuppressants (may counteract)",
+    "Other immunomodulators"
+  ],
+  "sideEffects": [
+    "Injection site reactions",
+    "Mild flu-like symptoms (rare)"
+  ],
+  "contraindications": [
+    "Organ transplant recipients on immunosuppressants",
+    "Active autoimmune disease"
+  ],
+  "tags": [
+    "peptide",
+    "immune",
+    "thymus",
+    "immunosenescence",
+    "clinical",
+    "approved"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 100,
+    "mid": 250,
+    "high": 500,
+    "currency": "USD"
+  },
+  "id": "prod-thymosin-alpha-1",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.783Z",
+  "createdAt": "2026-02-04T14:50:14.783Z"
+}

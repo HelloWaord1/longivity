@@ -1,0 +1,50 @@
+{
+  "name": "Peter Attia Longevity Framework",
+  "category": "protocol",
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "description": "Evidence-based longevity framework by physician Peter Attia MD (author of \"Outlive\"). Focuses on the \"four horsemen\" of chronic disease prevention through exercise (Zone 2 + strength), metabolic health, sleep optimization, and emotional health. Emphasizes Medicine 3.0 — proactive rather than reactive healthcare.",
+  "mechanisms": [
+    "VO2max optimization (strongest mortality predictor)",
+    "Stability and strength training",
+    "Metabolic health optimization",
+    "Early cancer and cardiovascular screening"
+  ],
+  "dosage": {
+    "standard": "3-4hr/week Zone 2, 3-4 strength sessions, metabolic monitoring",
+    "range": "Personalized based on biomarkers",
+    "notes": "Framework detailed in \"Outlive\" (2023). Centering principles: exercise is the most powerful longevity \"drug\". Focus on healthspan not just lifespan."
+  },
+  "keyFindings": [
+    "VO2max in top quartile associated with 5x lower all-cause mortality",
+    "Muscle mass/strength strongest predictor of mortality in elderly",
+    "Early screening catches disease 10-20 years before symptoms"
+  ],
+  "interactions": [],
+  "sideEffects": [
+    "Time commitment (10+ hours/week with exercise)",
+    "Cost of advanced testing"
+  ],
+  "contraindications": [],
+  "tags": [
+    "protocol",
+    "framework",
+    "exercise",
+    "medicine-3.0",
+    "evidence-based",
+    "outlive"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 50,
+    "mid": 200,
+    "high": 500,
+    "currency": "USD"
+  },
+  "id": "prod-peter-attia-longevity-framework",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.820Z",
+  "createdAt": "2026-02-04T14:50:14.820Z"
+}

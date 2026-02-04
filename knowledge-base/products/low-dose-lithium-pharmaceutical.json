@@ -1,0 +1,58 @@
+{
+  "name": "Low-Dose Lithium (Pharmaceutical)",
+  "category": "pharmaceutical",
+  "evidenceGrade": "C",
+  "riskProfile": "low",
+  "description": "Lithium at sub-therapeutic doses (150-300mcg to 5mg) for neuroprotection and longevity, far below psychiatric doses (600-1200mg). Population studies show lower all-cause mortality and dementia rates in regions with higher lithium in drinking water.",
+  "mechanisms": [
+    "GSK-3β inhibition",
+    "Autophagy induction (TFEB activation)",
+    "BDNF upregulation",
+    "Neuroprotective — reduces neuroinflammation"
+  ],
+  "dosage": {
+    "standard": "1-5mg lithium orotate daily",
+    "range": "150mcg-20mg/day",
+    "notes": "Sub-therapeutic dose — NOT psychiatric dosing. Lithium orotate preferred (better CNS penetration at low doses). No blood level monitoring needed at these doses."
+  },
+  "keyFindings": [
+    "Higher lithium in drinking water associated with lower suicide, dementia, and all-cause mortality",
+    "Extended lifespan in C. elegans and Drosophila models",
+    "Low-dose lithium reduced biomarkers of Alzheimer disease progression"
+  ],
+  "interactions": [
+    "NSAIDs (increase lithium levels)",
+    "ACE inhibitors",
+    "Diuretics"
+  ],
+  "sideEffects": [
+    "Minimal at microdoses",
+    "Mild thirst (occasionally)",
+    "GI discomfort (rare)"
+  ],
+  "contraindications": [
+    "Severe renal impairment",
+    "Addison disease",
+    "Brugada syndrome"
+  ],
+  "tags": [
+    "pharmaceutical",
+    "neuroprotective",
+    "autophagy",
+    "low-dose",
+    "dementia-prevention"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 5,
+    "mid": 10,
+    "high": 20,
+    "currency": "USD"
+  },
+  "id": "prod-low-dose-lithium-pharmaceutical",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.814Z",
+  "createdAt": "2026-02-04T14:50:14.814Z"
+}

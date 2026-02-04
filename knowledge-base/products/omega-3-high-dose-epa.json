@@ -1,0 +1,57 @@
+{
+  "name": "Omega-3 (High-Dose EPA)",
+  "category": "supplement",
+  "evidenceGrade": "A",
+  "riskProfile": "low",
+  "description": "High-dose EPA (eicosapentaenoic acid) focused omega-3 for cardiovascular and anti-inflammatory benefits beyond standard fish oil. Icosapent ethyl (Vascepa) is the prescription form. Higher EPA:DHA ratio appears more cardioprotective than balanced formulations.",
+  "mechanisms": [
+    "Triglyceride reduction",
+    "Anti-inflammatory (resolvin and protectin production)",
+    "Membrane fluidity optimization",
+    "Endothelial function improvement"
+  ],
+  "dosage": {
+    "standard": "2-4g EPA/day",
+    "range": "1-4g EPA/day",
+    "notes": "EPA-focused (3:1 or higher EPA:DHA ratio). Vascepa (icosapent ethyl) is purified EPA — Rx. OTC options: concentrated EPA fish oil. Take with fatty meals for absorption."
+  },
+  "keyFindings": [
+    "REDUCE-IT: 4g/day icosapent ethyl reduced cardiovascular events 25% (NEJM)",
+    "Omega-3 index >8% associated with 5 years greater life expectancy",
+    "Higher EPA specifically reduces cardiovascular inflammation beyond DHA"
+  ],
+  "interactions": [
+    "Blood thinners (additive antiplatelet effect)",
+    "High-dose aspirin"
+  ],
+  "sideEffects": [
+    "Fishy burps",
+    "GI discomfort",
+    "Easy bruising at very high doses"
+  ],
+  "contraindications": [
+    "Fish/shellfish allergy",
+    "Active bleeding"
+  ],
+  "tags": [
+    "supplement",
+    "omega-3",
+    "epa",
+    "cardiovascular",
+    "anti-inflammatory",
+    "triglycerides"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 15,
+    "mid": 30,
+    "high": 60,
+    "currency": "USD"
+  },
+  "id": "prod-omega-3-high-dose-epa",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.847Z",
+  "createdAt": "2026-02-04T14:50:14.847Z"
+}

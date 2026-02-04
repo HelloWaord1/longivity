@@ -1,0 +1,54 @@
+{
+  "name": "Time-Restricted Eating (Circadian)",
+  "category": "protocol",
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "description": "Eating aligned with circadian rhythm — typically finishing food 3+ hours before sleep and emphasizing earlier eating window. Distinct from caloric restriction. Satchin Panda's research shows circadian-aligned eating improves metabolic health independent of calorie reduction.",
+  "mechanisms": [
+    "Circadian clock alignment",
+    "Metabolic gene expression optimization",
+    "Improved insulin sensitivity (morning > evening)",
+    "Gut microbiome circadian rhythm support"
+  ],
+  "dosage": {
+    "standard": "10-12 hour eating window, finish 3hr before bed",
+    "range": "8-12 hour window",
+    "notes": "Satchin Panda protocol: 10hr window is sweet spot for most. Earlier eating preferred (insulin sensitivity higher in AM). Even without calorie change, metabolic benefits observed. Track with myCircadianClock app."
+  },
+  "keyFindings": [
+    "10hr TRE improved metabolic syndrome markers without calorie counting (Panda lab, Cell Metabolism)",
+    "Firefighters on 10hr TRE: improved blood pressure, glucose, and LDL (RCT)",
+    "Circadian misalignment (eating late) increases cancer risk independent of calories"
+  ],
+  "interactions": [],
+  "sideEffects": [
+    "Initial hunger during adjustment",
+    "Social eating challenges"
+  ],
+  "contraindications": [
+    "Eating disorder history",
+    "Type 1 diabetes (without medical supervision)",
+    "Pregnancy"
+  ],
+  "tags": [
+    "protocol",
+    "circadian",
+    "fasting",
+    "metabolic",
+    "free",
+    "panda"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 0,
+    "mid": 0,
+    "high": 0,
+    "currency": "USD"
+  },
+  "id": "prod-time-restricted-eating-circadian",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.861Z",
+  "createdAt": "2026-02-04T14:50:14.861Z"
+}

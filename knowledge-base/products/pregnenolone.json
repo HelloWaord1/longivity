@@ -1,0 +1,58 @@
+{
+  "name": "Pregnenolone",
+  "category": "supplement",
+  "evidenceGrade": "C",
+  "riskProfile": "medium",
+  "description": "The \"mother hormone\" — precursor to all steroid hormones including DHEA, progesterone, cortisol, testosterone, and estrogen. Levels decline dramatically with age. Supports cognitive function, mood, and hormonal balance.",
+  "mechanisms": [
+    "Steroid hormone precursor (all pathways)",
+    "GABA-A receptor modulation",
+    "NMDA receptor potentiation",
+    "Neurosteroid — enhances memory and cognition"
+  ],
+  "dosage": {
+    "standard": "30-50mg/day",
+    "range": "10-100mg/day",
+    "notes": "Start low (10mg). Can convert to multiple downstream hormones. Monitor with blood tests. Take in morning."
+  },
+  "keyFindings": [
+    "Levels decline ~60% between ages 35-75",
+    "Improved memory and cognitive performance in small human trials",
+    "Enhanced myelination and neuroplasticity in preclinical studies"
+  ],
+  "interactions": [
+    "Hormone-sensitive conditions",
+    "Other hormone supplements (DHEA, progesterone)"
+  ],
+  "sideEffects": [
+    "Acne",
+    "Hair loss (if converts heavily to androgens)",
+    "Mood changes",
+    "Overstimulation"
+  ],
+  "contraindications": [
+    "Hormone-sensitive cancers (breast, prostate)",
+    "Pregnancy",
+    "Endometriosis"
+  ],
+  "tags": [
+    "hormone",
+    "precursor",
+    "neurosteroid",
+    "cognitive",
+    "age-related-decline"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 8,
+    "mid": 15,
+    "high": 30,
+    "currency": "USD"
+  },
+  "id": "prod-pregnenolone",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.788Z",
+  "createdAt": "2026-02-04T14:50:14.788Z"
+}

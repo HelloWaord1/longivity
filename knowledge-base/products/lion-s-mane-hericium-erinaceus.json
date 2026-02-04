@@ -1,0 +1,56 @@
+{
+  "name": "Lion's Mane (Hericium erinaceus)",
+  "category": "supplement",
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "description": "Medicinal mushroom with unique neurotrophic properties. Contains hericenones and erinacines that stimulate Nerve Growth Factor (NGF) synthesis — the only known natural compounds to do so. Supports neurogenesis, cognition, and may protect against neurodegeneration.",
+  "mechanisms": [
+    "NGF stimulation (hericenones and erinacines)",
+    "BDNF upregulation",
+    "Neurogenesis promotion",
+    "Anti-inflammatory and neuroprotective"
+  ],
+  "dosage": {
+    "standard": "500-1000mg extract, 2x/day",
+    "range": "500-3000mg/day",
+    "notes": "Dual extract (hot water + alcohol) captures both hericenones and erinacines. Fruiting body + mycelium combined preferred. Take consistently for 4+ weeks for cognitive effects."
+  },
+  "keyFindings": [
+    "Improved cognitive function in mild cognitive impairment (Mori et al., double-blind RCT)",
+    "Stimulated NGF synthesis in human astrocyte cells",
+    "Reduced anxiety and depression scores in menopausal women"
+  ],
+  "interactions": [
+    "Blood thinners (mild antiplatelet effect)",
+    "Diabetes medications (may lower blood sugar)"
+  ],
+  "sideEffects": [
+    "GI discomfort",
+    "Skin rash (rare, in allergic individuals)"
+  ],
+  "contraindications": [
+    "Mushroom allergy",
+    "Pre-surgery (antiplatelet effect)"
+  ],
+  "tags": [
+    "supplement",
+    "mushroom",
+    "nootropic",
+    "ngf",
+    "neurogenesis",
+    "cognitive"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 15,
+    "mid": 30,
+    "high": 60,
+    "currency": "USD"
+  },
+  "id": "prod-lion-s-mane-hericium-erinaceus",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.811Z",
+  "createdAt": "2026-02-04T14:50:14.811Z"
+}

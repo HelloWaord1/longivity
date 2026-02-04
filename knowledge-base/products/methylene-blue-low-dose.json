@@ -1,0 +1,60 @@
+{
+  "name": "Methylene Blue (Low-Dose)",
+  "category": "supplement",
+  "evidenceGrade": "C",
+  "riskProfile": "medium",
+  "description": "Synthetic dye and pharmaceutical with remarkable mitochondrial-enhancing properties at low doses. Acts as an alternative electron carrier in the mitochondrial electron transport chain, bypassing Complex I/III dysfunction. Cognitive enhancer and neuroprotectant with over a century of medical use.",
+  "mechanisms": [
+    "Alternative electron carrier (mitochondrial ETC bypass)",
+    "Mitochondrial Complex IV optimization",
+    "MAO-A inhibition (mood enhancement)",
+    "Nrf2 activation and autophagy induction"
+  ],
+  "dosage": {
+    "standard": "0.5-2mg/kg (typically 15-50mg/day)",
+    "range": "0.5-4mg/kg",
+    "notes": "USP pharmaceutical grade essential (NOT industrial dye). Low doses enhance mitochondria, high doses inhibit them (hormetic U-curve). Will turn urine blue-green. Very affordable."
+  },
+  "keyFindings": [
+    "Enhanced memory and cognitive function in animal and small human studies",
+    "Improved mitochondrial function in aged neurons",
+    "FDA-approved (high dose) for methemoglobinemia — century of safety data at clinical doses"
+  ],
+  "interactions": [
+    "SSRIs and serotonergic drugs (SEROTONIN SYNDROME RISK — serious)",
+    "MAO inhibitors (CONTRAINDICATED)",
+    "Psychiatric medications"
+  ],
+  "sideEffects": [
+    "Blue-green urine and stool",
+    "Blue-tinged skin/sclera",
+    "Nausea",
+    "Serotonin syndrome with SSRIs"
+  ],
+  "contraindications": [
+    "SSRI/SNRI use (DANGEROUS — serotonin syndrome)",
+    "MAO inhibitor use",
+    "G6PD deficiency (hemolytic anemia)",
+    "Severe renal impairment"
+  ],
+  "tags": [
+    "supplement",
+    "mitochondria",
+    "nootropic",
+    "neuroprotective",
+    "pharmaceutical-grade"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 5,
+    "mid": 15,
+    "high": 30,
+    "currency": "USD"
+  },
+  "id": "prod-methylene-blue-low-dose",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.824Z",
+  "createdAt": "2026-02-04T14:50:14.824Z"
+}

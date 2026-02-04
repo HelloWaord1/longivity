@@ -1,0 +1,56 @@
+{
+  "name": "Semax",
+  "category": "peptide",
+  "evidenceGrade": "C",
+  "riskProfile": "low",
+  "description": "A synthetic analogue of ACTH(4-7) developed in Russia, approved for cognitive enhancement and neuroprotection. Enhances BDNF, NGF, and has robust nootropic effects. Extensively studied in Russian clinical settings for stroke recovery and cognitive decline.",
+  "mechanisms": [
+    "BDNF and NGF upregulation",
+    "Dopamine and serotonin modulation",
+    "Neuroprotection via anti-inflammatory pathways",
+    "Improved cerebral blood flow"
+  ],
+  "dosage": {
+    "standard": "200-600mcg intranasal, 2-3x/day",
+    "range": "100-900mcg/day",
+    "notes": "Intranasal drops or spray. Approved in Russia and Ukraine. 10-14 day courses typical."
+  },
+  "keyFindings": [
+    "Improved cognitive performance and memory in clinical trials",
+    "Accelerated recovery from ischemic stroke in Russian clinical data",
+    "Upregulated BDNF expression by 4-8x in animal hippocampus"
+  ],
+  "interactions": [
+    "May interact with stimulants or ADHD medications"
+  ],
+  "sideEffects": [
+    "Nasal irritation",
+    "Mild headache",
+    "Irritability at high doses"
+  ],
+  "contraindications": [
+    "Acute psychosis",
+    "Seizure disorders",
+    "Pregnancy"
+  ],
+  "tags": [
+    "peptide",
+    "nootropic",
+    "neuroprotective",
+    "cognitive",
+    "russian-research"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 20,
+    "mid": 45,
+    "high": 90,
+    "currency": "USD"
+  },
+  "id": "prod-semax",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.777Z",
+  "createdAt": "2026-02-04T14:50:14.777Z"
+}

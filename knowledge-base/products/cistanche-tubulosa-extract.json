@@ -1,0 +1,55 @@
+{
+  "name": "Cistanche tubulosa Extract",
+  "category": "supplement",
+  "evidenceGrade": "C",
+  "riskProfile": "low",
+  "description": "Desert-dwelling parasitic plant used in Traditional Chinese Medicine for over 1,800 years as a \"yang tonic.\" Modern research reveals potent anti-aging properties including telomerase activation, neuroprotection, and stem cell proliferation. Known as the \"ginseng of the desert.\"",
+  "mechanisms": [
+    "Telomerase activation",
+    "BDNF and NGF upregulation",
+    "Klotho protein expression increase",
+    "Stem cell proliferation"
+  ],
+  "dosage": {
+    "standard": "100-300mg/day (standardized extract)",
+    "range": "100-500mg/day",
+    "notes": "Standardized to echinacoside and acteoside content. Take in morning. Used in Chinese longevity formulas for centuries."
+  },
+  "keyFindings": [
+    "Extended lifespan in C. elegans by 20-30%",
+    "Increased telomerase activity in human peripheral blood mononuclear cells",
+    "Improved cognitive function and reduced brain aging markers in animal studies"
+  ],
+  "interactions": [
+    "Immunosuppressants (immune-modulating effects)"
+  ],
+  "sideEffects": [
+    "Mild GI discomfort",
+    "Allergic reaction (rare)"
+  ],
+  "contraindications": [
+    "Autoimmune conditions",
+    "Pregnancy"
+  ],
+  "tags": [
+    "supplement",
+    "traditional",
+    "telomerase",
+    "neuroprotective",
+    "adaptogen",
+    "tcm"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 15,
+    "mid": 30,
+    "high": 55,
+    "currency": "USD"
+  },
+  "id": "prod-cistanche-tubulosa-extract",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.826Z",
+  "createdAt": "2026-02-04T14:50:14.826Z"
+}

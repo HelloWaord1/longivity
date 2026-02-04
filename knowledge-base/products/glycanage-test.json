@@ -1,0 +1,49 @@
+{
+  "name": "GlycanAge Test",
+  "category": "diagnostic",
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "description": "Biological age test based on IgG glycosylation patterns. Measures the glycan structures attached to immunoglobulin G, which reflect chronic inflammation and immune system aging. Complementary to epigenetic clocks.",
+  "mechanisms": [
+    "IgG glycosylation analysis",
+    "Inflammation status assessment",
+    "Immune age measurement"
+  ],
+  "dosage": {
+    "standard": "Dried blood spot, test every 3-6 months",
+    "range": "Quarterly to annually",
+    "notes": "Simple finger-prick dried blood spot. Measures glycan age (can be older or younger than chronological age). Responsive to lifestyle changes."
+  },
+  "keyFindings": [
+    "IgG glycans change predictably with age and inflammation",
+    "Responsive to lifestyle interventions within 3-6 months (faster than methylation clocks)",
+    "Validated across multiple cohorts (>100,000 individuals)"
+  ],
+  "interactions": [],
+  "sideEffects": [
+    "Finger prick discomfort"
+  ],
+  "contraindications": [
+    "Active infection may skew results"
+  ],
+  "tags": [
+    "diagnostic",
+    "glycan",
+    "biological-age",
+    "inflammation",
+    "immune-age"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 50,
+    "mid": 75,
+    "high": 100,
+    "currency": "USD"
+  },
+  "id": "prod-glycanage-test",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.796Z",
+  "createdAt": "2026-02-04T14:50:14.796Z"
+}

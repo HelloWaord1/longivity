@@ -1,0 +1,56 @@
+{
+  "name": "Glucosamine",
+  "category": "supplement",
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "description": "Amino sugar traditionally used for joint health, but emerging large-scale epidemiological data shows remarkable association with reduced all-cause mortality (18-39% reduction), comparable to regular exercise. May work via mTOR pathway modulation.",
+  "mechanisms": [
+    "Glycosaminoglycan precursor (cartilage)",
+    "mTOR pathway modulation",
+    "Anti-inflammatory",
+    "Mimics low-carbohydrate state (hexosamine pathway)"
+  ],
+  "dosage": {
+    "standard": "1500mg/day",
+    "range": "500-3000mg/day",
+    "notes": "Glucosamine sulfate or HCl. Large UK Biobank studies showed mortality benefit. May mimic aspects of fasting via hexosamine pathway."
+  },
+  "keyFindings": [
+    "Regular users had 18-39% lower all-cause mortality in UK Biobank (500,000+ participants)",
+    "Mortality reduction comparable to regular exercise in observational data",
+    "May activate autophagy via hexosamine pathway — similar to fasting mimicry"
+  ],
+  "interactions": [
+    "Warfarin (may enhance anticoagulant effect)",
+    "Diabetes medications (monitor glucose)"
+  ],
+  "sideEffects": [
+    "GI discomfort",
+    "Shellfish allergy concern (if shellfish-derived)"
+  ],
+  "contraindications": [
+    "Shellfish allergy (use synthetic form)",
+    "Diabetes (monitor glucose)"
+  ],
+  "tags": [
+    "supplement",
+    "joint",
+    "mortality",
+    "mtor",
+    "affordable",
+    "well-studied"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 8,
+    "mid": 15,
+    "high": 25,
+    "currency": "USD"
+  },
+  "id": "prod-glucosamine",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.831Z",
+  "createdAt": "2026-02-04T14:50:14.831Z"
+}

@@ -1,0 +1,55 @@
+{
+  "name": "David Sinclair Longevity Protocol",
+  "category": "protocol",
+  "evidenceGrade": "C",
+  "riskProfile": "low",
+  "description": "Protocol based on research by Harvard geneticist David Sinclair (author of \"Lifespan\"). Centers on the Information Theory of Aging — epigenetic noise accumulation. Core stack: NMN, resveratrol, metformin, with intermittent fasting and cold/heat exposure.",
+  "mechanisms": [
+    "NAD+ replenishment (NMN)",
+    "Sirtuin activation (resveratrol + NMN)",
+    "AMPK activation (metformin)",
+    "Epigenetic reprogramming support"
+  ],
+  "dosage": {
+    "standard": "NMN 1g, Resveratrol 1g (with yogurt), Metformin 1g (evening)",
+    "range": "Variable — he adjusts based on bloodwork",
+    "notes": "Sinclair has publicly shared his personal protocol. Resveratrol with fat source in morning. NMN morning. Metformin evening (skip on exercise days). Plus vitamin D, K2, aspirin, TMG."
+  },
+  "keyFindings": [
+    "Sinclair lab: NMN restored NAD+ levels and improved healthspan in aged mice",
+    "ICE mice: epigenetic reprogramming reversed aging (Sinclair lab, Cell 2023)",
+    "Controversial — some peers dispute extrapolation from mouse to human data"
+  ],
+  "interactions": [
+    "Complex multi-drug protocol — interaction mapping important"
+  ],
+  "sideEffects": [
+    "Metformin GI side effects",
+    "Cost of NMN"
+  ],
+  "contraindications": [
+    "Metformin contraindications apply",
+    "Individual variation in response"
+  ],
+  "tags": [
+    "protocol",
+    "sinclair",
+    "nad+",
+    "sirtuins",
+    "epigenetic",
+    "information-theory"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 100,
+    "mid": 200,
+    "high": 400,
+    "currency": "USD"
+  },
+  "id": "prod-david-sinclair-longevity-protocol",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.821Z",
+  "createdAt": "2026-02-04T14:50:14.821Z"
+}

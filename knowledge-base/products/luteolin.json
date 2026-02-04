@@ -1,0 +1,53 @@
+{
+  "name": "Luteolin",
+  "category": "supplement",
+  "evidenceGrade": "C",
+  "riskProfile": "low",
+  "description": "Flavonoid found in celery, peppers, and chamomile with potent anti-neuroinflammatory and mast cell stabilizing properties. Crosses the blood-brain barrier and inhibits microglial activation, making it particularly relevant for brain aging and neuroinflammation.",
+  "mechanisms": [
+    "Mast cell stabilization",
+    "Microglial inhibition",
+    "NF-κB suppression",
+    "Nrf2 activation"
+  ],
+  "dosage": {
+    "standard": "100-200mg/day",
+    "range": "50-400mg/day",
+    "notes": "Liposomal form for better absorption. Found in celery seed, chamomile, peppers. Often combined with rutin for synergy."
+  },
+  "keyFindings": [
+    "Potent inhibitor of microglial activation and neuroinflammation",
+    "Improved cognitive function in brain fog and post-viral syndromes",
+    "Crosses blood-brain barrier — one of few flavonoids that does effectively"
+  ],
+  "interactions": [
+    "CYP3A4 and CYP1A2 substrates (may inhibit metabolism)"
+  ],
+  "sideEffects": [
+    "Mild GI upset",
+    "Headache (rare)"
+  ],
+  "contraindications": [
+    "Pregnancy (insufficient data)"
+  ],
+  "tags": [
+    "supplement",
+    "flavonoid",
+    "neuroinflammation",
+    "mast-cell",
+    "brain"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 10,
+    "mid": 20,
+    "high": 40,
+    "currency": "USD"
+  },
+  "id": "prod-luteolin",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.810Z",
+  "createdAt": "2026-02-04T14:50:14.810Z"
+}

@@ -1,0 +1,50 @@
+{
+  "name": "Comprehensive Blood Biomarker Panel",
+  "category": "diagnostic",
+  "evidenceGrade": "A",
+  "riskProfile": "low",
+  "description": "Extended blood panel covering metabolic, hormonal, inflammatory, and organ function markers. Goes beyond standard annual bloodwork to include longevity-relevant biomarkers like insulin, hs-CRP, homocysteine, ApoB, and hormone panels.",
+  "mechanisms": [
+    "Metabolic health assessment (glucose, insulin, HbA1c, lipids)",
+    "Inflammation markers (hs-CRP, homocysteine, IL-6)",
+    "Hormone levels (testosterone, estradiol, thyroid, cortisol)",
+    "Organ function (liver, kidney, complete blood count)"
+  ],
+  "dosage": {
+    "standard": "Fasting blood draw, every 3-6 months",
+    "range": "Quarterly to annually",
+    "notes": "Best done fasting (12hr). Include: CBC, CMP, lipid panel + ApoB, insulin, HbA1c, hs-CRP, homocysteine, full thyroid, hormones, vitamin D, B12, ferritin."
+  },
+  "keyFindings": [
+    "Regular monitoring enables data-driven intervention optimization",
+    "ApoB superior to LDL-C for cardiovascular risk assessment",
+    "Fasting insulin is earliest marker of metabolic dysfunction"
+  ],
+  "interactions": [],
+  "sideEffects": [
+    "Venipuncture discomfort",
+    "Fasting requirement"
+  ],
+  "contraindications": [],
+  "tags": [
+    "diagnostic",
+    "blood-test",
+    "biomarkers",
+    "tracking",
+    "essential",
+    "preventive"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 50,
+    "mid": 100,
+    "high": 200,
+    "currency": "USD"
+  },
+  "id": "prod-comprehensive-blood-biomarker-panel",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.800Z",
+  "createdAt": "2026-02-04T14:50:14.800Z"
+}

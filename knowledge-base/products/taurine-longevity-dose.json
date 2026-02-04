@@ -1,0 +1,54 @@
+{
+  "name": "Taurine (Longevity Dose)",
+  "category": "supplement",
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "description": "Semi-essential amino acid that declines dramatically with age. A landmark 2023 Science paper showed taurine supplementation extended lifespan in mice by 10-12% and improved healthspan across multiple systems. Higher \"longevity doses\" (1-6g) differ from typical supplement amounts.",
+  "mechanisms": [
+    "Mitochondrial function support",
+    "Anti-inflammatory (reduces oxidative stress)",
+    "Osmotic regulation and calcium signaling",
+    "Bile acid conjugation"
+  ],
+  "dosage": {
+    "standard": "1-3g/day",
+    "range": "1-6g/day",
+    "notes": "Science 2023 paper used ~500-1000mg/kg in mice (human equivalent ~3-6g). Levels decline 80% with age. Take with meals. Very affordable."
+  },
+  "keyFindings": [
+    "Extended median lifespan by 10-12% in mice (Singh et al., Science 2023)",
+    "Blood taurine levels decline 80%+ from youth to old age",
+    "Improved bone density, muscle endurance, immune function, and metabolic health in aged mice"
+  ],
+  "interactions": [
+    "Lithium (taurine affects renal lithium clearance)"
+  ],
+  "sideEffects": [
+    "GI discomfort at very high doses",
+    "Mild drowsiness"
+  ],
+  "contraindications": [
+    "Bipolar disorder on lithium (monitor levels)"
+  ],
+  "tags": [
+    "supplement",
+    "amino-acid",
+    "longevity",
+    "Science-2023",
+    "affordable",
+    "age-related-decline"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 5,
+    "mid": 10,
+    "high": 20,
+    "currency": "USD"
+  },
+  "id": "prod-taurine-longevity-dose",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.812Z",
+  "createdAt": "2026-02-04T14:50:14.812Z"
+}

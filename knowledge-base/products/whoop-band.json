@@ -1,0 +1,50 @@
+{
+  "name": "WHOOP Band",
+  "category": "device",
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "description": "Continuous physiological monitoring wearable focused on strain, recovery, and sleep. Uses HRV, resting heart rate, respiratory rate, and skin temperature to calculate daily recovery scores. Popular among athletes and biohackers for training optimization.",
+  "mechanisms": [
+    "HRV-based recovery scoring",
+    "Strain tracking (cardiovascular load)",
+    "Sleep performance analysis",
+    "Respiratory rate monitoring"
+  ],
+  "dosage": {
+    "standard": "Continuous wear, membership model",
+    "range": "Daily use",
+    "notes": "WHOOP 4.0. No screen — purely data-focused. Subscription model ($30/month). Best for training optimization and recovery tracking. Journal feature for behavior correlation."
+  },
+  "keyFindings": [
+    "HRV-guided training improved performance outcomes vs fixed programs",
+    "Respiratory rate changes detected illness onset early",
+    "Strain-recovery balance optimization reduces overtraining risk"
+  ],
+  "interactions": [],
+  "sideEffects": [
+    "Skin irritation under band",
+    "Data anxiety in some users"
+  ],
+  "contraindications": [],
+  "tags": [
+    "device",
+    "wearable",
+    "hrv",
+    "recovery",
+    "training",
+    "strain"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 30,
+    "mid": 30,
+    "high": 30,
+    "currency": "USD"
+  },
+  "id": "prod-whoop-band",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.808Z",
+  "createdAt": "2026-02-04T14:50:14.808Z"
+}

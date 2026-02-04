@@ -1,0 +1,57 @@
+{
+  "name": "Serrapeptase",
+  "category": "supplement",
+  "evidenceGrade": "C",
+  "riskProfile": "low",
+  "description": "Proteolytic enzyme originally isolated from silkworm gut bacteria. Breaks down inflammatory proteins, fibrin, and scar tissue. Used in European and Japanese medicine for inflammation and pain. Often combined with nattokinase for synergistic fibrinolytic effect.",
+  "mechanisms": [
+    "Proteolytic — breaks down inflammatory proteins",
+    "Fibrinolytic activity",
+    "Scar tissue and biofilm degradation",
+    "Anti-inflammatory (bradykinin and histamine modulation)"
+  ],
+  "dosage": {
+    "standard": "120,000 SPU/day",
+    "range": "60,000-240,000 SPU/day",
+    "notes": "Take on empty stomach (2hr from food). Enteric-coated essential. SPU = Serratiopeptidase Units. Often combined with nattokinase."
+  },
+  "keyFindings": [
+    "Reduced post-surgical swelling and pain in multiple clinical trials",
+    "Anti-biofilm properties — may support antibiotic efficacy",
+    "Approved pharmaceutical in Japan and some European countries"
+  ],
+  "interactions": [
+    "Blood thinners",
+    "Antibiotics (may enhance penetration)"
+  ],
+  "sideEffects": [
+    "GI discomfort",
+    "Skin reactions (rare)",
+    "Bleeding risk"
+  ],
+  "contraindications": [
+    "Bleeding disorders",
+    "Pre-surgery",
+    "Concurrent blood thinners"
+  ],
+  "tags": [
+    "supplement",
+    "enzyme",
+    "anti-inflammatory",
+    "proteolytic",
+    "pain"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 8,
+    "mid": 15,
+    "high": 30,
+    "currency": "USD"
+  },
+  "id": "prod-serrapeptase",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.823Z",
+  "createdAt": "2026-02-04T14:50:14.823Z"
+}

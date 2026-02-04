@@ -1,0 +1,62 @@
+{
+  "name": "GLP-1 Receptor Agonists (Semaglutide)",
+  "category": "pharmaceutical",
+  "evidenceGrade": "A",
+  "riskProfile": "medium",
+  "description": "GLP-1 receptor agonist (Ozempic/Wegovy) originally for diabetes/obesity showing remarkable multi-organ benefits. Beyond weight loss, reduces cardiovascular events, kidney disease progression, and shows anti-inflammatory and neuroprotective effects. Being studied for Alzheimer prevention.",
+  "mechanisms": [
+    "GLP-1 receptor agonism",
+    "Appetite suppression (hypothalamic)",
+    "Insulin secretion enhancement",
+    "Systemic anti-inflammatory effects"
+  ],
+  "dosage": {
+    "standard": "0.25-2.4mg weekly (subcutaneous injection)",
+    "range": "0.25-2.4mg/week",
+    "notes": "Prescription. Titrate slowly over 16+ weeks to minimize GI side effects. Weekly injection. Wegovy (obesity dose up to 2.4mg) vs Ozempic (diabetes dose up to 2mg)."
+  },
+  "keyFindings": [
+    "SELECT trial: 20% reduction in major cardiovascular events in non-diabetic obese",
+    "FLOW trial: 24% reduction in kidney disease progression",
+    "Multiple ongoing trials for Alzheimer disease and NASH/liver disease"
+  ],
+  "interactions": [
+    "Insulin (hypoglycemia risk)",
+    "Oral contraceptives (delayed absorption)",
+    "Other diabetes medications"
+  ],
+  "sideEffects": [
+    "Nausea (common, usually transient)",
+    "Vomiting",
+    "Diarrhea",
+    "Pancreatitis (rare)",
+    "Muscle loss (requires resistance training)"
+  ],
+  "contraindications": [
+    "Personal/family history of medullary thyroid carcinoma",
+    "MEN2 syndrome",
+    "Pancreatitis history",
+    "Gastroparesis"
+  ],
+  "tags": [
+    "pharmaceutical",
+    "glp1",
+    "obesity",
+    "cardiovascular",
+    "prescription",
+    "blockbuster"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 300,
+    "mid": 800,
+    "high": 1300,
+    "currency": "USD"
+  },
+  "id": "prod-glp-1-receptor-agonists-semaglutide",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.819Z",
+  "createdAt": "2026-02-04T14:50:14.819Z"
+}

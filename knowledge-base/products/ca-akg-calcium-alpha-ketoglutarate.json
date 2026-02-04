@@ -1,0 +1,55 @@
+{
+  "name": "Ca-AKG (Calcium Alpha-Ketoglutarate)",
+  "category": "supplement",
+  "evidenceGrade": "C",
+  "riskProfile": "low",
+  "description": "Calcium salt of alpha-ketoglutarate, a key TCA cycle metabolite. The CALERIE-adjacent Rejuvant study showed biological age reversal. Supports epigenetic regulation via TET enzyme cofaction and collagen synthesis. Branded version: Rejuvant (ProHealthspan).",
+  "mechanisms": [
+    "TCA cycle metabolite (energy production)",
+    "TET enzyme cofactor (DNA demethylation)",
+    "Collagen synthesis",
+    "Stem cell maintenance"
+  ],
+  "dosage": {
+    "standard": "1000mg/day",
+    "range": "500-2000mg/day",
+    "notes": "Calcium alpha-ketoglutarate specific form. Take on empty stomach. Rejuvant brand is most studied. May take 4-7 months for measurable epigenetic changes."
+  },
+  "keyFindings": [
+    "Reduced biological age by 8 years in 7-month Rejuvant trial (TruAge)",
+    "Extended lifespan ~12% in mice and reduced frailty (Buck Institute)",
+    "AKG levels decline 10-fold between ages 40 and 80"
+  ],
+  "interactions": [
+    "Calcium supplements (additive calcium intake)"
+  ],
+  "sideEffects": [
+    "Mild GI discomfort",
+    "Constipation (calcium component)"
+  ],
+  "contraindications": [
+    "Hypercalcemia",
+    "Kidney stones (calcium-based)"
+  ],
+  "tags": [
+    "supplement",
+    "metabolite",
+    "epigenetic",
+    "biological-age",
+    "tca-cycle",
+    "rejuvant"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 30,
+    "mid": 50,
+    "high": 80,
+    "currency": "USD"
+  },
+  "id": "prod-ca-akg-calcium-alpha-ketoglutarate",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.813Z",
+  "createdAt": "2026-02-04T14:50:14.813Z"
+}

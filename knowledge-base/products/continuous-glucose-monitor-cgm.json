@@ -1,0 +1,56 @@
+{
+  "name": "Continuous Glucose Monitor (CGM)",
+  "category": "device",
+  "evidenceGrade": "A",
+  "riskProfile": "low",
+  "description": "Wearable sensor (usually on arm) that continuously tracks interstitial glucose levels, providing real-time data on metabolic health. Reveals hidden glucose spikes from foods, exercise, stress, and sleep. Key tool for metabolic optimization even in non-diabetics.",
+  "mechanisms": [
+    "Real-time glucose monitoring (every 1-5 min)",
+    "Pattern recognition for food responses",
+    "Glucose variability tracking",
+    "Metabolic health optimization feedback"
+  ],
+  "dosage": {
+    "standard": "Continuous wear, 14-day sensor",
+    "range": "Ongoing or periodic 1-3 month experiments",
+    "notes": "Major brands: Dexcom G7, Abbott Freestyle Libre 3, Stelo (OTC). Non-diabetics: use for 1-3 months to learn personal responses, then periodically recheck."
+  },
+  "keyFindings": [
+    "Reveals individual glucose responses vary enormously to identical foods (Zeevi et al., Cell)",
+    "Glucose variability (not just average) predicts cardiovascular risk",
+    "Behavior change tool — users reduce glucose spikes 15-30% through real-time feedback"
+  ],
+  "interactions": [
+    "High-dose vitamin C may interfere with readings",
+    "Acetaminophen (older sensors)"
+  ],
+  "sideEffects": [
+    "Skin irritation at sensor site",
+    "Adhesive allergy"
+  ],
+  "contraindications": [
+    "Severe skin conditions at application site"
+  ],
+  "tags": [
+    "device",
+    "cgm",
+    "glucose",
+    "metabolic",
+    "wearable",
+    "tracking",
+    "data-driven"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 75,
+    "mid": 125,
+    "high": 200,
+    "currency": "USD"
+  },
+  "id": "prod-continuous-glucose-monitor-cgm",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.805Z",
+  "createdAt": "2026-02-04T14:50:14.805Z"
+}

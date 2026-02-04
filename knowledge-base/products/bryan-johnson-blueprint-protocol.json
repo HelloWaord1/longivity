@@ -1,0 +1,56 @@
+{
+  "name": "Bryan Johnson Blueprint Protocol",
+  "category": "protocol",
+  "evidenceGrade": "C",
+  "riskProfile": "medium",
+  "description": "Comprehensive anti-aging protocol by tech entrepreneur Bryan Johnson, aiming to achieve the body of an 18-year-old. Involves 100+ supplements, strict diet (1,977 calories vegan), extensive exercise, precise sleep optimization, and regular biomarker testing. Reported biological age reversal of 5+ years.",
+  "mechanisms": [
+    "Multi-system optimization",
+    "Epigenetic age reversal",
+    "Caloric restriction with optimal nutrition",
+    "Comprehensive biomarker-driven adjustments"
+  ],
+  "dosage": {
+    "standard": "Full protocol: 100+ daily interventions",
+    "range": "Tiered: Blueprint Lite to Full",
+    "notes": "Full protocol costs $2M+/year. Core elements (diet, sleep, exercise, key supplements) achievable for much less. Published openly at blueprint.bryanjohnson.com."
+  },
+  "keyFindings": [
+    "Reported epigenetic age reversal of 5.1 years",
+    "Achieved top 1% fitness metrics across all organs tested",
+    "Documented extensively with public biomarker data — unprecedented n=1 experiment"
+  ],
+  "interactions": [
+    "Complexity makes interaction tracking difficult"
+  ],
+  "sideEffects": [
+    "Social isolation",
+    "Extreme rigidity",
+    "Financial burden (full protocol)"
+  ],
+  "contraindications": [
+    "Eating disorder history",
+    "Financial constraints (full protocol)"
+  ],
+  "tags": [
+    "protocol",
+    "comprehensive",
+    "blueprint",
+    "epigenetic",
+    "data-driven",
+    "extreme"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 200,
+    "mid": 1000,
+    "high": 5000,
+    "currency": "USD"
+  },
+  "id": "prod-bryan-johnson-blueprint-protocol",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.819Z",
+  "createdAt": "2026-02-04T14:50:14.819Z"
+}

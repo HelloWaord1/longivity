@@ -1,0 +1,62 @@
+{
+  "name": "Canagliflozin (SGLT2 Inhibitor)",
+  "category": "pharmaceutical",
+  "evidenceGrade": "B",
+  "riskProfile": "medium",
+  "description": "SGLT2 inhibitor that blocks glucose reabsorption in kidneys, causing glycosuria (glucose excretion in urine). Extended lifespan in the NIA ITP. Beyond diabetes, shows remarkable cardio-renal protective effects and mimics aspects of caloric restriction.",
+  "mechanisms": [
+    "SGLT2 inhibition (renal glucose excretion)",
+    "Caloric restriction mimetic (~200-300 cal/day excreted)",
+    "Ketogenesis promotion",
+    "Cardiovascular and renal protection"
+  ],
+  "dosage": {
+    "standard": "100mg/day",
+    "range": "100-300mg/day",
+    "notes": "Prescription. ITP-positive for lifespan extension. CREDENCE and CANVAS trials. Causes glycosuria — keep hydrated. Monitor for UTIs."
+  },
+  "keyFindings": [
+    "Extended lifespan in male mice in NIA ITP (genetically heterogeneous)",
+    "CANVAS program: 14% reduction in cardiovascular events",
+    "CREDENCE: 30% reduction in kidney disease progression"
+  ],
+  "interactions": [
+    "Insulin and sulfonylureas (hypoglycemia risk)",
+    "Diuretics (volume depletion)",
+    "Loop diuretics"
+  ],
+  "sideEffects": [
+    "Genital mycotic infections (yeast)",
+    "UTIs",
+    "Polyuria",
+    "Hypotension",
+    "DKA (rare)"
+  ],
+  "contraindications": [
+    "Severe renal impairment (eGFR <30)",
+    "Type 1 diabetes",
+    "Recurrent UTIs or genital infections"
+  ],
+  "tags": [
+    "pharmaceutical",
+    "sglt2",
+    "itp-positive",
+    "longevity-drug",
+    "cardiovascular",
+    "renal",
+    "prescription"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 15,
+    "mid": 40,
+    "high": 100,
+    "currency": "USD"
+  },
+  "id": "prod-canagliflozin-sglt2-inhibitor",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.815Z",
+  "createdAt": "2026-02-04T14:50:14.815Z"
+}

@@ -1,0 +1,54 @@
+{
+  "name": "Boron",
+  "category": "supplement",
+  "evidenceGrade": "C",
+  "riskProfile": "low",
+  "description": "Trace mineral that supports bone health, hormone metabolism, and brain function. Increases free testosterone by reducing SHBG, supports vitamin D metabolism, and has anti-inflammatory properties. Often overlooked but increasingly recognized in longevity circles.",
+  "mechanisms": [
+    "SHBG reduction (increases free testosterone)",
+    "Vitamin D metabolism enhancement",
+    "Bone health (reduces calcium and magnesium excretion)",
+    "Anti-inflammatory (reduces hs-CRP and TNF-α)"
+  ],
+  "dosage": {
+    "standard": "3-6mg/day",
+    "range": "3-10mg/day",
+    "notes": "Boron citrate, glycinate, or fructoborate forms. Found in avocados, nuts, dried fruits. Very affordable. Take with meals."
+  },
+  "keyFindings": [
+    "Increased free testosterone by 28% and reduced estradiol in 1-week supplementation study",
+    "Reduced inflammatory markers (hs-CRP, TNF-α) within 1 week",
+    "Populations with low boron intake have higher arthritis prevalence"
+  ],
+  "interactions": [
+    "Estrogen therapy (may modulate estrogen metabolism)"
+  ],
+  "sideEffects": [
+    "Minimal at recommended doses",
+    "GI discomfort at very high doses"
+  ],
+  "contraindications": [
+    "Kidney impairment (reduced excretion)"
+  ],
+  "tags": [
+    "mineral",
+    "hormone",
+    "testosterone",
+    "bone",
+    "affordable",
+    "overlooked"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 3,
+    "mid": 6,
+    "high": 12,
+    "currency": "USD"
+  },
+  "id": "prod-boron",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.843Z",
+  "createdAt": "2026-02-04T14:50:14.843Z"
+}

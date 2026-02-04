@@ -1,0 +1,52 @@
+{
+  "name": "Pyruvate Kinase M2 Activator (TEPP-46)",
+  "category": "supplement",
+  "evidenceGrade": "D",
+  "riskProfile": "medium",
+  "description": "Research compound that activates pyruvate kinase M2, shifting cellular metabolism from aerobic glycolysis (Warburg effect) back to oxidative phosphorylation. Emerging interest in longevity community for metabolic reprogramming and potential anti-cancer properties.",
+  "mechanisms": [
+    "PKM2 tetramerization (activating glycolysis completion)",
+    "Warburg effect reversal",
+    "Metabolic reprogramming",
+    "mTOR pathway modulation"
+  ],
+  "dosage": {
+    "standard": "Research compound — no established human dose",
+    "range": "Experimental",
+    "notes": "Research-grade compound. Not commercially available as supplement. Included for awareness — represents emerging metabolic reprogramming approach."
+  },
+  "keyFindings": [
+    "Reversed Warburg effect in cancer cells (preclinical)",
+    "Improved metabolic function in aged cells in vitro",
+    "Represents novel metabolic reprogramming approach to aging"
+  ],
+  "interactions": [
+    "Unknown — research compound"
+  ],
+  "sideEffects": [
+    "Unknown — limited safety data"
+  ],
+  "contraindications": [
+    "Human use not established"
+  ],
+  "tags": [
+    "experimental",
+    "metabolism",
+    "warburg",
+    "research",
+    "future"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 0,
+    "mid": 0,
+    "high": 0,
+    "currency": "USD"
+  },
+  "id": "prod-pyruvate-kinase-m2-activator-tepp-46",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.857Z",
+  "createdAt": "2026-02-04T14:50:14.857Z"
+}

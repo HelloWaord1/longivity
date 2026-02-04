@@ -1,0 +1,55 @@
+{
+  "name": "DSIP (Delta Sleep-Inducing Peptide)",
+  "category": "peptide",
+  "evidenceGrade": "D",
+  "riskProfile": "medium",
+  "description": "A neuropeptide originally isolated from rabbit brain that promotes delta wave sleep. Research suggests roles in stress modulation, pain perception, and endocrine regulation. Limited but intriguing clinical data from European studies.",
+  "mechanisms": [
+    "Delta wave sleep induction",
+    "Cortisol and stress modulation",
+    "LH/GH release regulation",
+    "Opioid system modulation"
+  ],
+  "dosage": {
+    "standard": "100-300mcg before bed (intranasal or injection)",
+    "range": "100-500mcg",
+    "notes": "Short half-life. Typically used for 2-4 week cycles. Intranasal or subcutaneous."
+  },
+  "keyFindings": [
+    "Improved sleep architecture and increased delta wave sleep in clinical studies",
+    "Normalized disturbed sleep patterns without next-day sedation",
+    "Showed stress-protective and analgesic properties in animal models"
+  ],
+  "interactions": [
+    "May potentiate sedatives and sleep medications"
+  ],
+  "sideEffects": [
+    "Mild drowsiness",
+    "Vivid dreams",
+    "Nasal irritation (intranasal)"
+  ],
+  "contraindications": [
+    "Severe respiratory depression",
+    "Use of CNS depressants"
+  ],
+  "tags": [
+    "peptide",
+    "sleep",
+    "stress",
+    "neuropeptide",
+    "experimental"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 30,
+    "mid": 60,
+    "high": 120,
+    "currency": "USD"
+  },
+  "id": "prod-dsip-delta-sleep-inducing-peptide",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.773Z",
+  "createdAt": "2026-02-04T14:50:14.773Z"
+}

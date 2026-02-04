@@ -1,0 +1,54 @@
+{
+  "name": "Palmitoylethanolamide (PEA)",
+  "category": "supplement",
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "description": "Endogenous fatty acid amide that acts on the endocannabinoid system without binding CB1/CB2 receptors. Anti-inflammatory and analgesic via PPAR-α activation and mast cell downregulation. Nobel laureate Rita Levi-Montalcini studied its neuroprotective properties.",
+  "mechanisms": [
+    "PPAR-α agonism",
+    "Mast cell downregulation",
+    "Endocannabinoid tone modulation (entourage effect)",
+    "Neuroinflammation reduction"
+  ],
+  "dosage": {
+    "standard": "300-600mg 2x/day",
+    "range": "300-1200mg/day",
+    "notes": "Micronized or ultra-micronized form for better absorption (OptiPEA). Take with or without food. Onset of pain relief: 2-4 weeks. Studied since 1950s."
+  },
+  "keyFindings": [
+    "Reduced chronic pain in multiple RCTs (NNT comparable to pregabalin)",
+    "Anti-inflammatory without GI side effects of NSAIDs",
+    "Nobel laureate Levi-Montalcini studied its mast cell and neuroimmune effects"
+  ],
+  "interactions": [
+    "None significant known"
+  ],
+  "sideEffects": [
+    "Minimal — excellent safety profile",
+    "Mild GI discomfort (rare)"
+  ],
+  "contraindications": [
+    "None established"
+  ],
+  "tags": [
+    "supplement",
+    "anti-inflammatory",
+    "pain",
+    "endocannabinoid",
+    "neuroprotective",
+    "safe"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 20,
+    "mid": 35,
+    "high": 60,
+    "currency": "USD"
+  },
+  "id": "prod-palmitoylethanolamide-pea",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.852Z",
+  "createdAt": "2026-02-04T14:50:14.852Z"
+}

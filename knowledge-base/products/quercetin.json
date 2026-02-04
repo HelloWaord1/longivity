@@ -1,0 +1,58 @@
+{
+  "name": "Quercetin",
+  "category": "supplement",
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "description": "Flavonoid with senolytic, anti-inflammatory, and antiviral properties. Part of the dasatinib + quercetin senolytic cocktail studied at Mayo Clinic. Also used standalone for immune support, histamine management, and general anti-inflammatory benefits.",
+  "mechanisms": [
+    "Senolytic (especially with dasatinib)",
+    "Anti-inflammatory (NF-κB, COX-2)",
+    "Antihistamine (mast cell stabilizer)",
+    "Antiviral (zinc ionophore)"
+  ],
+  "dosage": {
+    "standard": "500-1000mg/day",
+    "range": "250-2000mg/day",
+    "notes": "Poor bioavailability — use phytosome or liposomal form. As senolytic: 1000mg for 3 days monthly. As daily supplement: 500mg. Zinc ionophore — take with zinc for immune support."
+  },
+  "keyFindings": [
+    "Dasatinib + Quercetin cleared senescent cells in human clinical trial (Mayo Clinic)",
+    "Reduced upper respiratory infections in athletes (meta-analysis)",
+    "Potent zinc ionophore — enhances intracellular zinc for antiviral activity"
+  ],
+  "interactions": [
+    "Antibiotics (quinolones — may reduce absorption)",
+    "Blood thinners",
+    "Cyclosporine"
+  ],
+  "sideEffects": [
+    "Headache",
+    "GI discomfort",
+    "Kidney damage (very high doses, rare)"
+  ],
+  "contraindications": [
+    "Kidney disease (high doses)",
+    "Pregnancy (high doses)"
+  ],
+  "tags": [
+    "supplement",
+    "flavonoid",
+    "senolytic",
+    "antihistamine",
+    "immune",
+    "zinc-ionophore"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 10,
+    "mid": 20,
+    "high": 40,
+    "currency": "USD"
+  },
+  "id": "prod-quercetin",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.834Z",
+  "createdAt": "2026-02-04T14:50:14.834Z"
+}

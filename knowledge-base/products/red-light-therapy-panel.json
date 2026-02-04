@@ -1,0 +1,57 @@
+{
+  "name": "Red Light Therapy Panel",
+  "category": "device",
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "description": "Photobiomodulation devices emitting red (630-670nm) and near-infrared (810-850nm) light. Stimulates mitochondrial cytochrome c oxidase, increasing ATP production and reducing oxidative stress. Studied for skin health, wound healing, pain reduction, and cognitive function.",
+  "mechanisms": [
+    "Cytochrome c oxidase stimulation (Complex IV)",
+    "ATP production increase",
+    "Reactive oxygen species signaling (hormetic)",
+    "Nitric oxide release and blood flow"
+  ],
+  "dosage": {
+    "standard": "10-20min per session, 5-10cm from panel, daily",
+    "range": "5-30min, 3-7x/week",
+    "notes": "Red (660nm) for skin/surface. NIR (850nm) penetrates deeper for joints, brain. Power density 50-100mW/cm². Quality panels: Joovv, Mito Red, Platinum LED."
+  },
+  "keyFindings": [
+    "Improved skin complexion, collagen density, and wrinkle reduction in RCTs",
+    "Reduced joint pain and inflammation comparable to NSAIDs in some trials",
+    "Enhanced cognitive function and reduced TBI symptoms (Naeser et al.)"
+  ],
+  "interactions": [
+    "Photosensitizing medications"
+  ],
+  "sideEffects": [
+    "Temporary skin warmth",
+    "Eye strain (use goggles)",
+    "Rare: headache"
+  ],
+  "contraindications": [
+    "Active cancer over treatment area (theoretical)",
+    "Photosensitivity disorders",
+    "Over thyroid if hyperthyroid"
+  ],
+  "tags": [
+    "device",
+    "photobiomodulation",
+    "mitochondria",
+    "skin",
+    "pain",
+    "recovery"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 0,
+    "mid": 0,
+    "high": 0,
+    "currency": "USD"
+  },
+  "id": "prod-red-light-therapy-panel",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.801Z",
+  "createdAt": "2026-02-04T14:50:14.801Z"
+}

@@ -1,0 +1,55 @@
+{
+  "name": "GHK-Cu (Copper Peptide)",
+  "category": "peptide",
+  "evidenceGrade": "C",
+  "riskProfile": "low",
+  "description": "A naturally occurring copper-binding tripeptide that declines with age. Extensive research shows it remodels tissue, stimulates collagen and glycosaminoglycans, has anti-inflammatory effects, and may reset gene expression toward a younger pattern.",
+  "mechanisms": [
+    "Collagen and elastin synthesis",
+    "Stem cell attraction to injury sites",
+    "Gene expression reset (resets ~30% of genes to younger pattern)",
+    "Anti-inflammatory and antioxidant"
+  ],
+  "dosage": {
+    "standard": "1-2ml of 0.1% solution topical, or 200mcg injection",
+    "range": "Topical or 100-500mcg SC",
+    "notes": "Topical for skin/hair. Subcutaneous injection for systemic effects. Naturally present in plasma at ~200ng/ml in youth."
+  },
+  "keyFindings": [
+    "Resets expression of ~30% of human genes toward a younger state (Pickart)",
+    "Improved wound healing, skin thickness, and hair growth in clinical studies",
+    "Plasma levels decline from 200ng/ml (age 20) to 80ng/ml (age 60)"
+  ],
+  "interactions": [
+    "Copper supplements — monitor copper levels"
+  ],
+  "sideEffects": [
+    "Skin irritation (topical)",
+    "Injection site redness"
+  ],
+  "contraindications": [
+    "Wilson disease (copper metabolism disorder)",
+    "Active liver disease"
+  ],
+  "tags": [
+    "peptide",
+    "skin",
+    "regeneration",
+    "anti-aging",
+    "copper",
+    "gene-expression"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 15,
+    "mid": 40,
+    "high": 100,
+    "currency": "USD"
+  },
+  "id": "prod-ghk-cu-copper-peptide",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.780Z",
+  "createdAt": "2026-02-04T14:50:14.780Z"
+}

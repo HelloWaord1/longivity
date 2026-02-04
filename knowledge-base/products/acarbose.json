@@ -1,0 +1,60 @@
+{
+  "name": "Acarbose",
+  "category": "pharmaceutical",
+  "evidenceGrade": "B",
+  "riskProfile": "medium",
+  "description": "Alpha-glucosidase inhibitor that slows carbohydrate digestion, reducing postprandial glucose spikes. One of only four drugs to extend lifespan in the NIA Interventions Testing Program (ITP) in mice. Particularly effective in males. Prescription required.",
+  "mechanisms": [
+    "Alpha-glucosidase inhibition (slows starch digestion)",
+    "Post-prandial glucose spike reduction",
+    "Gut microbiome modulation",
+    "AMPK activation (indirect)"
+  ],
+  "dosage": {
+    "standard": "25-50mg with each meal",
+    "range": "25-100mg per meal",
+    "notes": "Start at 25mg to minimize GI side effects. Take with first bite of food. Prescription drug. NIA ITP positive result."
+  },
+  "keyFindings": [
+    "Extended lifespan in male mice by ~22% in NIA ITP (one of only 4 positive drugs)",
+    "Reduced cardiovascular events by 49% in STOP-NIDDM trial",
+    "Flattens postprandial glucose curve — \"carb blocker\" with longevity benefits"
+  ],
+  "interactions": [
+    "Digestive enzymes (counteract each other)",
+    "Insulin and sulfonylureas (hypoglycemia risk)",
+    "Charcoal and absorbents"
+  ],
+  "sideEffects": [
+    "Flatulence (common, usually improves)",
+    "Bloating",
+    "Diarrhea",
+    "Abdominal discomfort"
+  ],
+  "contraindications": [
+    "Inflammatory bowel disease",
+    "Intestinal obstruction",
+    "Severe renal impairment",
+    "Cirrhosis"
+  ],
+  "tags": [
+    "pharmaceutical",
+    "glucose",
+    "itp-positive",
+    "longevity-drug",
+    "prescription"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 10,
+    "mid": 25,
+    "high": 50,
+    "currency": "USD"
+  },
+  "id": "prod-acarbose",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.814Z",
+  "createdAt": "2026-02-04T14:50:14.814Z"
+}

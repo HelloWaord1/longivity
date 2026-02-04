@@ -1,0 +1,50 @@
+{
+  "name": "Oura Ring",
+  "category": "device",
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "description": "Smart ring wearable tracking sleep stages, HRV, resting heart rate, body temperature, blood oxygen, and activity. Provides daily readiness and sleep scores. Compact form factor with research-grade accuracy for sleep tracking.",
+  "mechanisms": [
+    "Photoplethysmography (PPG) for heart rate and HRV",
+    "Accelerometer for sleep staging and activity",
+    "Temperature sensor (deviation tracking)",
+    "SpO2 monitoring"
+  ],
+  "dosage": {
+    "standard": "Continuous wear, charge every 4-7 days",
+    "range": "Daily use",
+    "notes": "Gen 3. Best sleep tracker available in wearable form. HRV and temperature trends most valuable for longevity tracking. Pairs with app for insights."
+  },
+  "keyFindings": [
+    "94.1% agreement with polysomnography for sleep staging",
+    "Detected COVID-19 onset 2.75 days before symptoms via temperature deviation",
+    "HRV tracking correlates with autonomic nervous system health and recovery"
+  ],
+  "interactions": [],
+  "sideEffects": [
+    "Finger irritation (rare)",
+    "Anxiety from over-monitoring (orthosomnia)"
+  ],
+  "contraindications": [],
+  "tags": [
+    "device",
+    "wearable",
+    "sleep",
+    "hrv",
+    "tracking",
+    "temperature"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 6,
+    "mid": 6,
+    "high": 6,
+    "currency": "USD"
+  },
+  "id": "prod-oura-ring",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.807Z",
+  "createdAt": "2026-02-04T14:50:14.807Z"
+}

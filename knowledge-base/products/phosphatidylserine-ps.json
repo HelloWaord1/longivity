@@ -1,0 +1,55 @@
+{
+  "name": "Phosphatidylserine (PS)",
+  "category": "supplement",
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "description": "Phospholipid that is a major component of cell membranes, particularly concentrated in brain tissue. Supports cognitive function, cortisol regulation, and cell signaling. FDA-qualified health claim for cognitive decline risk reduction. Levels decline with age.",
+  "mechanisms": [
+    "Cell membrane fluidity and integrity",
+    "Cortisol regulation (blunts excess)",
+    "Acetylcholine and dopamine support",
+    "Apoptotic signaling (cell membrane asymmetry)"
+  ],
+  "dosage": {
+    "standard": "100-300mg/day",
+    "range": "100-600mg/day",
+    "notes": "Soy or sunflower derived. FDA-qualified health claim for dementia risk reduction (2003). Take with meals (fat-soluble). May help cortisol management for athletes."
+  },
+  "keyFindings": [
+    "Improved cognitive function in elderly with memory complaints (multiple RCTs)",
+    "FDA-qualified health claim for reduced dementia risk",
+    "Blunted cortisol response to exercise stress in athletes"
+  ],
+  "interactions": [
+    "Blood thinners (mild anticoagulant effect)",
+    "Anticholinergic medications"
+  ],
+  "sideEffects": [
+    "GI discomfort",
+    "Insomnia (if taken late)"
+  ],
+  "contraindications": [
+    "Bleeding disorders"
+  ],
+  "tags": [
+    "supplement",
+    "phospholipid",
+    "cognitive",
+    "cortisol",
+    "brain",
+    "fda-claim"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 12,
+    "mid": 25,
+    "high": 45,
+    "currency": "USD"
+  },
+  "id": "prod-phosphatidylserine-ps",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.837Z",
+  "createdAt": "2026-02-04T14:50:14.837Z"
+}

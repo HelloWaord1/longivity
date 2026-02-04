@@ -1,0 +1,47 @@
+{
+  "name": "TruAge Epigenetic Test",
+  "category": "diagnostic",
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "description": "DNA methylation-based biological age test using the TruAge PACE (DunedinPACE) algorithm. Measures the rate of aging rather than just biological age. Considered one of the most validated epigenetic clocks for tracking intervention effects.",
+  "mechanisms": [
+    "DNA methylation analysis at CpG sites",
+    "DunedinPACE algorithm (rate of aging)",
+    "Epigenetic clock calibration"
+  ],
+  "dosage": {
+    "standard": "Blood draw, test every 3-6 months",
+    "range": "Quarterly to annually",
+    "notes": "Uses whole blood sample. DunedinPACE measures pace of aging (1.0 = normal, <1.0 = slower aging). Track trends over time."
+  },
+  "keyFindings": [
+    "DunedinPACE validated against 20-year longitudinal data (Dunedin Study)",
+    "Predicts mortality, morbidity, and functional decline",
+    "Responsive to lifestyle interventions within 6-12 months"
+  ],
+  "interactions": [],
+  "sideEffects": [
+    "Venipuncture discomfort"
+  ],
+  "contraindications": [],
+  "tags": [
+    "diagnostic",
+    "epigenetic",
+    "biological-age",
+    "methylation",
+    "tracking"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 75,
+    "mid": 100,
+    "high": 125,
+    "currency": "USD"
+  },
+  "id": "prod-truage-epigenetic-test",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.794Z",
+  "createdAt": "2026-02-04T14:50:14.794Z"
+}

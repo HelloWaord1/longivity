@@ -1,0 +1,54 @@
+{
+  "name": "Cold Plunge (Equipment)",
+  "category": "device",
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "description": "Dedicated cold water immersion equipment maintaining water at 1-15°C. Provides consistent cold exposure for hormesis, brown fat activation, and mood enhancement. Ranges from simple ice barrels to chiller-equipped tubs with filtration.",
+  "mechanisms": [
+    "Norepinephrine surge (2-3x baseline)",
+    "Brown adipose tissue activation",
+    "Cold shock proteins (RBM3)",
+    "Vagal tone improvement"
+  ],
+  "dosage": {
+    "standard": "2-5min at 10-15°C, 3-5x/week",
+    "range": "1-15min, based on temperature and adaptation",
+    "notes": "Colder = shorter. 11°C Huberman protocol. Do NOT warm up with hot shower after — let body reheat naturally for maximum brown fat effect."
+  },
+  "keyFindings": [
+    "2-3x norepinephrine increase lasting hours (sustained mood/focus boost)",
+    "Activated brown fat and increased metabolic rate in regular practitioners",
+    "Cold shock protein RBM3 associated with neuroprotection and synaptogenesis"
+  ],
+  "interactions": [],
+  "sideEffects": [
+    "Cold shock response (initial)",
+    "Hyperventilation risk",
+    "Numbness"
+  ],
+  "contraindications": [
+    "Uncontrolled cardiovascular disease",
+    "Raynaud phenomenon (severe)",
+    "Cold urticaria"
+  ],
+  "tags": [
+    "device",
+    "cold-exposure",
+    "hormesis",
+    "brown-fat",
+    "norepinephrine"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 0,
+    "mid": 0,
+    "high": 0,
+    "currency": "USD"
+  },
+  "id": "prod-cold-plunge-equipment",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.804Z",
+  "createdAt": "2026-02-04T14:50:14.804Z"
+}

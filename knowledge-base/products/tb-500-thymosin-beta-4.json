@@ -1,0 +1,55 @@
+{
+  "name": "TB-500 (Thymosin Beta-4)",
+  "category": "peptide",
+  "evidenceGrade": "D",
+  "riskProfile": "medium",
+  "description": "Synthetic fragment of thymosin beta-4, a naturally occurring peptide involved in tissue repair and regeneration. Widely used in biohacking and veterinary medicine for accelerating wound healing and reducing inflammation. Limited human clinical data but extensive animal research.",
+  "mechanisms": [
+    "Tissue repair and regeneration",
+    "Angiogenesis promotion",
+    "Anti-inflammatory",
+    "Actin regulation and cell migration"
+  ],
+  "dosage": {
+    "standard": "2.5mg twice weekly (injection)",
+    "range": "2-10mg/week",
+    "notes": "Typically run in 4-6 week cycles. Subcutaneous injection. Not FDA approved for human use."
+  },
+  "keyFindings": [
+    "Promoted cardiac repair after myocardial infarction in animal models",
+    "Accelerated wound healing and hair regrowth in preclinical studies",
+    "Upregulates actin polymerization enabling cell migration to injury sites"
+  ],
+  "interactions": [
+    "May interact with anticoagulants due to wound-healing effects"
+  ],
+  "sideEffects": [
+    "Injection site irritation",
+    "Headache",
+    "Lethargy"
+  ],
+  "contraindications": [
+    "Active cancer (theoretical — promotes angiogenesis)",
+    "Pregnancy"
+  ],
+  "tags": [
+    "peptide",
+    "healing",
+    "regeneration",
+    "experimental",
+    "biohacker"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 40,
+    "mid": 80,
+    "high": 150,
+    "currency": "USD"
+  },
+  "id": "prod-tb-500-thymosin-beta-4",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.770Z",
+  "createdAt": "2026-02-04T14:50:14.770Z"
+}

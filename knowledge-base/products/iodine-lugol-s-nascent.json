@@ -1,0 +1,59 @@
+{
+  "name": "Iodine (Lugol's / Nascent)",
+  "category": "supplement",
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "description": "Essential trace element critical for thyroid function, metabolism, and cellular health. Deficiency is widespread globally and linked to cognitive decline, metabolic dysfunction, and increased cancer risk. Supports thyroid hormone production (T3/T4).",
+  "mechanisms": [
+    "Thyroid hormone synthesis (T3, T4)",
+    "Breast and prostate tissue health",
+    "Antioxidant in thyroid (via thyroid peroxidase)",
+    "Cellular detoxification (displaces halides)"
+  ],
+  "dosage": {
+    "standard": "150-300mcg/day",
+    "range": "150mcg-12.5mg/day",
+    "notes": "RDA is 150mcg. Higher doses (mg range) controversial — requires selenium co-supplementation. Start low with thyroid monitoring."
+  },
+  "keyFindings": [
+    "2 billion people worldwide are iodine deficient (WHO)",
+    "Japanese dietary intake (~1-3mg/day) associated with lower breast cancer rates",
+    "Essential for cognitive development and maintenance throughout life"
+  ],
+  "interactions": [
+    "Thyroid medications (levothyroxine)",
+    "Lithium",
+    "Anti-thyroid drugs"
+  ],
+  "sideEffects": [
+    "Thyroid dysfunction if excessive",
+    "Metallic taste",
+    "Skin breakouts (bromide detox)"
+  ],
+  "contraindications": [
+    "Hashimoto thyroiditis (use with caution, low dose)",
+    "Hyperthyroidism",
+    "Thyroid nodules"
+  ],
+  "tags": [
+    "mineral",
+    "thyroid",
+    "essential",
+    "metabolism",
+    "affordable",
+    "deficiency-common"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 5,
+    "mid": 10,
+    "high": 20,
+    "currency": "USD"
+  },
+  "id": "prod-iodine-lugol-s-nascent",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.792Z",
+  "createdAt": "2026-02-04T14:50:14.792Z"
+}

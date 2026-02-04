@@ -1,0 +1,56 @@
+{
+  "name": "TMG (Trimethylglycine / Betaine)",
+  "category": "supplement",
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "description": "Methyl donor that supports the methionine-homocysteine cycle, helping to lower homocysteine and support SAM (S-adenosylmethionine) production. Important companion to NMN/NR supplementation to replenish methyl groups consumed in NAD+ metabolism.",
+  "mechanisms": [
+    "Methyl group donation (homocysteine → methionine)",
+    "SAM production support",
+    "Liver health (lipotropic)",
+    "Osmolyte function (cellular protection)"
+  ],
+  "dosage": {
+    "standard": "500-1000mg/day",
+    "range": "250-3000mg/day",
+    "notes": "Essential co-supplement with NMN/NR to avoid methyl donor depletion. Also known as betaine (from beets). Take with meals. Very affordable."
+  },
+  "keyFindings": [
+    "Effectively lowers homocysteine levels (independent cardiovascular risk factor)",
+    "Compensates for methyl group depletion from NAD+ precursor supplementation",
+    "Protects against fatty liver disease in clinical studies"
+  ],
+  "interactions": [
+    "Methotrexate",
+    "Other methyl donors (folate, B12)"
+  ],
+  "sideEffects": [
+    "GI upset",
+    "Fishy body odor (rare)",
+    "Nausea at high doses"
+  ],
+  "contraindications": [
+    "Homocystinuria (need medical supervision)"
+  ],
+  "tags": [
+    "supplement",
+    "methyl-donor",
+    "homocysteine",
+    "liver",
+    "nad-companion",
+    "affordable"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 5,
+    "mid": 10,
+    "high": 20,
+    "currency": "USD"
+  },
+  "id": "prod-tmg-trimethylglycine-betaine",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.812Z",
+  "createdAt": "2026-02-04T14:50:14.812Z"
+}

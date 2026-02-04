@@ -1,0 +1,61 @@
+{
+  "name": "Telmisartan",
+  "category": "pharmaceutical",
+  "evidenceGrade": "B",
+  "riskProfile": "medium",
+  "description": "Angiotensin II receptor blocker (ARB) with unique PPAR-γ partial agonist activity. Beyond blood pressure control, activates metabolic pathways similar to caloric restriction. Among the longest-acting ARBs with 24hr coverage. Popular in longevity medicine even for normotensive individuals.",
+  "mechanisms": [
+    "Angiotensin II receptor blockade",
+    "PPAR-γ partial agonism (metabolic benefits)",
+    "Insulin sensitivity improvement",
+    "Anti-inflammatory and antifibrotic"
+  ],
+  "dosage": {
+    "standard": "20-40mg/day",
+    "range": "20-80mg/day",
+    "notes": "Prescription required. Unique among ARBs for PPAR-γ activation. 24-hour half-life. Can be used at low dose (20mg) even without hypertension. Peter Attia protocols mention it."
+  },
+  "keyFindings": [
+    "ONTARGET trial: comparable to ACE inhibitor ramipril for cardiovascular protection",
+    "Unique PPAR-γ agonism improves insulin sensitivity — not seen with other ARBs",
+    "Reduced new-onset diabetes by 30% compared to other antihypertensives"
+  ],
+  "interactions": [
+    "Potassium supplements (hyperkalemia risk)",
+    "NSAIDs (reduced efficacy)",
+    "Lithium (increased levels)",
+    "Other antihypertensives"
+  ],
+  "sideEffects": [
+    "Dizziness",
+    "Hypotension",
+    "Hyperkalemia",
+    "Back pain"
+  ],
+  "contraindications": [
+    "Pregnancy (teratogenic)",
+    "Bilateral renal artery stenosis",
+    "Severe hepatic impairment"
+  ],
+  "tags": [
+    "pharmaceutical",
+    "arb",
+    "metabolic",
+    "ppar-gamma",
+    "cardiovascular",
+    "prescription"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 5,
+    "mid": 15,
+    "high": 30,
+    "currency": "USD"
+  },
+  "id": "prod-telmisartan",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.815Z",
+  "createdAt": "2026-02-04T14:50:14.815Z"
+}

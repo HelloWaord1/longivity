@@ -1,0 +1,57 @@
+{
+  "name": "Shilajit (Purified)",
+  "category": "supplement",
+  "evidenceGrade": "C",
+  "riskProfile": "low",
+  "description": "Mineral-rich biomass exudate from Himalayan rocks, used in Ayurvedic medicine for millennia. Contains fulvic acid, dibenzo-alpha-pyrones, and 85+ minerals. Enhances mitochondrial CoQ10 function, increases testosterone, and supports mineral absorption. Must be purified and tested for heavy metals.",
+  "mechanisms": [
+    "Fulvic acid — mineral absorption enhancement",
+    "Mitochondrial electron transport support (CoQ10 synergy)",
+    "Testosterone and fertility support",
+    "Adaptogenic — stress resistance"
+  ],
+  "dosage": {
+    "standard": "250-500mg/day (purified extract)",
+    "range": "100-1000mg/day",
+    "notes": "MUST be purified and tested for heavy metals. PrimaVie is most studied branded extract. Take in morning. Traditional use: dissolved in warm milk or water."
+  },
+  "keyFindings": [
+    "Increased testosterone by 20% in healthy men (Clinical Ther & Pharm, 2016)",
+    "Enhanced CoQ10 function in mitochondria (synergistic effect)",
+    "Improved sperm count and motility in infertile men"
+  ],
+  "interactions": [
+    "Iron supplements (may increase absorption)",
+    "Diabetes medications"
+  ],
+  "sideEffects": [
+    "GI discomfort",
+    "Heavy metal toxicity (unpurified products)",
+    "Allergic reaction (rare)"
+  ],
+  "contraindications": [
+    "Iron overload (hemochromatosis)",
+    "Active gout"
+  ],
+  "tags": [
+    "supplement",
+    "mineral",
+    "adaptogen",
+    "testosterone",
+    "ayurvedic",
+    "traditional"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 15,
+    "mid": 30,
+    "high": 60,
+    "currency": "USD"
+  },
+  "id": "prod-shilajit-purified",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.840Z",
+  "createdAt": "2026-02-04T14:50:14.840Z"
+}

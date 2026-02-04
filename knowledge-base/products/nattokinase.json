@@ -1,0 +1,59 @@
+{
+  "name": "Nattokinase",
+  "category": "supplement",
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "description": "Fibrinolytic enzyme derived from natto (fermented soybeans). Dissolves fibrin clots, reduces blood viscosity, and supports cardiovascular health. Used widely in Japan for decades. Emerging evidence for reducing spike protein and microclot concerns.",
+  "mechanisms": [
+    "Fibrinolysis (dissolves fibrin clots)",
+    "Blood viscosity reduction",
+    "Blood pressure reduction (ACE inhibition)",
+    "Anti-inflammatory"
+  ],
+  "dosage": {
+    "standard": "2000-4000 FU/day (100-200mg)",
+    "range": "2000-6000 FU/day",
+    "notes": "Take on empty stomach (away from food). Measured in fibrinolytic units (FU). NSK-SD form is vitamin K2-free for those on blood thinners."
+  },
+  "keyFindings": [
+    "Reduced blood pressure in hypertensive subjects (meta-analysis)",
+    "Significant fibrinolytic activity demonstrated in human trials",
+    "Reduced blood viscosity and improved flow in clinical studies"
+  ],
+  "interactions": [
+    "Blood thinners (warfarin, aspirin) — significant interaction",
+    "Antiplatelet drugs"
+  ],
+  "sideEffects": [
+    "Easy bruising",
+    "Nosebleeds (rare)",
+    "GI discomfort"
+  ],
+  "contraindications": [
+    "Bleeding disorders",
+    "Pre-surgery (stop 2 weeks before)",
+    "Active bleeding",
+    "Concurrent anticoagulant therapy (without medical supervision)"
+  ],
+  "tags": [
+    "supplement",
+    "enzyme",
+    "cardiovascular",
+    "fibrinolytic",
+    "natto",
+    "blood-flow"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 10,
+    "mid": 20,
+    "high": 40,
+    "currency": "USD"
+  },
+  "id": "prod-nattokinase",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.822Z",
+  "createdAt": "2026-02-04T14:50:14.822Z"
+}

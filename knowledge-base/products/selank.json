@@ -1,0 +1,54 @@
+{
+  "name": "Selank",
+  "category": "peptide",
+  "evidenceGrade": "C",
+  "riskProfile": "low",
+  "description": "A synthetic analogue of the immunomodulatory peptide tuftsin, developed at the Institute of Molecular Genetics (Russia). Approved as an anxiolytic in Russia. Enhances BDNF expression and has nootropic and immune-modulating properties.",
+  "mechanisms": [
+    "BDNF upregulation",
+    "GABA modulation",
+    "Immune system modulation (IL-6, T-helper balance)",
+    "Enkephalin stabilization"
+  ],
+  "dosage": {
+    "standard": "250-500mcg intranasal, 1-3x/day",
+    "range": "150-750mcg/day",
+    "notes": "Intranasal administration. Approved in Russia. Typical course is 2-4 weeks."
+  },
+  "keyFindings": [
+    "Approved anxiolytic in Russia with clinical trial data",
+    "Increased BDNF mRNA expression in hippocampus (animal studies)",
+    "Anxiolytic without sedation or cognitive impairment"
+  ],
+  "interactions": [
+    "Theoretical interaction with benzodiazepines or other GABAergic drugs"
+  ],
+  "sideEffects": [
+    "Nasal irritation",
+    "Mild fatigue (rare)"
+  ],
+  "contraindications": [
+    "Pregnancy",
+    "Autoimmune conditions (theoretical)"
+  ],
+  "tags": [
+    "peptide",
+    "nootropic",
+    "anxiolytic",
+    "immune",
+    "russian-research"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 25,
+    "mid": 50,
+    "high": 100,
+    "currency": "USD"
+  },
+  "id": "prod-selank",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.774Z",
+  "createdAt": "2026-02-04T14:50:14.774Z"
+}

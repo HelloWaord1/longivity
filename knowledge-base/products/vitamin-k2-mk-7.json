@@ -1,0 +1,56 @@
+{
+  "name": "Vitamin K2 (MK-7)",
+  "category": "supplement",
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "description": "Fat-soluble vitamin essential for calcium metabolism — directs calcium to bones and teeth while preventing arterial calcification. MK-7 form (from natto) has longest half-life and best clinical evidence. Critical companion to vitamin D3 supplementation.",
+  "mechanisms": [
+    "Matrix GLA protein activation (prevents arterial calcification)",
+    "Osteocalcin activation (directs calcium to bones)",
+    "Vitamin D3 synergy",
+    "Mitochondrial electron transport participation"
+  ],
+  "dosage": {
+    "standard": "100-200mcg MK-7/day",
+    "range": "100-500mcg/day",
+    "notes": "Always pair with vitamin D3. MK-7 form preferred (longer half-life than MK-4). Fat-soluble — take with meals. Essential if supplementing high-dose D3."
+  },
+  "keyFindings": [
+    "Reduced arterial stiffness in postmenopausal women (3-year RCT)",
+    "MK-7 supplementation improved bone density and reduced fractures",
+    "Rotterdam Study: highest K2 intake associated with 50% less arterial calcification"
+  ],
+  "interactions": [
+    "Warfarin (CONTRAINDICATED — directly antagonizes warfarin)",
+    "Other anticoagulants"
+  ],
+  "sideEffects": [
+    "Minimal",
+    "GI discomfort (rare)"
+  ],
+  "contraindications": [
+    "Warfarin/coumarin anticoagulant therapy",
+    "Hypercoagulable states"
+  ],
+  "tags": [
+    "supplement",
+    "vitamin",
+    "bone",
+    "cardiovascular",
+    "calcification",
+    "d3-companion"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 8,
+    "mid": 15,
+    "high": 30,
+    "currency": "USD"
+  },
+  "id": "prod-vitamin-k2-mk-7",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.841Z",
+  "createdAt": "2026-02-04T14:50:14.841Z"
+}

@@ -1,0 +1,59 @@
+{
+  "name": "Infrared Sauna",
+  "category": "device",
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "description": "Far-infrared (FIR) sauna panels that heat the body directly at lower ambient temperatures (40-65°C) compared to traditional Finnish saunas. Promotes detoxification, cardiovascular conditioning, and heat shock protein production with better tolerability.",
+  "mechanisms": [
+    "Heat shock protein induction (HSP70, HSP90)",
+    "Increased core body temperature",
+    "Heavy metal and toxin excretion via sweat",
+    "Cardiovascular conditioning (mimics moderate exercise)"
+  ],
+  "dosage": {
+    "standard": "30-45min at 55-65°C, 3-5x/week",
+    "range": "20-60min sessions",
+    "notes": "Lower temperature than Finnish sauna but longer sessions. Far-infrared penetrates 1.5 inches into tissue. Hydrate well. Mineral supplementation recommended."
+  },
+  "keyFindings": [
+    "Similar cardiovascular benefits to Finnish sauna at more tolerable temperatures",
+    "Improved symptoms in congestive heart failure patients (Waon therapy, Japan)",
+    "Enhanced detoxification — heavy metals and BPA found in sweat at higher concentrations than blood"
+  ],
+  "interactions": [
+    "Heat-sensitive medications",
+    "Alcohol (dangerous combination)"
+  ],
+  "sideEffects": [
+    "Dehydration",
+    "Electrolyte imbalance",
+    "Lightheadedness"
+  ],
+  "contraindications": [
+    "Unstable angina",
+    "Recent heart attack",
+    "Pregnancy",
+    "Multiple sclerosis (heat-sensitive)"
+  ],
+  "tags": [
+    "device",
+    "sauna",
+    "infrared",
+    "heat-shock",
+    "detox",
+    "cardiovascular"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 0,
+    "mid": 0,
+    "high": 0,
+    "currency": "USD"
+  },
+  "id": "prod-infrared-sauna",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.804Z",
+  "createdAt": "2026-02-04T14:50:14.804Z"
+}

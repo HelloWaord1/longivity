@@ -1,0 +1,56 @@
+{
+  "name": "Spore-Based Probiotics (Bacillus)",
+  "category": "supplement",
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "description": "Spore-forming Bacillus strains (B. subtilis, B. coagulans, B. clausii) that survive stomach acid and colonize the gut more effectively than standard probiotics. Function as \"reconditioning\" probiotics that modulate the existing microbiome rather than colonizing permanently.",
+  "mechanisms": [
+    "Gut microbiome reconditioning",
+    "Short-chain fatty acid production",
+    "Gut barrier integrity improvement",
+    "Competitive exclusion of pathogens"
+  ],
+  "dosage": {
+    "standard": "1-2 capsules/day",
+    "range": "Product-specific CFU counts",
+    "notes": "MegaSporeBiotic is most studied. Survive stomach acid — no refrigeration needed. True gut colonizers vs transient Lactobacillus strains. Start low (every other day) and increase."
+  },
+  "keyFindings": [
+    "Reduced metabolic endotoxemia (LPS leakage) in randomized trial",
+    "Survived gastric acid and colonized colon (vs <1% survival of standard probiotics)",
+    "Improved gut barrier function and reduced inflammatory markers"
+  ],
+  "interactions": [
+    "Antibiotics (take 2hr apart)",
+    "Immunosuppressants (theoretical)"
+  ],
+  "sideEffects": [
+    "Initial die-off symptoms (bloating, gas)",
+    "GI adjustment period"
+  ],
+  "contraindications": [
+    "Severe immunosuppression",
+    "Short bowel syndrome"
+  ],
+  "tags": [
+    "supplement",
+    "probiotic",
+    "spore-based",
+    "gut",
+    "microbiome",
+    "bacillus"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 15,
+    "mid": 30,
+    "high": 55,
+    "currency": "USD"
+  },
+  "id": "prod-spore-based-probiotics-bacillus",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.853Z",
+  "createdAt": "2026-02-04T14:50:14.853Z"
+}

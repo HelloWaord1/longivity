@@ -1,0 +1,50 @@
+{
+  "name": "Galleri Multi-Cancer Early Detection",
+  "category": "diagnostic",
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "description": "Blood test by GRAIL that screens for 50+ cancer types via cell-free DNA methylation patterns. Detects cancer signal and predicts tissue of origin. Designed as complement to standard screening, especially for cancers without current screening methods.",
+  "mechanisms": [
+    "Cell-free DNA (cfDNA) methylation analysis",
+    "Cancer signal detection across 50+ types",
+    "Tissue of origin prediction"
+  ],
+  "dosage": {
+    "standard": "Blood draw, annually",
+    "range": "Annually",
+    "notes": "Recommended for adults 50+ or high-risk individuals. Complement to (not replacement for) standard screenings. ~0.5% false positive rate."
+  },
+  "keyFindings": [
+    "Detected 50+ cancer types with 51.5% sensitivity in PATHFINDER study",
+    "Predicted tissue of origin with 88% accuracy",
+    "NHS-Galleri trial (140,000 participants) — largest cancer screening trial ever"
+  ],
+  "interactions": [],
+  "sideEffects": [
+    "Venipuncture",
+    "Psychological impact of results"
+  ],
+  "contraindications": [
+    "Already undergoing cancer treatment (may confound results)"
+  ],
+  "tags": [
+    "diagnostic",
+    "cancer-screening",
+    "liquid-biopsy",
+    "cfdna",
+    "preventive"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 75,
+    "mid": 80,
+    "high": 85,
+    "currency": "USD"
+  },
+  "id": "prod-galleri-multi-cancer-early-detection",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.798Z",
+  "createdAt": "2026-02-04T14:50:14.798Z"
+}

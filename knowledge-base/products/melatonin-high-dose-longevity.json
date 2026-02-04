@@ -1,0 +1,58 @@
+{
+  "name": "Melatonin (High-Dose Longevity)",
+  "category": "supplement",
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "description": "Higher-dose melatonin (3-20mg) used specifically for longevity and anti-cancer purposes, distinct from low-dose sleep use. Acts as a potent mitochondrial antioxidant, immune modulator, and has direct anti-cancer properties via oncostatic mechanisms.",
+  "mechanisms": [
+    "Mitochondrial antioxidant (concentrates in mitochondria)",
+    "Oncostatic — inhibits cancer cell proliferation",
+    "Telomerase regulation",
+    "Autophagy induction at higher doses"
+  ],
+  "dosage": {
+    "standard": "5-10mg/night",
+    "range": "3-20mg/night",
+    "notes": "Higher doses for longevity/anti-cancer distinct from sleep dose (0.3-1mg). Extended-release preferred. Take 1hr before bed."
+  },
+  "keyFindings": [
+    "10mg dose showed anti-cancer effects as adjuvant therapy in multiple RCTs",
+    "Concentrates in mitochondria — 10x more potent there than in cytosol",
+    "Extended lifespan in multiple animal models at higher doses"
+  ],
+  "interactions": [
+    "Immunosuppressants",
+    "Blood thinners",
+    "Diabetes medications (affects insulin sensitivity)"
+  ],
+  "sideEffects": [
+    "Morning grogginess",
+    "Vivid dreams",
+    "Possible hormone disruption at very high doses"
+  ],
+  "contraindications": [
+    "Autoimmune conditions (may stimulate immune system)",
+    "Depression (may worsen in some)"
+  ],
+  "tags": [
+    "hormone",
+    "antioxidant",
+    "anti-cancer",
+    "mitochondria",
+    "longevity-dose",
+    "affordable"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 5,
+    "mid": 12,
+    "high": 25,
+    "currency": "USD"
+  },
+  "id": "prod-melatonin-high-dose-longevity",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.790Z",
+  "createdAt": "2026-02-04T14:50:14.790Z"
+}

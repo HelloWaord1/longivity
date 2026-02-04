@@ -1,0 +1,58 @@
+{
+  "name": "Proteolytic Enzyme Blend (Systemic Enzymes)",
+  "category": "supplement",
+  "evidenceGrade": "C",
+  "riskProfile": "low",
+  "description": "Systemic enzyme formulations (bromelain, trypsin, chymotrypsin, papain, rutin) taken on empty stomach for systemic anti-inflammatory, fibrinolytic, and immune-modulating effects. Used in German and European integrative medicine for decades. Wobenzym is the most studied brand.",
+  "mechanisms": [
+    "Systemic proteolysis (inflammatory protein degradation)",
+    "Fibrinolytic activity",
+    "Immune complex clearance",
+    "Anti-edema and analgesic effects"
+  ],
+  "dosage": {
+    "standard": "3-6 tablets on empty stomach, 2-3x/day",
+    "range": "Product-specific",
+    "notes": "MUST take on empty stomach (1hr before or 2hr after food). Enteric coating protects from stomach acid. Wobenzym N most studied. German clinical standard."
+  },
+  "keyFindings": [
+    "Reduced post-surgical inflammation comparable to NSAIDs in German clinical trials",
+    "Improved recovery time in athletes (reduced muscle soreness)",
+    "Immune modulation — reduced autoimmune symptom severity in open-label studies"
+  ],
+  "interactions": [
+    "Blood thinners (additive effect)",
+    "Antibiotics (may enhance tissue penetration)"
+  ],
+  "sideEffects": [
+    "GI discomfort",
+    "Allergic reaction (rare)",
+    "Changes in stool consistency"
+  ],
+  "contraindications": [
+    "Bleeding disorders",
+    "Pre-surgery (stop 2 weeks before)",
+    "Severe liver or kidney disease"
+  ],
+  "tags": [
+    "supplement",
+    "enzyme",
+    "anti-inflammatory",
+    "systemic",
+    "recovery",
+    "german-medicine"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 20,
+    "mid": 40,
+    "high": 70,
+    "currency": "USD"
+  },
+  "id": "prod-proteolytic-enzyme-blend-systemic-enzymes",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.847Z",
+  "createdAt": "2026-02-04T14:50:14.847Z"
+}

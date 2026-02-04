@@ -1,0 +1,56 @@
+{
+  "name": "Fisetin (High-Dose Senolytic)",
+  "category": "supplement",
+  "evidenceGrade": "C",
+  "riskProfile": "low",
+  "description": "High-dose fisetin protocol (500-2000mg) used intermittently as a senolytic to clear senescent cells. Distinct from daily low-dose use. The \"senolytic hit\" approach targets zombie cells during 1-3 day bursts, followed by weeks of clearance.",
+  "mechanisms": [
+    "Senolytic — kills senescent cells via apoptosis",
+    "Bcl-2 family inhibition in senescent cells",
+    "PI3K/AKT pathway modulation",
+    "SASP reduction"
+  ],
+  "dosage": {
+    "standard": "1000-2000mg/day for 2 consecutive days, monthly",
+    "range": "500-2500mg over 1-3 days",
+    "notes": "Senolytic dosing is HIGH and INTERMITTENT. Different from daily use. Take with fat (olive oil) for absorption. Mayo Clinic trial used 20mg/kg."
+  },
+  "keyFindings": [
+    "Most potent senolytic identified in natural compound screen (Mayo Clinic)",
+    "AFFIRM-LITE trial: high-dose fisetin for senescent cell clearance",
+    "Intermittent dosing allows immune clearance of dead senescent cells between rounds"
+  ],
+  "interactions": [
+    "Blood thinners (high doses may affect platelet function)",
+    "CYP3A4 substrates"
+  ],
+  "sideEffects": [
+    "GI discomfort at high doses",
+    "Diarrhea",
+    "Possible allergic reaction"
+  ],
+  "contraindications": [
+    "Bleeding disorders",
+    "Upcoming surgery"
+  ],
+  "tags": [
+    "supplement",
+    "senolytic",
+    "intermittent",
+    "high-dose",
+    "anti-aging"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 20,
+    "mid": 40,
+    "high": 80,
+    "currency": "USD"
+  },
+  "id": "prod-fisetin-high-dose-senolytic",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.808Z",
+  "createdAt": "2026-02-04T14:50:14.808Z"
+}

@@ -1,0 +1,57 @@
+{
+  "name": "Nicotinamide (Niacinamide / Vitamin B3)",
+  "category": "supplement",
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "description": "Amide form of vitamin B3, distinct from niacin (no flushing). NAD+ precursor via the salvage pathway. Shown to reduce skin cancer risk and support DNA repair. Used in dermatology for photoprotection and in oncology for skin cancer prevention at 500mg 2x/day.",
+  "mechanisms": [
+    "NAD+ precursor (salvage pathway)",
+    "PARP enzyme support (DNA repair)",
+    "Skin cancer prevention",
+    "Anti-inflammatory (immune modulation)"
+  ],
+  "dosage": {
+    "standard": "500mg 2x/day",
+    "range": "250-1500mg/day",
+    "notes": "Does NOT cause flushing (unlike niacin). ONTRAC trial dose: 500mg 2x/day for skin cancer prevention. Very affordable. Different mechanism from NMN/NR."
+  },
+  "keyFindings": [
+    "ONTRAC trial: 23% reduction in new skin cancers at 500mg 2x/day",
+    "Effectively raises NAD+ via salvage pathway",
+    "Enhanced DNA repair capacity in UV-exposed skin"
+  ],
+  "interactions": [
+    "Anti-seizure medications",
+    "Carbamazepine"
+  ],
+  "sideEffects": [
+    "Minimal",
+    "Mild GI discomfort (rare)",
+    "Hepatotoxicity (very high doses >3g)"
+  ],
+  "contraindications": [
+    "Active liver disease (high doses)",
+    "Gout (may increase uric acid at very high doses)"
+  ],
+  "tags": [
+    "supplement",
+    "nad+",
+    "b3",
+    "skin-cancer",
+    "dna-repair",
+    "affordable"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 5,
+    "mid": 10,
+    "high": 20,
+    "currency": "USD"
+  },
+  "id": "prod-nicotinamide-niacinamide-vitamin-b3",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.848Z",
+  "createdAt": "2026-02-04T14:50:14.848Z"
+}

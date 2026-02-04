@@ -1,0 +1,57 @@
+{
+  "name": "Dihydroberberine (GlucoVantage)",
+  "category": "supplement",
+  "evidenceGrade": "C",
+  "riskProfile": "low",
+  "description": "Active metabolite of berberine with 5x better bioavailability. Allows lower dosing with equivalent or superior glucose-lowering effects and fewer GI side effects. GlucoVantage is the branded form. Ideal for those who can't tolerate standard berberine doses.",
+  "mechanisms": [
+    "AMPK activation (same as berberine, better absorbed)",
+    "Glucose transporter modulation",
+    "Gut microbiome modulation",
+    "Lipid metabolism improvement"
+  ],
+  "dosage": {
+    "standard": "100-200mg 2-3x/day with meals",
+    "range": "100-300mg per dose",
+    "notes": "5x better absorbed than berberine — use ~1/5 the dose. GlucoVantage brand most studied. Better GI tolerance than berberine. Take with carb-containing meals."
+  },
+  "keyFindings": [
+    "5x greater bioavailability than standard berberine in pharmacokinetic studies",
+    "Equivalent glucose-lowering at fraction of the dose",
+    "Significantly fewer GI side effects than standard berberine"
+  ],
+  "interactions": [
+    "CYP enzyme substrates (similar to berberine)",
+    "Diabetes medications",
+    "Metformin (use with caution)"
+  ],
+  "sideEffects": [
+    "Mild GI effects (much less than berberine)",
+    "Hypoglycemia risk with diabetes meds"
+  ],
+  "contraindications": [
+    "Severe liver disease",
+    "Concurrent metformin (without medical supervision)"
+  ],
+  "tags": [
+    "supplement",
+    "ampk",
+    "glucose",
+    "metabolic",
+    "berberine-alternative",
+    "bioavailable"
+  ],
+  "estimatedMonthlyCost": {
+    "low": 15,
+    "mid": 30,
+    "high": 50,
+    "currency": "USD"
+  },
+  "id": "prod-dihydroberberine-glucovantage",
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T14:50:14.850Z",
+  "createdAt": "2026-02-04T14:50:14.850Z"
+}
