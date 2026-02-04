@@ -2,49 +2,27 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border/50 bg-bg-card/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand */}
-          <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-3">
-              <span className="text-2xl">🧬</span>
-              <span className="text-lg font-bold">Longivity</span>
-            </div>
-            <p className="text-muted text-sm max-w-md leading-relaxed">
-              AI-powered longevity platform. Multi-agent research system that monitors the latest 
-              science and builds personalized supplement stacks.
+    <footer className="border-t border-border">
+      <div className="max-w-3xl mx-auto px-4 md:px-6 py-10">
+        <div className="flex flex-col sm:flex-row items-start justify-between gap-6">
+          <div>
+            <span className="text-sm font-semibold text-primary">Longivity</span>
+            <p className="text-xs text-tertiary mt-1 max-w-xs leading-relaxed">
+              Evidence-graded longevity research and personalized supplement stacks.
             </p>
           </div>
 
-          {/* Links */}
-          <div>
-            <h4 className="text-sm font-semibold text-white mb-3">Platform</h4>
-            <div className="space-y-2">
-              <Link href="/" className="block text-sm text-muted hover:text-accent transition-colors">Search</Link>
-              <Link href="/discover" className="block text-sm text-muted hover:text-accent transition-colors">Discover</Link>
-              <Link href="/products" className="block text-sm text-muted hover:text-accent transition-colors">Products</Link>
-              <Link href="/stack" className="block text-sm text-muted hover:text-accent transition-colors">Stack Builder</Link>
-            </div>
-          </div>
-
-          {/* Info */}
-          <div>
-            <h4 className="text-sm font-semibold text-white mb-3">Information</h4>
-            <div className="space-y-2">
-              <p className="text-sm text-muted">Not medical advice</p>
-              <p className="text-sm text-muted">Consult a healthcare professional</p>
-              <p className="text-sm text-muted">© 2026 Longivity</p>
-            </div>
+          <div className="flex gap-6">
+            <Link href="/" className="text-xs text-secondary hover:text-primary transition-colors duration-150">Search</Link>
+            <Link href="/discover" className="text-xs text-secondary hover:text-primary transition-colors duration-150">Discover</Link>
+            <Link href="/products" className="text-xs text-secondary hover:text-primary transition-colors duration-150">Products</Link>
+            <Link href="/stack" className="text-xs text-secondary hover:text-primary transition-colors duration-150">Stack</Link>
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-border/30 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-muted">Built with multi-agent AI · Powered by science</p>
-          <div className="flex items-center gap-4">
-            <span className="text-xs text-muted">🔬 44+ research papers indexed</span>
-            <span className="text-xs text-muted">💊 48+ products graded</span>
-          </div>
+        <div className="mt-8 pt-4 border-t border-border flex items-center justify-between">
+          <p className="text-xs text-tertiary">&copy; 2026 Longivity</p>
+          <p className="text-xs text-tertiary">Not medical advice</p>
         </div>
       </div>
     </footer>

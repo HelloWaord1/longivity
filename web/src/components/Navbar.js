@@ -1,96 +1,112 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const links = [
-  { href: '/', label: 'Search', icon: '🔍' },
-  { href: '/discover', label: 'Discover', icon: '📰' },
-  { href: '/products', label: 'Products', icon: '💊' },
-  { href: '/stack', label: 'Stack Builder', icon: '🧪' },
+  { href: '/', label: 'Search' },
+  { href: '/discover', label: 'Discover' },
+  { href: '/products', label: 'Products' },
+  { href: '/stack', label: 'Stack' },
+];
+
+const mobileLinks = [
+  {
+    href: '/',
+    label: 'Search',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="11" cy="11" r="8" />
+        <path d="m21 21-4.35-4.35" />
+      </svg>
+    ),
+  },
+  {
+    href: '/discover',
+    label: 'Discover',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+      </svg>
+    ),
+  },
+  {
+    href: '/products',
+    label: 'Products',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect width="7" height="7" x="3" y="3" rx="1" />
+        <rect width="7" height="7" x="14" y="3" rx="1" />
+        <rect width="7" height="7" x="14" y="14" rx="1" />
+        <rect width="7" height="7" x="3" y="14" rx="1" />
+      </svg>
+    ),
+  },
+  {
+    href: '/stack',
+    label: 'Stack',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+      </svg>
+    ),
+  },
 ];
 
 export default function Navbar() {
   const pathname = usePathname();
-  const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-bg/80 backdrop-blur-xl border-b border-border/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 group">
-            <span className="text-2xl">🧬</span>
-            <span className="text-xl font-bold text-white group-hover:text-accent transition-colors">
-              Longivity
-            </span>
+    <>
+      {/* Desktop top nav */}
+      <nav className="fixed top-0 w-full z-50 h-14 border-b border-border bg-bg">
+        <div className="max-w-3xl mx-auto px-4 md:px-6 h-full flex items-center justify-between">
+          <Link href="/" className="text-base font-semibold text-primary hover:text-accent transition-colors duration-150">
+            Longivity
           </Link>
 
-          {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-1">
             {links.map((link) => {
-              const active = pathname === link.href;
+              const active = link.href === '/' ? pathname === '/' : pathname.startsWith(link.href);
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
+                  className={`px-3 py-1.5 text-sm transition-colors duration-150 rounded-md ${
                     active
-                      ? 'bg-accent/10 text-accent'
-                      : 'text-muted hover:text-white hover:bg-bg-hover'
+                      ? 'text-primary font-medium'
+                      : 'text-secondary hover:text-primary'
                   }`}
                 >
-                  <span className="text-base">{link.icon}</span>
-                  {link.label}
-                </Link>
-              );
-            })}
-          </div>
-
-          {/* Mobile toggle */}
-          <button
-            className="md:hidden p-2 text-muted hover:text-white transition-colors"
-            onClick={() => setMobileOpen(!mobileOpen)}
-          >
-            {mobileOpen ? (
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            )}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile menu */}
-      {mobileOpen && (
-        <div className="md:hidden bg-bg-card/95 backdrop-blur-xl border-t border-border/50 animate-fade-in">
-          <div className="px-4 py-3 space-y-1">
-            {links.map((link) => {
-              const active = pathname === link.href;
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileOpen(false)}
-                  className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all ${
-                    active
-                      ? 'bg-accent/10 text-accent'
-                      : 'text-muted hover:text-white hover:bg-bg-hover'
-                  }`}
-                >
-                  <span className="text-lg">{link.icon}</span>
                   {link.label}
                 </Link>
               );
             })}
           </div>
         </div>
-      )}
-    </nav>
+      </nav>
+
+      {/* Mobile bottom tab bar */}
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 h-16 border-t border-border bg-bg safe-area-bottom">
+        <div className="flex items-center justify-around h-full px-2">
+          {mobileLinks.map((link) => {
+            const active = link.href === '/' ? pathname === '/' : pathname.startsWith(link.href);
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`flex flex-col items-center justify-center gap-0.5 w-16 h-full transition-colors duration-150 ${
+                  active ? 'text-accent' : 'text-tertiary'
+                }`}
+              >
+                {link.icon}
+                <span className="text-[10px] font-medium">{link.label}</span>
+              </Link>
+            );
+          })}
+        </div>
+      </nav>
+    </>
   );
 }

@@ -50,36 +50,18 @@ export async function getRecommendation({ budget, age, goals }) {
 export function getGradeColor(grade) {
   const g = (grade || 'D').toUpperCase();
   switch (g) {
-    case 'A': return { bg: 'bg-grade-a/15', text: 'text-grade-a', class: 'grade-a' };
-    case 'B': return { bg: 'bg-accent-dim', text: 'text-accent', class: 'grade-b' };
-    case 'C': return { bg: 'bg-grade-c/15', text: 'text-grade-c', class: 'grade-c' };
-    case 'D': return { bg: 'bg-grade-d/15', text: 'text-grade-d', class: 'grade-d' };
-    default: return { bg: 'bg-white/10', text: 'text-muted', class: 'grade-d' };
+    case 'A': return { text: 'text-grade-a', class: 'grade-a' };
+    case 'B': return { text: 'text-grade-b', class: 'grade-b' };
+    case 'C': return { text: 'text-grade-c', class: 'grade-c' };
+    case 'D': return { text: 'text-grade-d', class: 'grade-d' };
+    default: return { text: 'text-secondary', class: '' };
   }
 }
 
 export function getCategoryEmoji(category) {
-  const map = {
-    supplement: '💊',
-    protocol: '🏋️',
-    pharmaceutical: '💉',
-    peptide: '🧬',
-    research: '🔬',
-    news: '📰',
-  };
-  return map[category?.toLowerCase()] || '📋';
+  return '';
 }
 
 export function getCategoryGradient(category) {
-  const map = {
-    supplement: 'from-cyan-600/20 to-blue-600/20',
-    protocol: 'from-green-600/20 to-emerald-600/20',
-    pharmaceutical: 'from-purple-600/20 to-violet-600/20',
-    peptide: 'from-pink-600/20 to-rose-600/20',
-    supplements: 'from-cyan-600/20 to-blue-600/20',
-    research: 'from-amber-600/20 to-orange-600/20',
-    protocols: 'from-green-600/20 to-emerald-600/20',
-    news: 'from-indigo-600/20 to-blue-600/20',
-  };
-  return map[category?.toLowerCase()] || 'from-zinc-600/20 to-zinc-700/20';
+  return '';
 }
