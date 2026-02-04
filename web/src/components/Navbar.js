@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useCart } from '@/lib/CartContext';
+import { useProtocol } from '@/lib/ProtocolContext';
 
 const links = [
   { href: '/', label: 'Search' },
@@ -12,10 +12,20 @@ const links = [
   { href: '/stack', label: 'Build Stack' },
 ];
 
+function ProtocolIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="4" y="2" width="16" height="6" rx="1" />
+      <rect x="4" y="10" width="16" height="6" rx="1" />
+      <rect x="4" y="18" width="16" height="4" rx="1" />
+    </svg>
+  );
+}
+
 export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const { count, mounted } = useCart();
+  const { count, mounted } = useProtocol();
 
   return (
     <nav className="fixed top-0 w-full z-50 h-14 border-b border-border bg-bg/95 backdrop-blur-sm">
@@ -44,19 +54,15 @@ export default function Navbar() {
             );
           })}
 
-          {/* Cart icon */}
+          {/* Protocol icon */}
           <Link
-            href="/cart"
+            href="/protocol"
             className={`relative ml-2 p-2 rounded-md transition-colors duration-150 ${
-              pathname === '/cart' ? 'text-primary' : 'text-secondary hover:text-primary'
+              pathname === '/protocol' ? 'text-primary' : 'text-secondary hover:text-primary'
             }`}
-            aria-label="Cart"
+            aria-label="Protocol"
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <path d="M16 10a4 4 0 01-8 0" />
-            </svg>
+            <ProtocolIcon />
             {mounted && count > 0 && (
               <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-accent text-bg text-[10px] font-bold rounded-full flex items-center justify-center">
                 {count > 9 ? '9+' : count}
@@ -65,20 +71,16 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile right side: cart + hamburger */}
+        {/* Mobile right side: protocol + hamburger */}
         <div className="md:hidden flex items-center gap-1">
           <Link
-            href="/cart"
+            href="/protocol"
             className={`relative p-2 transition-colors duration-150 ${
-              pathname === '/cart' ? 'text-primary' : 'text-secondary hover:text-primary'
+              pathname === '/protocol' ? 'text-primary' : 'text-secondary hover:text-primary'
             }`}
-            aria-label="Cart"
+            aria-label="Protocol"
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <path d="M16 10a4 4 0 01-8 0" />
-            </svg>
+            <ProtocolIcon />
             {mounted && count > 0 && (
               <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-accent text-bg text-[10px] font-bold rounded-full flex items-center justify-center">
                 {count > 9 ? '9+' : count}
@@ -126,15 +128,15 @@ export default function Navbar() {
               );
             })}
             <Link
-              href="/cart"
+              href="/protocol"
               onClick={() => setOpen(false)}
               className={`block px-3 py-2.5 text-sm rounded-md transition-colors duration-150 ${
-                pathname === '/cart'
+                pathname === '/protocol'
                   ? 'text-primary font-medium bg-bg-hover'
                   : 'text-secondary hover:text-primary'
               }`}
             >
-              Cart{mounted && count > 0 ? ` (${count})` : ''}
+              Protocol{mounted && count > 0 ? ` (${count})` : ''}
             </Link>
           </div>
         </div>

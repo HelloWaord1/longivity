@@ -104,3 +104,13 @@ export async function placeOrder({ customer, items, total }) {
   if (!res.ok) throw new Error('Failed to place order');
   return res.json();
 }
+
+export async function subscribeProtocol({ email, protocol }) {
+  const res = await fetch(`${API_URL}/protocol/subscribe`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, protocol }),
+  });
+  if (!res.ok) throw new Error('Failed to subscribe');
+  return res.json();
+}

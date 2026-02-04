@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useCart } from '@/lib/CartContext';
+import { useProtocol } from '@/lib/ProtocolContext';
 
 function GradeDot({ grade }) {
   const colors = { A: 'bg-grade-a', B: 'bg-grade-b', C: 'bg-grade-c', D: 'bg-grade-d' };
@@ -15,7 +15,7 @@ function GradeDot({ grade }) {
 }
 
 export default function ProductModal({ product, onClose }) {
-  const { addToCart, isInCart } = useCart();
+  const { addToProtocol, isInProtocol } = useProtocol();
 
   useEffect(() => {
     const handleEsc = (e) => e.key === 'Escape' && onClose();
@@ -36,10 +36,10 @@ export default function ProductModal({ product, onClose }) {
       .replace(/[^a-z0-9]+/g, '-')
       .replace(/^-|-$/g, '');
 
-  const inCart = isInCart(slug);
+  const inProtocol = isInProtocol(slug);
 
   const handleAdd = () => {
-    addToCart({
+    addToProtocol({
       name: product.name,
       slug,
       dosage:
@@ -86,17 +86,17 @@ export default function ProductModal({ product, onClose }) {
             <p className="text-sm text-secondary leading-relaxed">{product.description}</p>
           )}
 
-          {/* Add to cart */}
+          {/* Add to protocol */}
           <button
             onClick={handleAdd}
-            disabled={inCart}
+            disabled={inProtocol}
             className={`w-full py-3 text-sm font-medium rounded-lg transition-colors duration-150 min-h-[44px] ${
-              inCart
+              inProtocol
                 ? 'bg-bg-hover text-tertiary cursor-default'
                 : 'bg-accent text-bg hover:bg-accent-hover'
             }`}
           >
-            {inCart ? 'Added to cart' : 'Add to cart'}
+            {inProtocol ? 'Added to protocol' : 'Add to protocol'}
           </button>
 
           {/* Dosage */}

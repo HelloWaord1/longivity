@@ -1,6 +1,6 @@
 import './globals.css';
 import Navbar from '@/components/Navbar';
-import { CartProvider } from '@/lib/CartContext';
+import { ProtocolProvider } from '@/lib/ProtocolContext';
 
 export const metadata = {
   title: 'Longivity — Longevity Research',
@@ -14,12 +14,12 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       </head>
       <body className="min-h-screen">
-        <CartProvider>
+        <ProtocolProvider>
           <Navbar />
           <main className="pt-14">
             {children}
           </main>
-        </CartProvider>
+        </ProtocolProvider>
       </body>
     </html>
   );

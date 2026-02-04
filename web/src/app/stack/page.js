@@ -1,8 +1,9 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import Link from 'next/link';
 import { consultStack } from '@/lib/api';
-import { useCart } from '@/lib/CartContext';
+import { useProtocol } from '@/lib/ProtocolContext';
 
 const INITIAL_MESSAGE = {
   role: 'assistant',
@@ -105,11 +106,12 @@ export default function StackPage() {
   const [loading, setLoading] = useState(false);
   const [healthProfile, setHealthProfile] = useState({});
   const [stack, setStack] = useState(null);
+  const [protocolSaved, setProtocolSaved] = useState(false);
   const [fallbackStep, setFallbackStep] = useState(0);
   const [useFallback, setUseFallback] = useState(false);
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
-  const { addToCart, isInCart } = useCart();
+  const { saveProtocol, isInProtocol } = useProtocol();
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -242,7 +244,7 @@ export default function StackPage() {
             ...prev.slice(0, -1),
             {
               role: 'assistant',
-              content: `Based on your profile, here is your recommended stack. You can add any of these to your cart.`,
+              content: `Based on your profile, here is your recommended stack. You can save it as your protocol.`,
             },
           ]);
           return;
@@ -269,8 +271,8 @@ export default function StackPage() {
     }
   };
 
-  const handleAddToCart = (item) => {
-    addToCart({
+  const handleSaveAsProtocol = () => {
+    const stackItems = (Array.isArray(stack) ? stack : stack?.items || []).map((item) => ({
       name: item.name,
       slug:
         item.slug ||
@@ -281,7 +283,16 @@ export default function StackPage() {
       dosage: item.dosage,
       monthlyCost: item.monthlyCost || null,
       evidenceGrade: item.evidenceGrade,
+      reasoning: item.reasoning || null,
+    }));
+
+    saveProtocol(stackItems, {
+      goals: healthProfile.goals || null,
+      budget: healthProfile.budget || null,
+      age: healthProfile.age || null,
     });
+
+    setProtocolSaved(true);
   };
 
   const getSlug = (item) =>
@@ -360,7 +371,6 @@ export default function StackPage() {
                 {(Array.isArray(stack) ? stack : stack.items || []).map(
                   (item, i) => {
                     const slug = getSlug(item);
-                    const inCart = isInCart(slug);
                     return (
                       <div
                         key={slug + i}
@@ -397,23 +407,34 @@ export default function StackPage() {
                             {item.reasoning}
                           </p>
                         )}
-
-                        <div className="ml-8">
-                          <button
-                            onClick={() => handleAddToCart(item)}
-                            disabled={inCart}
-                            className={`text-xs px-3 py-1.5 rounded-md transition-colors duration-150 ${
-                              inCart
-                                ? 'bg-bg-hover text-tertiary cursor-default'
-                                : 'bg-accent text-bg hover:bg-accent-hover'
-                            }`}
-                          >
-                            {inCart ? 'Added' : 'Add to cart'}
-                          </button>
-                        </div>
                       </div>
                     );
                   }
+                )}
+              </div>
+
+              {/* Save as protocol / View protocol */}
+              <div className="mt-6 flex flex-col gap-3">
+                {!protocolSaved ? (
+                  <button
+                    onClick={handleSaveAsProtocol}
+                    className="w-full py-3 bg-accent text-bg text-sm font-medium rounded-lg hover:bg-accent-hover transition-colors duration-150 min-h-[44px]"
+                  >
+                    Save as Protocol
+                  </button>
+                ) : (
+                  <div className="space-y-3">
+                    <div className="bg-bg-card border border-accent/30 rounded-lg p-4 text-center">
+                      <p className="text-sm text-primary font-medium mb-1">Protocol saved</p>
+                      <p className="text-xs text-tertiary">Your stack has been saved as your active protocol.</p>
+                    </div>
+                    <Link
+                      href="/protocol"
+                      className="block w-full py-3 text-center bg-accent text-bg text-sm font-medium rounded-lg hover:bg-accent-hover transition-colors duration-150 min-h-[44px]"
+                    >
+                      View your protocol
+                    </Link>
+                  </div>
                 )}
               </div>
 

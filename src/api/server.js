@@ -62,6 +62,7 @@ const routes = {
         'POST /consult',
         'POST /consult-stack',
         'POST /recommend',
+        'POST /protocol/subscribe',
         'POST /orders',
         'GET /orders',
       ],
@@ -523,6 +524,47 @@ Current health profile collected so far: ${JSON.stringify(healthProfile || {})}`
     json(res, { orders, count: orders.length });
   },
 
+  // Subscribe to a protocol
+  'POST /protocol/subscribe': async (req, res) => {
+    const body = await parseBody(req);
+    const { email, protocol } = body;
+
+    if (!email || !email.includes('@')) {
+      return json(res, { error: 'A valid email is required' }, 400);
+    }
+    if (!protocol || !protocol.items || !Array.isArray(protocol.items) || protocol.items.length === 0) {
+      return json(res, { error: 'protocol.items array is required and must not be empty' }, 400);
+    }
+
+    const subscriptionId = randomUUID();
+    const subscription = {
+      id: subscriptionId,
+      email,
+      protocol: {
+        items: protocol.items,
+        goals: protocol.goals || null,
+        budget: protocol.budget || null,
+      },
+      status: 'active',
+      createdAt: new Date().toISOString(),
+    };
+
+    const subsDir = join(process.cwd(), 'knowledge-base', 'subscriptions');
+    if (!existsSync(subsDir)) {
+      await mkdir(subsDir, { recursive: true });
+    }
+
+    await writeFile(
+      join(subsDir, `${subscriptionId}.json`),
+      JSON.stringify(subscription, null, 2),
+      'utf-8'
+    );
+
+    console.log(`[Protocol] New subscription ${subscriptionId} from ${email}, ${protocol.items.length} items`);
+
+    json(res, { success: true, subscriptionId, subscription });
+  },
+
   // Recommend a stack based on profile
   'POST /recommend': async (req, res) => {
     const body = await parseBody(req);
@@ -628,6 +670,11 @@ async function handleRequest(req, res) {
     const key = `${method} ${path}`;
     if (routes[key]) {
       return await routes[key](req, res);
+    }
+
+    // Nested routes
+    if (method === 'POST' && path === '/protocol/subscribe') {
+      return await routes['POST /protocol/subscribe'](req, res);
     }
 
     // Param routes
