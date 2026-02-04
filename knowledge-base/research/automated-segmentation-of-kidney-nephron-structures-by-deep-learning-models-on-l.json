@@ -1,0 +1,26 @@
+{
+  "id": "10.1101/2021.07.16.452703",
+  "title": "Automated Segmentation of Kidney Nephron Structures by Deep Learning Models on Label-free Autofluorescence Microscopy for Spatial Multi-omics Data Acquisition and Mining",
+  "authors": [
+    "Patterson, N. H.",
+    "Neumann, E. K.",
+    "Sharman, K.",
+    "Allen, J. L.",
+    "Harris, R. C.",
+    "Fogo, A. B.",
+    "deCaestecker, M. P.",
+    "Van de Plas, R.",
+    "Spraggins, J. M."
+  ],
+  "journal": "bioRxiv (preprint)",
+  "publishedDate": "2026-02-03",
+  "doi": "10.1101/2021.07.16.452703",
+  "url": "https://doi.org/10.1101/2021.07.16.452703",
+  "abstract": "Automated spatial segmentation models can enrich spatio-molecular omics analyses by providing a link to relevant biological structures. We developed segmentation models that use label-free autofluorescence (AF) microscopy to recognize multicellular functional tissue units (FTUs) (glomerulus, proximal tubule, descending thin limb, ascending thick limb, distal tubule, and collecting duct) and gross morphological structures (cortex, outer medulla, and inner medulla) in the human kidney. Annotations were curated using highly specific multiplex immunofluorescence and transferred to co-registered AF for model training. All FTUs (except the descending thin limb) and gross kidney morphology were segmented with high accuracy: >0.85 F1-score, and Dice-Sorensen coefficients >0.80, respectively. This workflow allowed lipids, profiled by imaging mass spectrometry, to be quantitatively associated with segmented FTUs. The segmentation masks were also used to acquire spatial transcriptomics data from collecting ducts. Consistent with previous literature, we demonstrated differing transcript expression of collecting ducts in the inner and outer medulla.",
+  "studyType": "preprint",
+  "tags": [
+    "preprint",
+    "longevity"
+  ],
+  "indexedAt": "2026-02-04T08:34:19.908Z"
+}

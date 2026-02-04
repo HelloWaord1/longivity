@@ -1,0 +1,16 @@
+{
+  "id": "10.1016/j.isci.2025.114298",
+  "title": "AKG-TET axis is central to senescence plasticity.",
+  "abstract": "Cellular senescence, a state of stable cell-cycle arrest associated with aging, is characterized by a distinct pro-inflammatory secretome. This study systematically interrogates the critical role of the &#x3b1;-ketoglutarate (AKG)-Ten-eleven translocation (TET) axis in regulating senescence in human somatic cells. Downregulating TET expression and activity, either genetically (siRNA) or pharmacologically (via C35), or limiting AKG bioavailability through a targeting peptide, trigger widespread epigenetic reprogramming, amplify pro-inflammatory signaling, and enhance the senescence-associated secretory phenotype (SASP), ultimately driving cells toward replicative senescence. Conversely, augmenting AKG bioavailability or TET expression and activity significantly enhances cellular resilience to stress, effectively preventing and reversing senescent phenotypes. These findings not only position the AKG-TET axis as a critical regulatory nexus of cellular senescence but also challenge the traditional view of senescence as a fixed endpoint, revealing its dynamic and plastic nature susceptible to therapeutic intervention.",
+  "journal": "iScience",
+  "doi": "10.1016/j.isci.2025.114298",
+  "url": "https://doi.org/10.1016/j.isci.2025.114298",
+  "publishedDate": "2026",
+  "studyType": "animal",
+  "tags": [
+    "pubmed",
+    "longevity"
+  ],
+  "authors": [],
+  "indexedAt": "2026-02-04T08:34:19.907Z"
+}

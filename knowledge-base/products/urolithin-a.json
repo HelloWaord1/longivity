@@ -1,0 +1,38 @@
+{
+  "name": "Urolithin A",
+  "category": "supplement",
+  "mechanisms": [
+    "Mitophagy activation",
+    "Mitochondrial health",
+    "Muscle function"
+  ],
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "500-1000mg/day",
+    "range": "250-1000mg/day",
+    "notes": "Gut microbiome converts ellagic acid to urolithin A, but only 40% of people can. Direct supplementation bypasses this."
+  },
+  "keyFindings": [
+    "Improved mitochondrial health biomarkers in elderly (ATLAS trial)",
+    "Enhanced muscle endurance and strength in older adults",
+    "Manufactured by Timeline (Mitopure)"
+  ],
+  "tags": [
+    "mitophagy",
+    "mitochondria",
+    "muscle",
+    "gut-microbiome"
+  ],
+  "id": "prod-urolithin-a",
+  "description": "Improved mitochondrial health biomarkers in elderly (ATLAS trial)",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T08:33:44.510Z",
+  "createdAt": "2026-02-04T08:33:44.510Z"
+}

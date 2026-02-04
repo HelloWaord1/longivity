@@ -1,0 +1,38 @@
+{
+  "name": "Resveratrol",
+  "category": "supplement",
+  "mechanisms": [
+    "Sirtuin activation (SIRT1)",
+    "Antioxidant",
+    "Anti-inflammatory"
+  ],
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "500mg/day",
+    "range": "150-1500mg/day",
+    "notes": "Take with fat for better absorption. Synergistic with NMN."
+  },
+  "keyFindings": [
+    "Activates SIRT1 and extends lifespan in model organisms",
+    "Improves cardiovascular markers in humans",
+    "Bioavailability concern — micronized forms preferred"
+  ],
+  "tags": [
+    "sirtuin",
+    "antioxidant",
+    "cardiovascular",
+    "polyphenol"
+  ],
+  "id": "prod-resveratrol",
+  "description": "Activates SIRT1 and extends lifespan in model organisms",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T08:33:44.501Z",
+  "createdAt": "2026-02-04T08:33:44.501Z"
+}

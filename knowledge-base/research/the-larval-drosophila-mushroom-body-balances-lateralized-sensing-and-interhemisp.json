@@ -1,0 +1,20 @@
+{
+  "id": "10.1101/2025.03.02.641007",
+  "title": "The larval Drosophila mushroom body balances lateralized sensing and interhemispheric integration",
+  "authors": [
+    "Zimmerman, D. M.",
+    "de Bivort, B. L.",
+    "Samuel, A. D. T."
+  ],
+  "journal": "bioRxiv (preprint)",
+  "publishedDate": "2026-02-03",
+  "doi": "10.1101/2025.03.02.641007",
+  "url": "https://doi.org/10.1101/2025.03.02.641007",
+  "abstract": "All animals with bilateral symmetry must integrate the sensory input from the left and right sides of their bodies to make coherent perceptual decisions. In the Drosophila larva, olfactory receptor neurons project largely ipsilaterally, providing a tractable system for asking where and how interhemispheric integration arises downstream. We combined volumetric calcium imaging with unilateral sensory perturbations, connectomic analysis, and optogenetic manipulations to trace the propagation of left-right olfactory information across successive layers of the olfactory system. This approach implicates the mushroom body (MB) as a key substrate for interhemispheric integration of odor representations. Kenyon cell (KC) odor responses were almost entirely ipsilateral, indicating minimal functional coupling between the two MBs at the input level. In contrast, modulatory neurons (MBINs) exhibited highly symmetric responses to unilateral stimulation, suggesting that reinforcement signals are broadly shared across hemispheres. Nevertheless, odor responses in some MB output neurons (MBONs), up to 5 synapses downstream from the sensory periphery, preserve information about stimulus laterality. Moreover, we show that asymmetric activation of these MBONs can modulate the animal's turning behavior in a side-biased manner. Finally, we provide direct evidence that larvae can exploit instantaneous spatial comparisons for navigation in certain sensory contexts. These findings suggest that the deeply lateralized architecture of the larval olfactory system balances the need for interhemispheric integration with the advantages of parallel sensory processing.",
+  "studyType": "preprint",
+  "tags": [
+    "preprint",
+    "longevity"
+  ],
+  "indexedAt": "2026-02-04T08:34:19.920Z"
+}

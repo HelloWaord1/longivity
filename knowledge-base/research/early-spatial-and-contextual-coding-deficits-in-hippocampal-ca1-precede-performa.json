@@ -1,0 +1,21 @@
+{
+  "id": "10.1101/2025.02.05.636661",
+  "title": "Early spatial and contextual coding deficits in hippocampal CA1 precede performance decline in an Alzheimer's disease model.",
+  "authors": [
+    "Li, Y.",
+    "Go, M. A.",
+    "Zhang, H.",
+    "Schultz, S. R."
+  ],
+  "journal": "bioRxiv (preprint)",
+  "publishedDate": "2026-02-03",
+  "doi": "10.1101/2025.02.05.636661",
+  "url": "https://doi.org/10.1101/2025.02.05.636661",
+  "abstract": "Alzheimer's disease (AD) is characterised by progressive memory decline, yet how hippocampal representations change at early disease stages remains largely unknown. Using a real-world head-fixed spatial alternation task combined with in vivo two-photon imaging, we examined hippocampal CA1 representations in 5xFAD mice. Although 7-12 month old 5xFAD mice exhibited significant impairments in task learning, 2-4 month old mice performed normally, allowing us to assess hippocampal coding before behavioural decline. At this early stage, CA1 neurons showed intact global spatial encoding but impaired task-related place cell representations. Contextual representations revealed by trajectory-dependent coding were weakened at both the population and single cell levels, accompanied by a shift from predominantly retrospective towards more prospective encoding along the central arm. Despite these vulnerabilities, a subset of place cells largely retained stable spatial representations that persisted throughout task learning in early-stage AD mice. Chemogenetic activation of basal forebrain cholinergic neurons improved spatial information rates and stability of spatial and contextual coding in early-stage 5xFAD mice. Together, these findings show that hippocampal spatial and contextual coding is disrupted early in AD, while a subset of stable place cells remains preserved, and that these representational deficits emerge before impairments in spatial alternation behaviour.",
+  "studyType": "preprint",
+  "tags": [
+    "preprint",
+    "longevity"
+  ],
+  "indexedAt": "2026-02-04T08:34:19.920Z"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "10.1101/2024.04.28.591464",
+  "title": "Disorganized Inhibitory Dynamics in Hippocampal area CA1 of 22q11.2 Deletion Mutant Mice",
+  "authors": [
+    "Herrlinger, S. A.",
+    "Rao, B.",
+    "Paredes, M. E. C.",
+    "Tuttman, A. L.",
+    "Arain, H.",
+    "Varol, E.",
+    "Gogos, J. A.",
+    "Losonczy, A."
+  ],
+  "journal": "bioRxiv (preprint)",
+  "publishedDate": "2026-02-02",
+  "doi": "10.1101/2024.04.28.591464",
+  "url": "https://doi.org/10.1101/2024.04.28.591464",
+  "abstract": "Individuals with the 22q11.2 deletion syndrome, one of the strongest genetic risk factors for schizophrenia, demonstrate cognitive impairments, including episodic memory dysfunction. Place cell activity of excitatory pyramidal neurons in the hippocampus supporting episodic memory is impaired in a mouse model for the 22q11.2 deletion (Df(16)A+/-). While excitatory dynamics are under tight inhibitory control by multiple subtypes of GABAergic interneurons, previous studies have predominantly focused on a single subtype of PV-expressing interneurons; there have not yet been studies describing the functional relationships between molecularly identified inhibitory types in Df(16)A+/- mice. Here, we examined interneuron subtype-specific activity dynamics in the dorsal hippocampal area CA1 of Df(16)A+/- mice during random foraging and spatial reward navigation tasks. Capitalizing on 3D acousto-optical deflector two-photon microscopy with post hoc immunohistochemical identification, we found that multiple interneuron types exhibit aberrant responses to reward locations and delayed reward enrichment extinction. Df(16)A+/- inhibitory interneurons also carry markedly reduced spatial information in a subtype-dependent manner. We observed task-dependent changes in the correlation structure and coactivity among multiple GABAergic subtypes, suggesting a broadly disorganized microcircuit functionality in mutant mice. Overall, we identify widespread and heterogeneous subtype-specific alterations in interneuron dynamics during spatial reward navigation, reflecting impaired flexibility and organization in CA1 inhibitory microcircuits. Our study provides critical insights into how schizophrenia-risk mutations affect local-circuit interactions among diverse cell types in the mouse hippocampus during learning and spatial navigation.",
+  "studyType": "preprint",
+  "tags": [
+    "preprint",
+    "longevity"
+  ],
+  "indexedAt": "2026-02-04T08:34:19.915Z"
+}

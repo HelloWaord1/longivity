@@ -1,0 +1,39 @@
+{
+  "name": "NMN (Nicotinamide Mononucleotide)",
+  "category": "supplement",
+  "mechanisms": [
+    "NAD+ precursor",
+    "Sirtuin activation",
+    "DNA repair"
+  ],
+  "evidenceGrade": "B",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "500mg/day",
+    "range": "250-1000mg/day",
+    "notes": "Sublingual may improve bioavailability"
+  },
+  "keyFindings": [
+    "Increases NAD+ levels in humans (doi:10.1126/science.abf1899)",
+    "Improves insulin sensitivity in prediabetic women (doi:10.1126/science.abe9985)",
+    "Enhances aerobic capacity in amateur runners (doi:10.1016/j.jare.2022.01.001)"
+  ],
+  "tags": [
+    "nad+",
+    "nmn",
+    "anti-aging",
+    "energy",
+    "dna-repair"
+  ],
+  "id": "prod-nmn-nicotinamide-mononucleotide",
+  "description": "Increases NAD+ levels in humans (doi:10.1126/science.abf1899)",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T08:33:44.497Z",
+  "createdAt": "2026-02-04T08:33:44.497Z"
+}

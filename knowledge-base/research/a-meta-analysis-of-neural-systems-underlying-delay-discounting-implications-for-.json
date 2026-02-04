@@ -1,0 +1,21 @@
+{
+  "id": "10.1101/2022.10.12.511959",
+  "title": "A meta-analysis of neural systems underlying delay discounting: Implications for transdiagnostic research",
+  "authors": [
+    "Lakhani, N. V.",
+    "Souther, M. K.",
+    "Boateng, B.",
+    "Kable, J."
+  ],
+  "journal": "bioRxiv (preprint)",
+  "publishedDate": "2026-01-28",
+  "doi": "10.1101/2022.10.12.511959",
+  "url": "https://doi.org/10.1101/2022.10.12.511959",
+  "abstract": "Delay discounting is a promising paradigm for transdiagnostic research because both excessive and insufficient tendency to discount future rewards have been reported across diagnoses. Because delay discounting involves multiple neurocognitive functions, researchers have used many strategies to characterize brain activity during delay discounting. However, which of these analytic approaches yield truly robust and replicable findings remains unclear. To this end, we conducted a meta-analysis of 80 fMRI studies of delay discounting, testing which statistical contrasts give rise to reliable effects across studies. Despite being a widely used analytic approach, comparing impulsive and patient choices did not reliably yield the expected effects. Instead, subjective value contrasts reliably engaged the valuation network, and task versus baseline and choice difficulty contrasts reliably engaged regions in the frontoparietal and salience networks. We strongly recommend that future neuroimaging studies of delay discounting use these analytic approaches shown to reliably identify specific networks. In addition, we provide all cluster maps from our meta-analysis for use as a priori regions of interest for future experiments.",
+  "studyType": "preprint",
+  "tags": [
+    "preprint",
+    "longevity"
+  ],
+  "indexedAt": "2026-02-04T08:34:19.908Z"
+}

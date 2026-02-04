@@ -1,0 +1,26 @@
+{
+  "id": "10.1101/2023.01.11.523642",
+  "title": "Fragmentation through cell-cell adhesion maintains senescent cell viability but promotes debris deposition",
+  "authors": [
+    "Durik, M.",
+    "Sampaio Goncalves, D.",
+    "Knauer Meyer, T.",
+    "Spiegelhalter, C.",
+    "Messaddeq, N.",
+    "Seehawer, M. T.",
+    "Bulavin, D.",
+    "Zender, L.",
+    "Keyes, B."
+  ],
+  "journal": "bioRxiv (preprint)",
+  "publishedDate": "2026-01-29",
+  "doi": "10.1101/2023.01.11.523642",
+  "url": "https://doi.org/10.1101/2023.01.11.523642",
+  "abstract": "Cellular senescence is a state of stable arrest and secretion linked to aging and disease. Here we identify that senescent cells dispose of large fragments of themselves through cell-to-cell adhesion, which we term senescent-cell adhesion fragments (SCAFs). Found across all senescent types examined, SCAFs lack nuclear material but contain organelles, including damaged mitochondria. Disrupting adherens junctions decreased SCAF formation but induced senescent-cell death, which was caused by an inability to shed damaged mitochondria. Dynamic analyses show that SCAFs ultimately rupture, releasing a complex proteome including damage-associated molecular patterns (DAMPs) and proteins linked to neurodegenerative disease. Functionally, SCAFs activate wound-healing and cancer-related programs, promoting migration and invasion. Altogether, these findings identify a new feature that facilitates senescent cell survival, but the consequence of which is external deposition of damaged intracellular contents, with implications for cancer and aging.",
+  "studyType": "preprint",
+  "tags": [
+    "preprint",
+    "longevity"
+  ],
+  "indexedAt": "2026-02-04T08:34:19.909Z"
+}

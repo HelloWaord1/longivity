@@ -1,0 +1,39 @@
+{
+  "name": "Taurine",
+  "category": "supplement",
+  "mechanisms": [
+    "Antioxidant",
+    "Anti-inflammatory",
+    "Osmotic regulation",
+    "Bile acid conjugation"
+  ],
+  "evidenceGrade": "C",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "1-3g/day",
+    "range": "500mg-6g/day",
+    "notes": "Levels decline with age. Very safe even at high doses."
+  },
+  "keyFindings": [
+    "Taurine deficiency identified as driver of aging (Science, 2023)",
+    "Supplementation extended healthy lifespan in mice by ~10%",
+    "Improved markers of aging in middle-aged monkeys"
+  ],
+  "tags": [
+    "amino-acid",
+    "antioxidant",
+    "affordable",
+    "well-studied"
+  ],
+  "id": "prod-taurine",
+  "description": "Taurine deficiency identified as driver of aging (Science, 2023)",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T08:33:44.511Z",
+  "createdAt": "2026-02-04T08:33:44.511Z"
+}

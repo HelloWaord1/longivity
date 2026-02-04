@@ -1,0 +1,40 @@
+{
+  "name": "Vitamin D3 + K2",
+  "category": "supplement",
+  "mechanisms": [
+    "Immune modulation",
+    "Calcium metabolism",
+    "Gene expression",
+    "Bone health"
+  ],
+  "evidenceGrade": "A",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "D3: 2000-5000 IU/day, K2: 100-200mcg/day",
+    "range": "D3: 1000-10000 IU",
+    "notes": "Test 25(OH)D levels. Target 40-60 ng/mL. K2 (MK-7 form) directs calcium to bones."
+  },
+  "keyFindings": [
+    "Deficiency linked to higher all-cause mortality",
+    "Immune function, cancer risk reduction at optimal levels",
+    "Most studied supplement — strong safety profile"
+  ],
+  "tags": [
+    "vitamin-d",
+    "immune",
+    "bone",
+    "essential",
+    "affordable"
+  ],
+  "id": "prod-vitamin-d3-k2",
+  "description": "Deficiency linked to higher all-cause mortality",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T08:33:44.513Z",
+  "createdAt": "2026-02-04T08:33:44.513Z"
+}

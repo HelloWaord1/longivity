@@ -1,0 +1,33 @@
+{
+  "id": "10.1101/2023.10.23.563667",
+  "title": "A novel genetic fluorescent reporter to visualize mitochondrial nucleoids",
+  "authors": [
+    "David, J. O.",
+    "Deng, J.",
+    "Swift, L.",
+    "Zaman, M.",
+    "Sharma, A.",
+    "Bureik, D.",
+    "Padovani, F.",
+    "Benedikt, A.",
+    "Shahhosseini, F.",
+    "Jaiswal, A.",
+    "Mohan, A.",
+    "Brideau, C.",
+    "Grewal, S.",
+    "Schmoller, K. M.",
+    "Colarusso, P.",
+    "Shutt, T. E."
+  ],
+  "journal": "bioRxiv (preprint)",
+  "publishedDate": "2026-01-30",
+  "doi": "10.1101/2023.10.23.563667",
+  "url": "https://doi.org/10.1101/2023.10.23.563667",
+  "abstract": "Mitochondria contain their own genome (mtDNA), which is present in hundreds of copies per cell and organized into nucleoid structures that are distributed throughout the dynamic mitochondrial network. Beyond encoding essential protein subunits for oxidative phosphorylation, mtDNA can also serve as a signalling molecule when it is present into the cytosol. Despite the importance of this genome, there are still many unknowns with respect to its regulation. To study mtDNA dynamics in living cells, we have developed a genetic fluorescent reporter, mt-HI-NESS, which is based on the HI-NESS reporter that uses the bacterial H-NS DNA binding domain. Here, we describe how this reporter can be used to image mtDNA nucleoids for live cell imaging without affecting the replication or expression of the mtDNA. In addition to demonstrating the adaptability of the mt-HI-NESS reporter for multiple fluorescent proteins, we also emphasize important factors to consider during the optimization and application of this reporter.",
+  "studyType": "preprint",
+  "tags": [
+    "preprint",
+    "longevity"
+  ],
+  "indexedAt": "2026-02-04T08:34:19.910Z"
+}

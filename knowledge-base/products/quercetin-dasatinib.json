@@ -1,0 +1,37 @@
+{
+  "name": "Quercetin + Dasatinib",
+  "category": "protocol",
+  "mechanisms": [
+    "Senolytic — clears senescent cells",
+    "Anti-inflammatory"
+  ],
+  "evidenceGrade": "C",
+  "riskProfile": "medium",
+  "dosage": {
+    "standard": "D:100mg + Q:1000mg, 3 days/month",
+    "range": "Various protocols",
+    "notes": "Intermittent dosing only. Dasatinib requires prescription."
+  },
+  "keyFindings": [
+    "First senolytic combination shown to clear senescent cells in humans",
+    "Improved physical function in IPF patients",
+    "Hit-and-run approach — cells cleared but drugs not continuously needed"
+  ],
+  "tags": [
+    "senolytic",
+    "senescent-cells",
+    "protocol",
+    "intermittent"
+  ],
+  "id": "prod-quercetin-dasatinib",
+  "description": "First senolytic combination shown to clear senescent cells in humans",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T08:33:44.508Z",
+  "createdAt": "2026-02-04T08:33:44.508Z"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "10.1101/2025.02.19.639114",
+  "title": "Lysine Crotonylation Acts as an Epigenetic Switch for Glutamate Neurotransmission and Spatial Memory",
+  "authors": [
+    "Mukherjee, U.",
+    "Basu, B.",
+    "Suryavanshi, P.",
+    "Beyer, S. E.",
+    "Ghodsi, S.",
+    "Robillard, N.",
+    "Vanrobaeys, Y.",
+    "Taylor, E. B.",
+    "Glykys, J.",
+    "Abel, T.",
+    "Chatterjee, S."
+  ],
+  "journal": "bioRxiv (preprint)",
+  "publishedDate": "2026-01-29",
+  "doi": "10.1101/2025.02.19.639114",
+  "url": "https://doi.org/10.1101/2025.02.19.639114",
+  "abstract": "Histone post-translational modifications (PTMs), particularly lysine acetylation (Kac), are critical epigenetic regulators of transcriptional programs underlying long-term memory consolidation. Beyond Kac, several other non-acetyl acylations have been identified with the ability to regulate transcription; however, their role in memory consolidation remains unknown. Here, we identify histone lysine crotonylation (Kcr) as a molecular switch for long-term memory and glutamatergic neurotransmission. We find that spatial learning induces distinct spatiotemporal patterns of Kcr across hippocampal subregions, and that Kcr stimulates learning-induced gene expression. Through genetic and pharmacological manipulations, we show that reducing hippocampal Kcr levels impairs memory, while increasing Kcr enhances long-term memory. Single-nuclei transcriptome and chromatin accessibility analyses reveals that Kcr facilitates activation of genes regulating glutamate signaling. Cell-cell communication analysis further infers that Kcr enhancement strengthens glutamatergic signaling within principal hippocampal neurons. Real-time fluorescence imaging with genetically encoded sensors functionally validates our multiomics and computational findings--demonstrating the role of Kcr in regulating presynaptic glutamate release and neuronal activity. In summary, our findings elucidate a novel mechanism underlying long-term memory consolidation and excitatory neurotransmission, linking epigenetic events to synaptic function and behavior.",
+  "studyType": "preprint",
+  "tags": [
+    "preprint",
+    "longevity"
+  ],
+  "indexedAt": "2026-02-04T08:34:19.920Z"
+}

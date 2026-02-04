@@ -1,0 +1,16 @@
+{
+  "id": "10.1002/ptr.70220",
+  "title": "Celastrol Targets Hsc70-Bim Interaction as a Novel Senolytic to Extend Lifespan and Mitigate Organ Fibrosis.",
+  "abstract": "Senolysis holds promise for geroprotection but is limited by efficacy and safety; here we show that Celastrol, a pentacyclic triterpenoid, surpasses benchmark agents ABT-263 and fisetin in senolytic potency and elucidate its mechanism and a prodrug strategy to improve safety. Using stress- and replication-induced senescent cells, we demonstrate that Celastrol selectively triggers intrinsic apoptosis-evidenced by viability assays, Annexin V/PI, cleaved caspase-3 and blockade by the pan-caspase inhibitor Z-VAD-FMK-while ferroptosis is excluded by specific inhibitors. Proteomic, co-immunoprecipitation/mass spectrometry, biolayer interferometry, ubiquitination assays and RNAi identify Hsc70 as a binding partner; Celastrol disrupts an Hsc70-Bim-CHIP complex, reduces Bim ubiquitination and stabilizes Bim protein, and Bim knockdown attenuates caspase activation and senolysis. In&#xa0;vivo, Celastrol reduces intestinal senescence and extends Drosophila median and maximum lifespan, and mitigates bleomycin- and CCl&#x2084;-induced pulmonary and hepatic fibrosis in mice with increased cleaved caspase-3 in p16&#x207a; cells. A &#x3b2;-galactosidase-activated prodrug (CeGal) preserves efficacy, preferentially releases Celastrol in &#x3b2;-galactosidase-high cells, and markedly reduces systemic toxicity, supporting clinical translation of this targeted senolytic approach.",
+  "journal": "Phytotherapy research : PTR",
+  "doi": "10.1002/ptr.70220",
+  "url": "https://doi.org/10.1002/ptr.70220",
+  "publishedDate": "2026",
+  "studyType": "animal",
+  "tags": [
+    "pubmed",
+    "longevity"
+  ],
+  "authors": [],
+  "indexedAt": "2026-02-04T08:34:19.904Z"
+}

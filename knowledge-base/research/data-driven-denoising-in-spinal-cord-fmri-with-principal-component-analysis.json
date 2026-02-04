@@ -1,0 +1,22 @@
+{
+  "id": "10.1101/2025.01.23.634596",
+  "title": "Data-driven denoising in spinal cord fMRI with principal component analysis",
+  "authors": [
+    "Hemmerling, K. J.",
+    "Vigotsky, A. D.",
+    "Glanville, C.",
+    "Barry, R. L.",
+    "Bright, M. G."
+  ],
+  "journal": "bioRxiv (preprint)",
+  "publishedDate": "2026-01-28",
+  "doi": "10.1101/2025.01.23.634596",
+  "url": "https://doi.org/10.1101/2025.01.23.634596",
+  "abstract": "Numerous approaches have been used to denoise spinal cord functional magnetic resonance imaging (fMRI) data. Principal component analysis (PCA)-based techniques, which derive regressors from a noise region of interest (ROI), have been used in both brain (e.g., CompCor) and spinal cord fMRI. However, spinal cord fMRI denoising methods have yet to be systematically evaluated. Here, we formalize and evaluate a PCA-based technique for deriving nuisance regressors for spinal cord fMRI analysis (SpinalCompCor). In this method, regressors are derived with PCA from a noise ROI, an area defined outside of the spinal cord and cerebrospinal fluid. A parallel analysis is used to systematically determine how many components to retain as regressors for modeling; this designated a median of 9 regressors across four fMRI datasets: motor task (n=26), breathing task (n=27), and resting state (n=15 and n=10). First-level fMRI modeling demonstrated that principal component regressors did fit noise (e.g., physiological noise from blood vessels), though the effectiveness may be dependent upon the acquisition parameters. However, group-level activation maps did not show a clear benefit from including SpinalCompCor regressors. The potential for collinearity of principal component regressors with the task may be a concern, and this should be considered in future implementations for which task-correlated noise is anticipated. In general, denoising with SpinalCompCor regressors in place of physiological recording-derived regressors is only recommended when the latter are unavailable, as SpinalCompCor may not consistently reproduce recording-based denoising across datasets or acquisitions.",
+  "studyType": "preprint",
+  "tags": [
+    "preprint",
+    "longevity"
+  ],
+  "indexedAt": "2026-02-04T08:34:19.919Z"
+}

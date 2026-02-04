@@ -1,0 +1,22 @@
+{
+  "id": "10.1101/2024.04.12.589179",
+  "title": "Temporally controlled nervous system-to-gut signaling bidirectionally regulates longevity in Caenorhabditis elegans",
+  "authors": [
+    "Xu, L.",
+    "Han, C.",
+    "Chun, L.",
+    "Xu, S.",
+    "Liu, J."
+  ],
+  "journal": "bioRxiv (preprint)",
+  "publishedDate": "2026-01-31",
+  "doi": "10.1101/2024.04.12.589179",
+  "url": "https://doi.org/10.1101/2024.04.12.589179",
+  "abstract": "The nervous system modulates aging by secreting signaling molecules to cell-nonautonomously regulate the physiological state of distal tissues such as the gut. However, the underlying mechanisms are not well understood. Here, using C. elegans as a model, we identified two distinct neuroendocrine signaling circuits through which motor neurons signal the gut in early life to shorten lifespan but in mid-late life to extend lifespan. Both circuits employ the same neurotransmitter acetylcholine (ACh), while recruiting two different gut ACh receptors ACR-6 and GAR-3 to regulate the transcription factor DAF-16 and HSF-1 in early and mid-late life, respectively. Strikingly, the gut expression of ACR-6 is restricted to early life, whereas that of GAR-3 is confined to mid-late life, providing a potential mechanism for the temporal control of the two circuits. These results identify a novel mechanism that empowers the nervous system to bidirectionally regulate longevity by differentially signaling the gut at different life stages.",
+  "studyType": "preprint",
+  "tags": [
+    "preprint",
+    "longevity"
+  ],
+  "indexedAt": "2026-02-04T08:34:19.914Z"
+}

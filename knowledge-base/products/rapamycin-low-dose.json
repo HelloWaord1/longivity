@@ -1,0 +1,42 @@
+{
+  "name": "Rapamycin (low-dose)",
+  "category": "pharmaceutical",
+  "mechanisms": [
+    "mTOR inhibition",
+    "Autophagy induction",
+    "Immune modulation"
+  ],
+  "evidenceGrade": "B",
+  "riskProfile": "medium",
+  "dosage": {
+    "standard": "5-6mg/week",
+    "range": "1-8mg/week",
+    "notes": "Intermittent dosing (weekly or biweekly). Requires medical supervision."
+  },
+  "keyFindings": [
+    "Extends lifespan in mice by 10-25%",
+    "PEARL trial: improved immune function in elderly at low doses",
+    "Off-label use growing in longevity community"
+  ],
+  "contraindications": [
+    "Immunocompromised",
+    "Active infections",
+    "Upcoming surgery"
+  ],
+  "tags": [
+    "mtor",
+    "autophagy",
+    "prescription",
+    "immune"
+  ],
+  "id": "prod-rapamycin-low-dose",
+  "description": "Extends lifespan in mice by 10-25%",
+  "interactions": [],
+  "sideEffects": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T08:33:44.502Z",
+  "createdAt": "2026-02-04T08:33:44.502Z"
+}

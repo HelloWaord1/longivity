@@ -1,0 +1,22 @@
+{
+  "id": "10.1101/2024.07.09.602800",
+  "title": "Multimodal longitudinal diffusion-MRI analysis of the neocortex in a rat model of cortical dysplasia",
+  "authors": [
+    "Villasenor, P. J.",
+    "Luna-Munguia, H.",
+    "Ramirez-Manzanares, A.",
+    "Coronado-Leija, R.",
+    "Concha, L."
+  ],
+  "journal": "bioRxiv (preprint)",
+  "publishedDate": "2026-01-30",
+  "doi": "10.1101/2024.07.09.602800",
+  "url": "https://doi.org/10.1101/2024.07.09.602800",
+  "abstract": "The neocortex is a highly organized structure, with region-specific spatial patterns of cells and fibers constituting cyto- and myelo-architecture, respectively. These architectural features are modulated during neurodevelopment, aging, and disease. While invasive techniques have contributed significantly to our understanding of cortical patterning, the task remains challenging through non-invasive methods. Structural magnetic resonance imaging (MRI) has advanced to improve sensitivity in identifying cortical features, yet most methods focus on capturing macrostructural characteristics, often overlooking critical microscale components. Diffusion-weighted MRI (dMRI) offers an opportunity to extract quantitative information reflecting microstructural changes. Here we investigate how different dMRI modalities contribute to the detection of microstructural characteristics and whether per-bundle approaches can disentangle characteristics related to the orientational organization of the myelo- and cyto-architecture in an animal model of cortical dysplasia, a malformation of cortical development. We scanned 32 animals (n=16 experimental; n=16 control) at four different time points (30, 60, 120, and 150 post-natal days) using both structural and multi-shell diffusion-weighted MRI. All dMRI metrics were sampled using a 2D curvilinear system of coordinates as a common anatomical descriptor across animals. Per-bundle metrics were labeled according to their orientation with respect to the cortical surface, and analyzed separately. Experimental animals showed diffusion abnormalities of the tangential and radial fiber components in deeper cortical areas, consistent with histological findings of neuronal and fiber disorganization. The ability of dMRI to detect abnormalities in an animal model of cortical dysplasia is indicative of the clinical potential of advanced dMRI methods to study cortical microstructure in neurological disorders.",
+  "studyType": "preprint",
+  "tags": [
+    "preprint",
+    "longevity"
+  ],
+  "indexedAt": "2026-02-04T08:34:19.916Z"
+}

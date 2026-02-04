@@ -1,0 +1,38 @@
+{
+  "name": "Spermidine",
+  "category": "supplement",
+  "mechanisms": [
+    "Autophagy induction",
+    "Cardioprotective",
+    "Epigenetic regulation"
+  ],
+  "evidenceGrade": "C",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "1-5mg/day",
+    "range": "1-10mg/day",
+    "notes": "Found naturally in wheat germ, natto, aged cheese"
+  },
+  "keyFindings": [
+    "Higher dietary spermidine intake associated with lower mortality in Bruneck Study",
+    "Induces autophagy and extends lifespan in multiple organisms",
+    "SmartAge trial: improved memory in elderly"
+  ],
+  "tags": [
+    "autophagy",
+    "cardioprotective",
+    "memory",
+    "polyamine"
+  ],
+  "id": "prod-spermidine",
+  "description": "Higher dietary spermidine intake associated with lower mortality in Bruneck Study",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T08:33:44.509Z",
+  "createdAt": "2026-02-04T08:33:44.509Z"
+}

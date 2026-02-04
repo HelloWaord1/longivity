@@ -1,0 +1,40 @@
+{
+  "name": "Omega-3 (EPA/DHA)",
+  "category": "supplement",
+  "mechanisms": [
+    "Anti-inflammatory",
+    "Cardiovascular",
+    "Neuroprotective",
+    "Cell membrane integrity"
+  ],
+  "evidenceGrade": "A",
+  "riskProfile": "low",
+  "dosage": {
+    "standard": "2-4g/day (combined EPA+DHA)",
+    "range": "1-5g/day",
+    "notes": "Higher EPA:DHA ratio for inflammation. Test omega-3 index (target 8-12%)."
+  },
+  "keyFindings": [
+    "Strong evidence for cardiovascular benefit",
+    "Higher omega-3 index associated with longer telomeres",
+    "VITAL trial: reduced heart attack risk by 28%"
+  ],
+  "tags": [
+    "omega-3",
+    "cardiovascular",
+    "brain",
+    "inflammation",
+    "essential"
+  ],
+  "id": "prod-omega-3-epa-dha",
+  "description": "Strong evidence for cardiovascular benefit",
+  "interactions": [],
+  "sideEffects": [],
+  "contraindications": [],
+  "sources": [],
+  "suppliers": [],
+  "communityReports": [],
+  "expertOpinions": [],
+  "lastUpdated": "2026-02-04T08:33:44.512Z",
+  "createdAt": "2026-02-04T08:33:44.512Z"
+}

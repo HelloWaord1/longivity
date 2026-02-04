@@ -1,0 +1,16 @@
+{
+  "id": "10.1016/j.jpet.2025.103794",
+  "title": "Naringenin-functionalized polyester nanoparticles improve oral urolithin A delivery and protect against cisplatin-induced kidney injury via heme oxygenase-1 activation and mitochondrial quality control.",
+  "abstract": "Cisplatin remains a cornerstone of chemotherapy, but its clinical use is often limited by cisplatin-induced acute kidney injury, a condition driven by oxidative stress, inflammation, and mitochondrial dysfunction. Here, we developed naringenin-functionalized polyester nanoparticles (P2Ns-NAR) to enhance the oral delivery and therapeutic efficacy of urolithin A (UA), a mitochondrial-targeting metabolite with cytoprotective properties. The resulting formulation, P2Ns-NAR-UA, conferred kidney protection in vitro and in vivo, outperforming the nontargeted nanoparticle formulation (P2Ns-UA). Notably, in vivo efficacy was achieved at a 50% lower dose. Molecular docking studies suggest UA exhibits a favorable heme oxygenase-1 binding energy of -7.43 kcal/mol, supporting its potential as a promising drug candidate. Mechanistic studies demonstrated that P2Ns-NAR-UA upregulate heme oxygenase-1 and activate PTEN-induced putative kinase 1/Parkin-mediated mitophagy, promoting mitochondrial quality control and preserving dynamics by increasing mitofusin-1/2 and reducing dynamin-related protein 1 and mitochondrial fission protein 1 expression. Treatment also attenuated inflammatory cytokines (interleukin 6, interleukin 8, and tumor necrosis factor-&#x3b1;), immune activation markers (cluster of differentiation 80 and 45), and kidney injury biomarkers (neutrophil gelatinase-associated lipocalin, cystatin C, and osteopontin). Histological analysis confirmed reduced tubular damage and fibrosis. These findings establish P2Ns-NAR-UA as a promising oral therapeutic platform to mitigate cisplatin-induced acute kidney injury through coordinated modulation of inflammation, oxidative stress, and mitochondrial homeostasis. Further investigation in cisplatin-resistant cancer models is warranted to establish this platform's dual therapeutic potential and translational value. SIGNIFICANCE STATEMENT: This study shows that naringenin-functionalized polyester nanoparticles improves intestinal uptake of encapsulated agents through intestinal folate receptors. Naringenin-functionalized polyester nanoparticles loaded with urolithin A (P2Ns-NAR-UA) doubles the efficacy of polyester nanoparticles loaded with urolithin A, achieving comparable results at half the dose. The formulation enhances cell health, reduces inflammation, and restores kidney function, making it a promising adjuvant to cisplatin therapy by improving outcomes while minimizing toxicity.",
+  "journal": "The Journal of pharmacology and experimental therapeutics",
+  "doi": "10.1016/j.jpet.2025.103794",
+  "url": "https://doi.org/10.1016/j.jpet.2025.103794",
+  "publishedDate": "2026",
+  "studyType": "in-vitro",
+  "tags": [
+    "pubmed",
+    "longevity"
+  ],
+  "authors": [],
+  "indexedAt": "2026-02-04T08:34:19.898Z"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "10.1038/s41419-026-08425-6",
+  "title": "p16-mediated G0/G1 cell cycle arrest leads to SASP and fibrosis in Fuchs endothelial corneal dystrophy.",
+  "abstract": "Fuchs endothelial corneal dystrophy (FECD) is an age-related disorder characterized by excessive extracellular matrix (ECM) deposition and loss of corneal endothelial cells (CEnCs), eventually leading to corneal blindness. Despite known environmental and genetic contributors, the roles of aging and hormonal influences, particularly in the predominantly female population, remain underexplored in FECD. This study investigates the impact of chronic exposure to combined ultra-violet (UV-A) light and the oxidized estrogen metabolite 4-hydroxyestradiol (4-OHE2) on healthy CEnCs, primarily focusing on the cellular senescence pathway implicated in FECD pathogenesis. Our results show that prolonged exposure triggers G0/G1 cell cycle arrest through the p16-pRB pathway, inducing a senescence-mediated pro-secretory phenotype. The senescent cells in G0/G1 phase concurrently upregulated the fibrotic and extracellular matrix (ECM) markers indicating a complex relationship between senescence with fibrosis and ECM deposition. Additionally, multiplex analysis to detect senescence-associated secretory phenotype (SASP) after chronic exposure revealed significant upregulation of pathogenic factors such as IL-8 and IL-17, which were attenuated by SB225002 (anti-CXCR2) and secukinumab (anti-IL-17A). Senolytic cocktail of Dasatinib and Quercetin treatment alleviated fibrosis by selectively eliminating senescent cells and improved the survival of healthy cells. This study introduces a novel in vitro model of FECD, revealing the crucial role of cell cycle modulation, senescence and interleukins in the disease advancement and pathogenesis. The findings suggest that targeting senescence and cytokine-driven inflammation could be a promising therapeutic strategy for mitigating FECD progression.",
+  "journal": "Cell death &amp; disease",
+  "doi": "10.1038/s41419-026-08425-6",
+  "url": "https://doi.org/10.1038/s41419-026-08425-6",
+  "publishedDate": "2026",
+  "studyType": "in-vitro",
+  "tags": [
+    "pubmed",
+    "longevity"
+  ],
+  "authors": [],
+  "indexedAt": "2026-02-04T08:34:19.891Z"
+}

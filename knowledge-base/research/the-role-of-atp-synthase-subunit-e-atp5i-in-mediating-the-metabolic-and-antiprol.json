@@ -1,0 +1,29 @@
+{
+  "id": "10.1101/2024.09.20.614047",
+  "title": "The Role of ATP Synthase Subunit e (ATP5I) in Mediating the Metabolic and Antiproliferative Effects of Metformin",
+  "authors": [
+    "Lefrancois, G.",
+    "Lavallee, E.",
+    "Rowell, M.-C.",
+    "Bourdeau, V.",
+    "Mohebali, F.",
+    "Bertomeu, T.",
+    "Duman, A. M.",
+    "Nikolova, M.",
+    "Tyers, M.",
+    "Gravel, S.-P.",
+    "Schmitzer, A. R.",
+    "Ferbeyre, G."
+  ],
+  "journal": "bioRxiv (preprint)",
+  "publishedDate": "2026-02-02",
+  "doi": "10.1101/2024.09.20.614047",
+  "url": "https://doi.org/10.1101/2024.09.20.614047",
+  "abstract": "Here we identify the subunit e of FF-ATP synthase (ATP5I) as a target of metformin, a first-in-class antidiabetic biguanide. ATP5I maintains the stability of FF-ATP synthase dimers which is crucial for shaping cristae morphology. We demonstrate that ATP5I interacts with a biguanide analogue in vitro and disabling its expression by CRISPR-Cas9 in pancreatic cancer cells leads to the same phenotype as biguanide treated cells including mitochondrial morphology alterations, reduction of the NAD+/NADH ratio, inhibition of oxidative phosphorylation (OXPHOS), rescue of respiration by uncouplers and a compensatory increase in glycolysis. Notably, metformin affects the oligomerization of the FF-ATP synthase leading to accumulation of vestigial assembly intermediates also observed upon ATP5I inactivation. Moreover, ATP5I knockout (KO) cells exhibit resistance to the antiproliferative effects of biguanides, but reintroduction of ATP5I rescues the metabolic and anti-proliferative effects of metformin and phenformin. Finally, a genome-wide CRISPR screening in NALM-6 lymphoma cells revealed that metformin-treated cells exhibit genetic interaction profiles similar to those observed with the FF-ATP synthase inhibitor oligomycin, but not with the complex I inhibitor rotenone. This provides unbiased support for the relevance of the newly proposed target.",
+  "studyType": "preprint",
+  "tags": [
+    "preprint",
+    "longevity"
+  ],
+  "indexedAt": "2026-02-04T08:34:19.918Z"
+}

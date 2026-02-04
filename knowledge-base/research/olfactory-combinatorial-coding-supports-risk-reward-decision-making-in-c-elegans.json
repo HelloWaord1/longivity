@@ -1,0 +1,28 @@
+{
+  "id": "10.1101/2024.06.19.599745",
+  "title": "Olfactory combinatorial coding supports risk-reward decision making in C. elegans",
+  "authors": [
+    "Saad, M. Z. H.",
+    "Ryan, W. G.",
+    "Edwards, C. A.",
+    "Szymanski, B. N.",
+    "Awa, L.",
+    "Kaake, J.",
+    "Martin, A.",
+    "Marri, A. R.",
+    "Jerow, L. G.",
+    "McCullumsmith, R.",
+    "Bamber, B. A."
+  ],
+  "journal": "bioRxiv (preprint)",
+  "publishedDate": "2026-01-28",
+  "doi": "10.1101/2024.06.19.599745",
+  "url": "https://doi.org/10.1101/2024.06.19.599745",
+  "abstract": "Olfactory-driven behaviors are essential for animal survival, but mechanisms for decoding olfactory inputs remain poorly understood. We have used whole-network Ca++ imaging to study olfactory coding in Caenorhabditis elegans. We show that the odorant 1-octanol is encoded combinatorially in the periphery as both an attractant and a repellant. These inputs are integrated centrally, and their relative strengths determine the sensitivity and valence of the behavioral response through modulation of locomotory reversals and speed. The balance of these pathways also dictates the activity of the locomotory command interneurons, which control locomotory reversals. This balance serves as a regulatory node for response modulation, allowing C. elegans to weigh opportunities and hazards in its environment when formulating behavioral responses. Thus, an odorant can be encoded simultaneously as inputs of opposite valence, focusing attention on the integration of these inputs in determining perception, response, and plasticity.",
+  "studyType": "preprint",
+  "tags": [
+    "preprint",
+    "longevity"
+  ],
+  "indexedAt": "2026-02-04T08:34:19.916Z"
+}

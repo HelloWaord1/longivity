@@ -1,0 +1,20 @@
+{
+  "id": "10.1101/2025.03.09.642144",
+  "title": "Fluorescence-based mapping of condensate dielectric permittivity uncovers hydrophobicity-driven membrane interactions",
+  "authors": [
+    "Sabri, E.",
+    "Mangiarotti, A.",
+    "Dimova, R."
+  ],
+  "journal": "bioRxiv (preprint)",
+  "publishedDate": "2026-01-29",
+  "doi": "10.1101/2025.03.09.642144",
+  "url": "https://doi.org/10.1101/2025.03.09.642144",
+  "abstract": "Biomolecular condensates, essential for cellular organization, possess mesoscale properties largely governed by hydrophobicity, influencing molecule partitioning and material characteristics like viscosity, surface tension, and hydration. While hydrophobicitys role is increasingly recognized, its impact on membrane-condensate interactions remains unexplored. Here, we introduce a novel approach, combining hyperspectral imaging of an environment-sensitive dye and phasor analysis, to quantitatively map the local dielectric permittivity of both condensates and their environment with pixel resolution as sensed by the dye. This robust method reveals a surprisingly broad range of condensate permittivities, from oil-like to water-like. Importantly, we uncover that membrane affinity is not dictated by condensate permittivity itself, but by the permittivity contrast with their surroundings. Indeed, membrane wetting affinity is found to scale linearly with this contrast, unveiling a unifying dielectric principle governing condensate-membrane interactions. Compatible with live-cell and in vitro imaging, this technique provides unprecedented insights into condensate biophysics and function and opens new avenues for studying biomolecular condensate biology.",
+  "studyType": "preprint",
+  "tags": [
+    "preprint",
+    "longevity"
+  ],
+  "indexedAt": "2026-02-04T08:34:19.921Z"
+}
