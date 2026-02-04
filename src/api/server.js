@@ -61,23 +61,45 @@ const routes = {
     });
   },
 
-  // List all products
+  // List all products (with optional filters via query params)
   'GET /products': async (req, res) => {
+    const url = new URL(req.url, `http://localhost:${PORT}`);
+    const filterCategory = url.searchParams.get('category');
+    const filterGrade = url.searchParams.get('grade');
+    const search = url.searchParams.get('q');
+
     const products = await kb.listProducts();
     const details = [];
     for (const name of products) {
       const product = await kb.getProduct(name);
-      if (product) {
-        details.push({
-          name: product.name,
-          category: product.category,
-          evidenceGrade: product.evidenceGrade,
-          riskProfile: product.riskProfile,
-          description: product.description,
-        });
+      if (!product) continue;
+      if (filterCategory && product.category !== filterCategory) continue;
+      if (filterGrade && product.evidenceGrade !== filterGrade) continue;
+      if (search) {
+        const searchLower = search.toLowerCase();
+        const text = [product.name, product.description, ...(product.tags || []), ...(product.mechanisms || [])].join(' ').toLowerCase();
+        if (!text.includes(searchLower)) continue;
       }
+      details.push({
+        name: product.name,
+        slug: kb.slugify(product.name),
+        category: product.category,
+        evidenceGrade: product.evidenceGrade,
+        riskProfile: product.riskProfile,
+        description: product.description,
+        dosage: product.dosage?.standard,
+        mechanisms: product.mechanisms,
+        tags: product.tags,
+      });
     }
-    json(res, { products: details, count: details.length });
+    // Sort: A first, then B, C, D
+    const gradeOrder = { A: 0, B: 1, C: 2, D: 3 };
+    details.sort((a, b) => (gradeOrder[a.evidenceGrade] || 3) - (gradeOrder[b.evidenceGrade] || 3));
+    
+    // Get unique categories for filters
+    const categories = [...new Set(details.map(p => p.category))];
+    
+    json(res, { products: details, count: details.length, categories });
   },
 
   // Get specific product
@@ -389,6 +411,12 @@ footer{padding:40px 20px;text-align:center;color:var(--tm);border-top:1px solid 
 <section id="products" class="sec ctr">
 <h2>Knowledge Base</h2>
 <p class="sub">Evidence-graded longevity products monitored by our AI agents.</p>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px">
+<input id="psearch" placeholder="Search products..." style="flex:1;min-width:200px;padding:10px 16px;border-radius:var(--rad);border:1px solid var(--b);background:var(--bg2);color:var(--t);font-size:14px;outline:none" oninput="filterProducts()">
+<select id="pcat" onchange="filterProducts()" style="padding:10px 16px;border-radius:var(--rad);border:1px solid var(--b);background:var(--bg2);color:var(--t);font-size:14px;outline:none"><option value="">All Categories</option></select>
+<select id="pgrade" onchange="filterProducts()" style="padding:10px 16px;border-radius:var(--rad);border:1px solid var(--b);background:var(--bg2);color:var(--t);font-size:14px;outline:none"><option value="">All Grades</option><option value="A">Grade A</option><option value="B">Grade B</option><option value="C">Grade C</option><option value="D">Grade D</option></select>
+</div>
+<div id="pcount" style="color:var(--tm);font-size:13px;margin-bottom:14px"></div>
 <div class="pgrid" id="products-grid"></div>
 </section>
 
@@ -426,11 +454,50 @@ footer{padding:40px 20px;text-align:center;color:var(--tm);border-top:1px solid 
 const API=location.origin;
 const gc={'A':'ga','B':'gb','C':'gc','D':'gd'};
 
+let allProducts=[];
 async function loadProducts(){
   try{const r=await fetch(API+'/products');const d=await r.json();
-  const el=document.getElementById('products-grid');
+  allProducts=d.products||[];
   document.getElementById('prod-count').textContent=d.count;
-  el.innerHTML=d.products.map(p=>'<div class="pcard"><div class="pname">'+p.name+'</div><div class="pmeta"><span class="tag '+(gc[p.evidenceGrade]||'gd')+'">Grade '+p.evidenceGrade+'</span><span class="tag tcat">'+p.category+'</span></div><div class="pdesc">'+p.description+'</div></div>').join('')}
+  // populate category filter
+  const cats=d.categories||[...new Set(allProducts.map(p=>p.category))];
+  const sel=document.getElementById('pcat');
+  cats.forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;sel.appendChild(o)});
+  renderProducts(allProducts)}
+  catch(e){console.error(e)}
+}
+function filterProducts(){
+  const q=(document.getElementById('psearch').value||'').toLowerCase();
+  const cat=document.getElementById('pcat').value;
+  const grade=document.getElementById('pgrade').value;
+  const filtered=allProducts.filter(p=>{
+    if(cat&&p.category!==cat)return false;
+    if(grade&&p.evidenceGrade!==grade)return false;
+    if(q){const t=[p.name,p.description,...(p.tags||[]),...(p.mechanisms||[])].join(' ').toLowerCase();if(!t.includes(q))return false}
+    return true});
+  renderProducts(filtered);
+}
+function renderProducts(products){
+  const el=document.getElementById('products-grid');
+  document.getElementById('pcount').textContent=products.length+' products';
+  el.innerHTML=products.map(p=>'<div class="pcard" data-slug="'+esc(p.slug||'')+'" onclick="showProduct(this.dataset.slug)"><div class="pname">'+esc(p.name)+'</div><div class="pmeta"><span class="tag '+(gc[p.evidenceGrade]||'gd')+'">Grade '+p.evidenceGrade+'</span><span class="tag tcat">'+p.category+'</span></div><div class="pdesc">'+esc(p.description)+'</div>'+(p.dosage?'<div style="color:var(--ac);font-size:12px;margin-top:6px">💊 '+esc(p.dosage)+'</div>':'')+'</div>').join('')
+}
+async function showProduct(slug){
+  try{const r=await fetch(API+'/products/'+slug);const d=await r.json();const p=d.product;
+  if(!p)return;
+  const modal=document.createElement('div');
+  modal.style.cssText='position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);z-index:200;display:flex;justify-content:center;align-items:center;padding:20px';
+  modal.id='modal';modal.onclick=e=>{if(e.target===modal)modal.remove()};
+  let html='<div style="background:var(--bg2);border:1px solid var(--b);border-radius:var(--rad);padding:32px;max-width:600px;width:100%;max-height:80vh;overflow-y:auto">';
+  html+='<div style="display:flex;justify-content:space-between;align-items:start"><h2 style="font-size:24px">'+esc(p.name)+'</h2><button onclick="document.getElementById(String.fromCharCode(109,111,100,97,108)).remove()" style="background:none;border:none;color:var(--tm);font-size:24px;cursor:pointer">✕</button></div>';
+  html+='<div class="pmeta" style="margin:12px 0"><span class="tag '+(gc[p.evidenceGrade]||'gd')+'">Grade '+p.evidenceGrade+'</span><span class="tag tcat">'+p.category+'</span><span class="tag" style="background:rgba(113,113,122,.1);color:var(--tm)">'+esc(p.riskProfile)+' risk</span></div>';
+  if(p.mechanisms&&p.mechanisms.length)html+='<div style="margin:12px 0"><b style="font-size:13px;color:var(--ac)">Mechanisms:</b><div style="color:var(--tm);font-size:14px;margin-top:4px">'+p.mechanisms.map(m=>esc(m)).join(' · ')+'</div></div>';
+  if(p.dosage)html+='<div style="margin:12px 0;background:var(--bg3);padding:14px;border-radius:8px"><b style="font-size:13px;color:var(--ac)">Dosage</b><div style="font-size:15px;margin-top:4px">'+esc(p.dosage.standard||'')+'</div><div style="font-size:13px;color:var(--tm)">Range: '+esc(p.dosage.range||'')+'</div>'+(p.dosage.notes?'<div style="font-size:13px;color:var(--y);margin-top:4px">⚠️ '+esc(p.dosage.notes)+'</div>':'')+'</div>';
+  if(p.keyFindings&&p.keyFindings.length)html+='<div style="margin:12px 0"><b style="font-size:13px;color:var(--ac)">Key Findings:</b><ul style="color:var(--tm);font-size:14px;margin-top:4px;padding-left:20px">'+p.keyFindings.map(f=>'<li>'+esc(f)+'</li>').join('')+'</ul></div>';
+  if(p.contraindications&&p.contraindications.length)html+='<div style="margin:12px 0"><b style="font-size:13px;color:var(--r)">Contraindications:</b><ul style="color:var(--tm);font-size:14px;margin-top:4px;padding-left:20px">'+p.contraindications.map(c=>'<li>'+esc(c)+'</li>').join('')+'</ul></div>';
+  if(p.tags&&p.tags.length)html+='<div style="margin:12px 0;display:flex;gap:6px;flex-wrap:wrap">'+p.tags.map(t=>'<span style="padding:2px 8px;border-radius:100px;font-size:11px;background:rgba(34,211,238,.1);color:var(--ac)">#'+esc(t)+'</span>').join('')+'</div>';
+  html+='</div>';
+  modal.innerHTML=html;document.body.appendChild(modal)}
   catch(e){console.error(e)}
 }
 
