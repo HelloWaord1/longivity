@@ -1,0 +1,28 @@
+{
+  "id": "10.1101/2024.11.20.624507",
+  "title": "Influence of attention mechanisms on cerebellar and basal ganglia activity during vocal emotion decoding",
+  "authors": [
+    "Ceravolo, L.",
+    "Thomasson, M.",
+    "Constantin, I. M.",
+    "Stiennon, E.",
+    "Chassot, E.",
+    "Pierce, J.",
+    "Cionca, A.",
+    "Grandjean, D.",
+    "Sveikata, L.",
+    "Assal, F.",
+    "Peron, J."
+  ],
+  "journal": "bioRxiv (preprint)",
+  "publishedDate": "2026-02-04",
+  "doi": "10.1101/2024.11.20.624507",
+  "url": "https://doi.org/10.1101/2024.11.20.624507",
+  "abstract": "Emotional prosody processing involves a widespread network of brain regions, but the specific roles of the cerebellum and basal ganglia in explicit and implicit tasks are not well known or understood. This study investigated how the cerebellum and basal ganglia contribute to explicit (emotion categorization) and implicit (gender categorization) processing of emotional prosody, namely when attention is directly versus implicitly oriented towards the emotion of the voice stimuli, respectively. Twenty-eight healthy French-speaking participants (average age: 65 years old) underwent high-resolution functional MRI while performing explicit and implicit vocal emotion processing tasks. Neuroimaging results revealed, and replicated, that both tasks recruited a widespread network, including the superior temporal cortex, inferior frontal cortex, primary motor and somatosensory cortices, basal ganglia, and cerebellum. The explicit task elicited stronger activations in the basal ganglia (caudate nucleus, putamen) and cerebellar regions (Crus I/II, lobules VI, VIIb, and X), consistent with higher cognitive control demands. In contrast, the implicit task was associated with activations in cerebellar lobules IV-V, VI, VIII, and IX, along with the thalamus. Regression-based functional connectivity analyses further demonstrated stronger connectivity between the right cerebellar lobule IX and the putamen, as well as the cerebellar vermis (XII), particularly during implicit processing. These findings highlight the distinct contributions of the cerebellum and basal ganglia to emotional prosody processing, with explicit tasks engaging associative and cognitive control networks, while implicit tasks rely more on sensorimotor and automatic neural processing mechanisms.",
+  "studyType": "preprint",
+  "tags": [
+    "preprint",
+    "longevity"
+  ],
+  "indexedAt": "2026-02-04T18:01:03.753Z"
+}

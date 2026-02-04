@@ -1,0 +1,24 @@
+{
+  "id": "10.1101/2024.01.21.576561",
+  "title": "Alpha phase-coding supports feature binding during working memory maintenance",
+  "authors": [
+    "Pagnotta, M. F.",
+    "Santo-Angles, A.",
+    "Temudo, A.",
+    "Barbosa, J.",
+    "Compte, A.",
+    "D'Esposito, M.",
+    "Sreenivasan, K. K."
+  ],
+  "journal": "bioRxiv (preprint)",
+  "publishedDate": "2026-02-01",
+  "doi": "10.1101/2024.01.21.576561",
+  "url": "https://doi.org/10.1101/2024.01.21.576561",
+  "abstract": "The ability to successfully retain and manipulate information in working memory (WM) requires that objects individual features are bound into cohesive representations; yet, the mechanisms supporting feature binding remain unclear. Binding (or swap) errors, where memorized features are erroneously associated with the wrong object, can provide a window into the intrinsic limits in capacity of WM that represent a key bottleneck in our cognitive ability. We tested the hypothesis that binding in WM is accomplished via neural phase synchrony and that swap errors result from perturbations in this synchrony. Using magnetoencephalography data collected from human subjects in a task designed to induce swap errors, we showed that swaps are characterized by reduced phase-locked oscillatory activity during memory retention, as predicted by an attractor model of spiking neural networks. Further, we found that this reduction arises from increased phase coding variability in the alpha-band over a distributed network of sensorimotor areas. Our findings demonstrate that feature binding in WM is accomplished through phase coding dynamics that emerge from the competition between different memories.\n\nSignificanceWe investigate the neural basis of working memory, focusing on how feature binding is accomplished and how binding or  swap errors arise. Using magnetoencephalography, we found that stable phase-locking of alpha oscillations supports correct feature binding, while swap errors correlate with reduced alpha phase preservation, localized to specific brain areas. These findings align with a biologically-plausible computational model predicting that temporal synchrony in neuronal firing underpins feature binding. This work advances our understanding of the neural mechanisms of working memory, providing empirical support for theories of time-based binding and demonstrating the utility of biophysically-realistic models in human neuroimaging studies.",
+  "studyType": "preprint",
+  "tags": [
+    "preprint",
+    "longevity"
+  ],
+  "indexedAt": "2026-02-04T18:01:03.752Z"
+}
