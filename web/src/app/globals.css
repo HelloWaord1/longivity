@@ -85,9 +85,15 @@
   margin: 16px 0;
 }
 
-/* Mobile bottom nav padding */
-@media (max-width: 767px) {
-  main {
-    padding-bottom: 72px;
-  }
+/* Subtle background texture */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60vh;
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(16, 185, 129, 0.04), transparent);
+  pointer-events: none;
+  z-index: -1;
 }
