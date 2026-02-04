@@ -21,6 +21,12 @@ const SUGGESTIONS = [
 function formatAnswer(data) {
   if (!data) return '';
 
+  // If we got an AI-generated answer, use it directly
+  if (data.answer) {
+    return data.answer;
+  }
+
+  // Fallback: format product data manually
   if (data.relevantProducts && data.relevantProducts.length > 0) {
     let text = `Found ${data.count} relevant product${data.count !== 1 ? 's' : ''}:\n\n`;
 

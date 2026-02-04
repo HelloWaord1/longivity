@@ -252,7 +252,7 @@ const routes = {
       if (p) allProducts.push(p);
     }
 
-    // Simple keyword matching for MVP (will be replaced with embeddings)
+    // Keyword matching to find relevant products
     const queryLower = query.toLowerCase();
     const relevant = allProducts.filter(p => {
       const searchText = [
@@ -262,8 +262,76 @@ const routes = {
       return queryLower.split(' ').some(word =>
         word.length > 3 && searchText.includes(word)
       );
-    });
+    }).slice(0, 8); // limit context size
 
+    // If Anthropic key available, use Claude for intelligent answers
+    const apiKey = process.env.ANTHROPIC_API_KEY;
+    if (apiKey) {
+      try {
+        const productContext = relevant.map(p => 
+          `- ${p.name} (Grade ${p.evidenceGrade}, ${p.riskProfile} risk): ${p.description}\n  Mechanisms: ${(p.mechanisms || []).join(', ')}\n  Dosage: ${p.dosage?.standard || 'N/A'}\n  Key findings: ${(p.keyFindings || []).slice(0, 2).join('; ')}`
+        ).join('\n\n');
+
+        const systemPrompt = `You are Longivity AI, a longevity science assistant. Answer questions about supplements, protocols, and longevity research based on the evidence-graded knowledge base provided.
+
+Rules:
+- Be concise and evidence-based
+- Always mention evidence grades (A=strong RCTs, B=good evidence, C=emerging, D=preliminary)
+- Include dosage information when relevant
+- Note contraindications and risks
+- End with a brief disclaimer
+- Use markdown formatting (## headings, **bold**, - bullet points)
+- Keep answers under 500 words`;
+
+        const userMessage = productContext 
+          ? `Knowledge base context:\n${productContext}\n\nUser question: ${query}`
+          : `No specific products found in the knowledge base for this query. Answer based on general longevity science knowledge.\n\nUser question: ${query}`;
+
+        const claudeRes = await fetch('https://api.anthropic.com/v1/messages', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'x-api-key': apiKey,
+            'anthropic-version': '2023-06-01',
+          },
+          body: JSON.stringify({
+            model: 'claude-sonnet-4-20250514',
+            max_tokens: 1024,
+            system: systemPrompt,
+            messages: [{ role: 'user', content: userMessage }],
+          }),
+        });
+
+        if (claudeRes.ok) {
+          const claudeData = await claudeRes.json();
+          const answer = claudeData.content?.[0]?.text || '';
+
+          return json(res, {
+            query,
+            answer,
+            relevantProducts: relevant.map(p => ({
+              name: p.name,
+              category: p.category,
+              evidenceGrade: p.evidenceGrade,
+              mechanisms: p.mechanisms,
+              dosage: p.dosage,
+              keyFindings: p.keyFindings,
+              riskProfile: p.riskProfile,
+            })),
+            count: relevant.length,
+            model: 'claude',
+            note: 'This is not medical advice. Consult a healthcare professional.',
+          });
+        }
+        // Fall through to keyword-only response if Claude fails
+        console.error('[Consult] Claude API error:', claudeRes.status);
+      } catch (err) {
+        console.error('[Consult] Claude error:', err.message);
+        // Fall through to keyword-only response
+      }
+    }
+
+    // Fallback: keyword-only response (no LLM)
     json(res, {
       query,
       relevantProducts: relevant.map(p => ({
